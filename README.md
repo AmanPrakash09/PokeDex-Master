@@ -20,4 +20,16 @@ The domain of our proposed application is Pokémon management. This domain mainl
   - Start on front-end development (Aman)
     - Create sign-in page 
     - Create a page for creating a new save file
-
+- Week 3: March 25- March 31
+  - Full-on front-end development
+    - Create a page for adding Pokemon and badges (Matthew)
+    - Create a page for displaying current save files, badges, and Pokemon (Valentino)
+    - A search page for finding what Pokemon/locations are currently available to the player (Aman)
+  - Ensuring the new features interface properly with the backend/DBMS (All)
+  - Create, Update, and Delete pop-up notifications (All)
+  - Error handling for any user input components (All)
+- Week 4: April 1- April 5
+  - Ensure Data Sanitization (All)
+  - Any needed touchups (All)
+  - Finishing any remaining front-end features (All)
+  - Milestone 5 Preparations (All)
