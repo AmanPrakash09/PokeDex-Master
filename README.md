@@ -30,6 +30,20 @@ The domain of our proposed application is Pokémon management. This domain mainl
   - Error handling for any user input components (All)
 - Week 4: April 1- April 5
   - Ensure Data Sanitization (All)
-  - Any needed touchups (All)
+  - Any needed touch-ups (All)
   - Finishing any remaining front-end features (All)
   - Milestone 5 Preparations (All)
+
+## Challenges / Things Left to do
+
+- Support each other by consistent communication
+  - Ensure that no one gets "stuck" and falls behind on their tasks
+- We will use GitHub's project feature
+  - We will track user stories this way and it will give us a better idea of what each of us are currently working on.
+- Challenge could be supporting many Pokemon games
+  - In order to mitigate this risk, we will start with supporting two games for our MVP.
+- Presentation for Milestone 5 is something left to do
+  - We have dedicated some time in Week 4, but it is hard to predict that far into the future
+  - We will mitigate this risk by making incremental progress to the presentation as we complete new tasks and our project evolves
+- Challenge could be the complexity of the front-end
+  - In order to still meet requirements, a contingency plan would be to remove the pages that show user information, and just retain the Pokemon/location querying features.
