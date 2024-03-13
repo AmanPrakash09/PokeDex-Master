@@ -168,7 +168,7 @@ CREATE TABLE Uses(
 
 CREATE TABLE Move1(
   Accuracy NUMBER,
-  Power NUMBER,
+  MovePower NUMBER,
   PP NUMBER,
   Type VARCHAR2(8),
   Function VARCHAR2(15),
@@ -204,7 +204,7 @@ CREATE TABLE LevelMove(
 
 CREATE TABLE TMHMMove(
   MoveName VARCHAR2(25),
-  Number NUMBER,
+  MoveNumber NUMBER,
   PRIMARY KEY (MoveName),
   FOREIGN KEY (MoveName) REFERENCES Move1(MoveName) 
     ON DELETE CASCADE
