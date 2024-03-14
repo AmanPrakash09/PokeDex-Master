@@ -5,10 +5,8 @@ import os
 DATA_FOLDER = "../data/"
 
 GAME_MAP = {
-    "emerald": """https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_
-                    Hoenn_Pok%C3%A9dex_number_(Generation_III)""",
-    "red": """https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_
-                Kanto_Pok%C3%A9dex_number"""
+    "emerald": "https://pokemondb.net/pokedex/game/ruby-sapphire-emerald",
+    "red": "https://pokemondb.net/pokedex/game/firered-leafgreen"
 }
 
 
@@ -16,13 +14,13 @@ class ScraperError(Exception):
     pass
 
 
-class BulbapediaScraper:
+class PokemonDBScraper:
     def __init__(self, game_name: str) -> None:
         if game_name not in GAME_MAP:
             raise ScraperError("Invalid game name! See game map for supported games.")
         self.game_name = game_name
 
-    # Save the HTML file, and parse file later. This helps prevent Bulbapedia blocking our bot
+    # Save the HTML file, and parse file later. This helps prevent PokemonDB blocking our bot
     def _save_webpage(self) -> None:
         url = GAME_MAP[self.game_name]
         output_file = self.get_file_path()
@@ -50,6 +48,6 @@ class BulbapediaScraper:
 
 
 if __name__ == "__main__":
-    emerald = BulbapediaScraper("emerald")
+    emerald = PokemonDBScraper("emerald")
     soup = emerald.load_webpage()
     print(soup.prettify())
