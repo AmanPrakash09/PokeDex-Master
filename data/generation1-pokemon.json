@@ -1,0 +1,3366 @@
+[
+    {
+        "id": "1-001",
+        "name": "Bulbasaur",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass",
+            "Monster"
+        ],
+        "abilities": [
+            "Overgrow",
+            "Chlorophyll"
+        ],
+        "location": [
+            "Pallet Town"
+        ],
+        "href": "/pokedex/bulbasaur"
+    },
+    {
+        "id": "1-002",
+        "name": "Ivysaur",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass",
+            "Monster"
+        ],
+        "abilities": [
+            "Overgrow",
+            "Chlorophyll"
+        ],
+        "location": [
+            "Bulbasaur"
+        ],
+        "href": "/pokedex/ivysaur"
+    },
+    {
+        "id": "1-003",
+        "name": "Venusaur",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass",
+            "Monster"
+        ],
+        "abilities": [
+            "Overgrow",
+            "Chlorophyll"
+        ],
+        "location": [
+            "Bulbasaur",
+            "Ivysaur"
+        ],
+        "href": "/pokedex/venusaur"
+    },
+    {
+        "id": "1-004",
+        "name": "Charmander",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Monster"
+        ],
+        "abilities": [
+            "Blaze",
+            "Solar Power"
+        ],
+        "location": [
+            "Pallet Town"
+        ],
+        "href": "/pokedex/charmander"
+    },
+    {
+        "id": "1-005",
+        "name": "Charmeleon",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Monster"
+        ],
+        "abilities": [
+            "Blaze",
+            "Solar Power"
+        ],
+        "location": [
+            "Charmander"
+        ],
+        "href": "/pokedex/charmeleon"
+    },
+    {
+        "id": "1-006",
+        "name": "Charizard",
+        "poke_types": [
+            "Fire",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Monster"
+        ],
+        "abilities": [
+            "Blaze",
+            "Solar Power"
+        ],
+        "location": [
+            "Charmander",
+            "Charmeleon"
+        ],
+        "href": "/pokedex/charizard"
+    },
+    {
+        "id": "1-007",
+        "name": "Squirtle",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Monster",
+            "Water 1"
+        ],
+        "abilities": [
+            "Torrent",
+            "Rain Dish"
+        ],
+        "location": [
+            "Pallet Town"
+        ],
+        "href": "/pokedex/squirtle"
+    },
+    {
+        "id": "1-008",
+        "name": "Wartortle",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Monster",
+            "Water 1"
+        ],
+        "abilities": [
+            "Torrent",
+            "Rain Dish"
+        ],
+        "location": [
+            "Squirtle"
+        ],
+        "href": "/pokedex/wartortle"
+    },
+    {
+        "id": "1-009",
+        "name": "Blastoise",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Monster",
+            "Water 1"
+        ],
+        "abilities": [
+            "Torrent",
+            "Rain Dish"
+        ],
+        "location": [
+            "Squirtle",
+            "Wartortle"
+        ],
+        "href": "/pokedex/blastoise"
+    },
+    {
+        "id": "1-010",
+        "name": "Caterpie",
+        "poke_types": [
+            "Bug"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Shield Dust",
+            "Run Away"
+        ],
+        "location": [
+            "Route 2",
+            "Route 24",
+            "Route 25",
+            "Pattern Bush",
+            "Viridian Forest"
+        ],
+        "href": "/pokedex/caterpie"
+    },
+    {
+        "id": "1-011",
+        "name": "Metapod",
+        "poke_types": [
+            "Bug"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Shed Skin"
+        ],
+        "location": [
+            "Route 24",
+            "Route 25",
+            "Pattern Bush",
+            "Viridian Forest"
+        ],
+        "href": "/pokedex/metapod"
+    },
+    {
+        "id": "1-012",
+        "name": "Butterfree",
+        "poke_types": [
+            "Bug",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Compound Eyes",
+            "Tinted Lens"
+        ],
+        "location": [
+            "Caterpie",
+            "Metapod"
+        ],
+        "href": "/pokedex/butterfree"
+    },
+    {
+        "id": "1-013",
+        "name": "Weedle",
+        "poke_types": [
+            "Bug",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Shield Dust",
+            "Run Away"
+        ],
+        "location": [
+            "Route 2",
+            "Route 24",
+            "Route 25",
+            "Pattern Bush",
+            "Viridian Forest"
+        ],
+        "href": "/pokedex/weedle"
+    },
+    {
+        "id": "1-014",
+        "name": "Kakuna",
+        "poke_types": [
+            "Bug",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Shed Skin"
+        ],
+        "location": [
+            "Route 24",
+            "Route 25",
+            "Pattern Bush",
+            "Viridian Forest"
+        ],
+        "href": "/pokedex/kakuna"
+    },
+    {
+        "id": "1-015",
+        "name": "Beedrill",
+        "poke_types": [
+            "Bug",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Swarm",
+            "Sniper"
+        ],
+        "location": [
+            "Weedle",
+            "Kakuna"
+        ],
+        "href": "/pokedex/beedrill"
+    },
+    {
+        "id": "1-016",
+        "name": "Pidgey",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Tangled Feet",
+            "Big Pecks"
+        ],
+        "location": [
+            "Route 1",
+            "Route 2",
+            "Route 3",
+            "Route 5",
+            "Route 6",
+            "Route 7",
+            "Route 8",
+            "Route 12",
+            "Route 13",
+            "Route 14",
+            "Route 15",
+            "Route 24",
+            "Route 25",
+            "Berry Forest",
+            "Bond Bridge",
+            "Five Isle Meadow"
+        ],
+        "href": "/pokedex/pidgey"
+    },
+    {
+        "id": "1-017",
+        "name": "Pidgeotto",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Tangled Feet",
+            "Big Pecks"
+        ],
+        "location": [
+            "Route 13",
+            "Route 14",
+            "Route 15",
+            "Berry Forest",
+            "Bond Bridge",
+            "Five Isle Meadow"
+        ],
+        "href": "/pokedex/pidgeotto"
+    },
+    {
+        "id": "1-018",
+        "name": "Pidgeot",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Tangled Feet",
+            "Big Pecks"
+        ],
+        "location": [
+            "Pidgey",
+            "Pidgeotto"
+        ],
+        "href": "/pokedex/pidgeot"
+    },
+    {
+        "id": "1-019",
+        "name": "Rattata",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Run Away",
+            "Guts",
+            "Hustle"
+        ],
+        "location": [
+            "Route 1",
+            "Route 2",
+            "Route 4",
+            "Route 9",
+            "Route 16",
+            "Route 17",
+            "Route 18",
+            "Route 22",
+            "Pok\u00e9mon Mansion"
+        ],
+        "href": "/pokedex/rattata"
+    },
+    {
+        "id": "1-020",
+        "name": "Raticate",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Run Away",
+            "Guts",
+            "Hustle"
+        ],
+        "location": [
+            "Route 16",
+            "Route 17",
+            "Route 18",
+            "Pok\u00e9mon Mansion"
+        ],
+        "href": "/pokedex/raticate"
+    },
+    {
+        "id": "1-021",
+        "name": "Spearow",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Sniper"
+        ],
+        "location": [
+            "Route 3",
+            "Route 4",
+            "Route 9",
+            "Route 10",
+            "Route 11",
+            "Route 16",
+            "Route 17",
+            "Route 18",
+            "Route 22",
+            "Route 23",
+            "Canyon Entrance",
+            "Cape Brink",
+            "Kindle Road",
+            "Mt. Ember",
+            "Ruin Valley",
+            "Treasure Beach",
+            "Water Path"
+        ],
+        "href": "/pokedex/spearow"
+    },
+    {
+        "id": "1-022",
+        "name": "Fearow",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Sniper"
+        ],
+        "location": [
+            "Route 17",
+            "Route 18",
+            "Route 23",
+            "Canyon Entrance",
+            "Cape Brink",
+            "Kindle Road",
+            "Mt. Ember",
+            "Ruin Valley",
+            "Sevault Canyon",
+            "Treasure Beach",
+            "Water Path"
+        ],
+        "href": "/pokedex/fearow"
+    },
+    {
+        "id": "1-023",
+        "name": "Ekans",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Field"
+        ],
+        "abilities": [
+            "Intimidate",
+            "Shed Skin",
+            "Unnerve"
+        ],
+        "location": [
+            "Route 4",
+            "Route 8",
+            "Route 9",
+            "Route 10",
+            "Route 11",
+            "Route 23"
+        ],
+        "href": "/pokedex/ekans"
+    },
+    {
+        "id": "1-024",
+        "name": "Arbok",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Field"
+        ],
+        "abilities": [
+            "Intimidate",
+            "Shed Skin",
+            "Unnerve"
+        ],
+        "location": [
+            "Route 23",
+            "Victory Road"
+        ],
+        "href": "/pokedex/arbok"
+    },
+    {
+        "id": "1-025",
+        "name": "Pikachu",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Field"
+        ],
+        "abilities": [
+            "Static",
+            "Lightning Rod"
+        ],
+        "location": [
+            "Power Plant",
+            "Viridian Forest"
+        ],
+        "href": "/pokedex/pikachu"
+    },
+    {
+        "id": "1-026",
+        "name": "Raichu",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Field"
+        ],
+        "abilities": [
+            "Static",
+            "Lightning Rod"
+        ],
+        "location": [
+            "Pikachu",
+            "Pichu"
+        ],
+        "href": "/pokedex/raichu"
+    },
+    {
+        "id": "1-027",
+        "name": "Sandshrew",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Sand Veil",
+            "Sand Rush"
+        ],
+        "location": [],
+        "href": "/pokedex/sandshrew"
+    },
+    {
+        "id": "1-028",
+        "name": "Sandslash",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Sand Veil",
+            "Sand Rush"
+        ],
+        "location": [],
+        "href": "/pokedex/sandslash"
+    },
+    {
+        "id": "1-029",
+        "name": "Nidoran\u2640",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Hustle"
+        ],
+        "location": [
+            "Route 3",
+            "Route 5",
+            "Underground Path 5-6",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/nidoran-f"
+    },
+    {
+        "id": "1-030",
+        "name": "Nidorina",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Hustle"
+        ],
+        "location": [
+            "Route 11",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/nidorina"
+    },
+    {
+        "id": "1-031",
+        "name": "Nidoqueen",
+        "poke_types": [
+            "Poison",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Sheer Force"
+        ],
+        "location": [
+            "Nidoran\u2640",
+            "Nidorina"
+        ],
+        "href": "/pokedex/nidoqueen"
+    },
+    {
+        "id": "1-032",
+        "name": "Nidoran\u2642",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Hustle"
+        ],
+        "location": [
+            "Route 3",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/nidoran-m"
+    },
+    {
+        "id": "1-033",
+        "name": "Nidorino",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Hustle"
+        ],
+        "location": [
+            "Safari Zone"
+        ],
+        "href": "/pokedex/nidorino"
+    },
+    {
+        "id": "1-034",
+        "name": "Nidoking",
+        "poke_types": [
+            "Poison",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Sheer Force"
+        ],
+        "location": [
+            "Nidoran\u2642",
+            "Nidorino"
+        ],
+        "href": "/pokedex/nidoking"
+    },
+    {
+        "id": "1-035",
+        "name": "Clefairy",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Fairy"
+        ],
+        "abilities": [
+            "Cute Charm",
+            "Magic Guard",
+            "Friend Guard"
+        ],
+        "location": [
+            "Celadon City",
+            "Mt. Moon"
+        ],
+        "href": "/pokedex/clefairy"
+    },
+    {
+        "id": "1-036",
+        "name": "Clefable",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Fairy"
+        ],
+        "abilities": [
+            "Cute Charm",
+            "Magic Guard",
+            "Unaware"
+        ],
+        "location": [
+            "Clefairy",
+            "Cleffa"
+        ],
+        "href": "/pokedex/clefable"
+    },
+    {
+        "id": "1-037",
+        "name": "Vulpix",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Flash Fire",
+            "Drought"
+        ],
+        "location": [],
+        "href": "/pokedex/vulpix"
+    },
+    {
+        "id": "1-038",
+        "name": "Ninetales",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Flash Fire",
+            "Drought"
+        ],
+        "location": [],
+        "href": "/pokedex/ninetales"
+    },
+    {
+        "id": "1-039",
+        "name": "Jigglypuff",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Fairy"
+        ],
+        "abilities": [
+            "Cute Charm",
+            "Competitive",
+            "Friend Guard"
+        ],
+        "location": [
+            "Route 3"
+        ],
+        "href": "/pokedex/jigglypuff"
+    },
+    {
+        "id": "1-040",
+        "name": "Wigglytuff",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Fairy"
+        ],
+        "abilities": [
+            "Cute Charm",
+            "Competitive",
+            "Frisk"
+        ],
+        "location": [
+            "Jigglypuff",
+            "Igglybuff"
+        ],
+        "href": "/pokedex/wigglytuff"
+    },
+    {
+        "id": "1-041",
+        "name": "Zubat",
+        "poke_types": [
+            "Poison",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Inner Focus",
+            "Infiltrator"
+        ],
+        "location": [
+            "Icefall Cave",
+            "Lost Cave",
+            "Mt. Moon",
+            "Rock Tunnel",
+            "Seafoam Islands",
+            "Victory Road"
+        ],
+        "href": "/pokedex/zubat"
+    },
+    {
+        "id": "1-042",
+        "name": "Golbat",
+        "poke_types": [
+            "Poison",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Inner Focus",
+            "Infiltrator"
+        ],
+        "location": [
+            "Cerulean Cave",
+            "Icefall Cave",
+            "Lost Cave",
+            "Seafoam Islands",
+            "Victory Road"
+        ],
+        "href": "/pokedex/golbat"
+    },
+    {
+        "id": "1-043",
+        "name": "Oddish",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Run Away"
+        ],
+        "location": [
+            "Route 5",
+            "Route 6",
+            "Route 7",
+            "Route 12",
+            "Route 13",
+            "Route 14",
+            "Route 15",
+            "Route 24",
+            "Route 25",
+            "Berry Forest",
+            "Bond Bridge",
+            "Cape Brink",
+            "Water Path"
+        ],
+        "href": "/pokedex/oddish"
+    },
+    {
+        "id": "1-044",
+        "name": "Gloom",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Stench"
+        ],
+        "location": [
+            "Route 12",
+            "Route 13",
+            "Route 14",
+            "Route 15",
+            "Berry Forest",
+            "Bond Bridge",
+            "Cape Brink",
+            "Water Path"
+        ],
+        "href": "/pokedex/gloom"
+    },
+    {
+        "id": "1-045",
+        "name": "Vileplume",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Effect Spore"
+        ],
+        "location": [
+            "Oddish",
+            "Gloom"
+        ],
+        "href": "/pokedex/vileplume"
+    },
+    {
+        "id": "1-046",
+        "name": "Paras",
+        "poke_types": [
+            "Bug",
+            "Grass"
+        ],
+        "egg_groups": [
+            "Bug",
+            "Grass"
+        ],
+        "abilities": [
+            "Effect Spore",
+            "Dry Skin",
+            "Damp"
+        ],
+        "location": [
+            "Mt. Moon",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/paras"
+    },
+    {
+        "id": "1-047",
+        "name": "Parasect",
+        "poke_types": [
+            "Bug",
+            "Grass"
+        ],
+        "egg_groups": [
+            "Bug",
+            "Grass"
+        ],
+        "abilities": [
+            "Effect Spore",
+            "Dry Skin",
+            "Damp"
+        ],
+        "location": [
+            "Cerulean Cave",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/parasect"
+    },
+    {
+        "id": "1-048",
+        "name": "Venonat",
+        "poke_types": [
+            "Bug",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Compound Eyes",
+            "Tinted Lens",
+            "Run Away"
+        ],
+        "location": [
+            "Route 12",
+            "Route 13",
+            "Route 14",
+            "Route 15",
+            "Berry Forest",
+            "Bond Bridge",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/venonat"
+    },
+    {
+        "id": "1-049",
+        "name": "Venomoth",
+        "poke_types": [
+            "Bug",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Shield Dust",
+            "Tinted Lens",
+            "Wonder Skin"
+        ],
+        "location": [
+            "Berry Forest",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/venomoth"
+    },
+    {
+        "id": "1-050",
+        "name": "Diglett",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Sand Veil",
+            "Arena Trap",
+            "Sand Force"
+        ],
+        "location": [
+            "Diglett's Cave"
+        ],
+        "href": "/pokedex/diglett"
+    },
+    {
+        "id": "1-051",
+        "name": "Dugtrio",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Sand Veil",
+            "Arena Trap",
+            "Sand Force"
+        ],
+        "location": [
+            "Diglett's Cave"
+        ],
+        "href": "/pokedex/dugtrio"
+    },
+    {
+        "id": "1-052",
+        "name": "Meowth",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Pickup",
+            "Technician",
+            "Unnerve"
+        ],
+        "location": [
+            "Route 5",
+            "Route 6",
+            "Route 7",
+            "Route 8",
+            "Bond Bridge",
+            "Canyon Entrance",
+            "Cape Brink",
+            "Five Isle Meadow",
+            "Kindle Road",
+            "Ruin Valley",
+            "Sevault Canyon",
+            "Treasure Beach",
+            "Water Path"
+        ],
+        "href": "/pokedex/meowth"
+    },
+    {
+        "id": "1-053",
+        "name": "Persian",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Limber",
+            "Technician",
+            "Unnerve"
+        ],
+        "location": [
+            "Bond Bridge",
+            "Canyon Entrance",
+            "Cape Brink",
+            "Five Isle Meadow",
+            "Kindle Road",
+            "Ruin Valley",
+            "Sevault Canyon",
+            "Treasure Beach",
+            "Water Path"
+        ],
+        "href": "/pokedex/persian"
+    },
+    {
+        "id": "1-054",
+        "name": "Psyduck",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 1"
+        ],
+        "abilities": [
+            "Damp",
+            "Cloud Nine",
+            "Swift Swim"
+        ],
+        "location": [
+            "Route 4",
+            "Route 6",
+            "Route 10",
+            "Route 11",
+            "Route 12",
+            "Route 13",
+            "Route 19",
+            "Route 20",
+            "Route 21",
+            "Route 22",
+            "Route 23",
+            "Route 24",
+            "Route 25",
+            "Berry Forest",
+            "Bond Bridge",
+            "Canyon Entrance",
+            "Cape Brink",
+            "Celadon City",
+            "Cerulean Cave",
+            "Cerulean City",
+            "Cinnabar Island",
+            "Five Island",
+            "Five Isle Meadow",
+            "Four Island",
+            "Fuchsia City",
+            "Green Path",
+            "Icefall Cave",
+            "Kindle Road",
+            "Memorial Pillar",
+            "One Island",
+            "Outcast Island",
+            "Pallet Town",
+            "Resort Gorgeous",
+            "Ruin Valley",
+            "Seafoam Islands",
+            "Tanoby Ruins",
+            "Trainer Tower",
+            "Treasure Beach",
+            "Vermilion City",
+            "Viridian City",
+            "Water Labyrinth",
+            "Water Path",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/psyduck"
+    },
+    {
+        "id": "1-055",
+        "name": "Golduck",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 1"
+        ],
+        "abilities": [
+            "Damp",
+            "Cloud Nine",
+            "Swift Swim"
+        ],
+        "location": [
+            "Berry Forest",
+            "Cape Brink",
+            "Cerulean Cave",
+            "Seafoam Islands"
+        ],
+        "href": "/pokedex/golduck"
+    },
+    {
+        "id": "1-056",
+        "name": "Mankey",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Vital Spirit",
+            "Anger Point",
+            "Defiant"
+        ],
+        "location": [
+            "Route 3",
+            "Route 4",
+            "Route 22",
+            "Route 23",
+            "Rock Tunnel"
+        ],
+        "href": "/pokedex/mankey"
+    },
+    {
+        "id": "1-057",
+        "name": "Primeape",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Vital Spirit",
+            "Anger Point",
+            "Defiant"
+        ],
+        "location": [
+            "Route 23",
+            "Cerulean Cave",
+            "Victory Road"
+        ],
+        "href": "/pokedex/primeape"
+    },
+    {
+        "id": "1-058",
+        "name": "Growlithe",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Intimidate",
+            "Flash Fire",
+            "Justified"
+        ],
+        "location": [
+            "Route 7",
+            "Route 8",
+            "Pok\u00e9mon Mansion"
+        ],
+        "href": "/pokedex/growlithe"
+    },
+    {
+        "id": "1-059",
+        "name": "Arcanine",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Intimidate",
+            "Flash Fire",
+            "Justified"
+        ],
+        "location": [
+            "Growlithe"
+        ],
+        "href": "/pokedex/arcanine"
+    },
+    {
+        "id": "1-060",
+        "name": "Poliwag",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 1"
+        ],
+        "abilities": [
+            "Water Absorb",
+            "Damp",
+            "Swift Swim"
+        ],
+        "location": [
+            "Route 6",
+            "Route 22",
+            "Route 23",
+            "Route 25",
+            "Berry Forest",
+            "Cape Brink",
+            "Cerulean Cave",
+            "Four Island",
+            "Fuchsia City",
+            "Icefall Cave",
+            "Ruin Valley",
+            "Viridian City",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/poliwag"
+    },
+    {
+        "id": "1-061",
+        "name": "Poliwhirl",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 1"
+        ],
+        "abilities": [
+            "Water Absorb",
+            "Damp",
+            "Swift Swim"
+        ],
+        "location": [
+            "Route 6",
+            "Route 22",
+            "Route 23",
+            "Route 25",
+            "Cape Brink",
+            "Cerulean Cave",
+            "Four Island",
+            "Icefall Cave",
+            "Ruin Valley",
+            "Viridian City"
+        ],
+        "href": "/pokedex/poliwhirl"
+    },
+    {
+        "id": "1-062",
+        "name": "Poliwrath",
+        "poke_types": [
+            "Water",
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Water 1"
+        ],
+        "abilities": [
+            "Water Absorb",
+            "Damp",
+            "Swift Swim"
+        ],
+        "location": [
+            "Poliwag",
+            "Poliwhirl"
+        ],
+        "href": "/pokedex/poliwrath"
+    },
+    {
+        "id": "1-063",
+        "name": "Abra",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Inner Focus",
+            "Magic Guard"
+        ],
+        "location": [
+            "Route 24",
+            "Route 25",
+            "Celadon City"
+        ],
+        "href": "/pokedex/abra"
+    },
+    {
+        "id": "1-064",
+        "name": "Kadabra",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Inner Focus",
+            "Magic Guard"
+        ],
+        "location": [
+            "Cerulean Cave"
+        ],
+        "href": "/pokedex/kadabra"
+    },
+    {
+        "id": "1-065",
+        "name": "Alakazam",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Inner Focus",
+            "Magic Guard"
+        ],
+        "location": [
+            "Abra",
+            "Kadabra"
+        ],
+        "href": "/pokedex/alakazam"
+    },
+    {
+        "id": "1-066",
+        "name": "Machop",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Guts",
+            "No Guard",
+            "Steadfast"
+        ],
+        "location": [
+            "Mt. Ember",
+            "Rock Tunnel",
+            "Victory Road"
+        ],
+        "href": "/pokedex/machop"
+    },
+    {
+        "id": "1-067",
+        "name": "Machoke",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Guts",
+            "No Guard",
+            "Steadfast"
+        ],
+        "location": [
+            "Cerulean Cave",
+            "Mt. Ember",
+            "Victory Road"
+        ],
+        "href": "/pokedex/machoke"
+    },
+    {
+        "id": "1-068",
+        "name": "Machamp",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Guts",
+            "No Guard",
+            "Steadfast"
+        ],
+        "location": [
+            "Machop",
+            "Machoke"
+        ],
+        "href": "/pokedex/machamp"
+    },
+    {
+        "id": "1-069",
+        "name": "Bellsprout",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Gluttony"
+        ],
+        "location": [],
+        "href": "/pokedex/bellsprout"
+    },
+    {
+        "id": "1-070",
+        "name": "Weepinbell",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Gluttony"
+        ],
+        "location": [],
+        "href": "/pokedex/weepinbell"
+    },
+    {
+        "id": "1-071",
+        "name": "Victreebel",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Gluttony"
+        ],
+        "location": [],
+        "href": "/pokedex/victreebel"
+    },
+    {
+        "id": "1-072",
+        "name": "Tentacool",
+        "poke_types": [
+            "Water",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Clear Body",
+            "Liquid Ooze",
+            "Rain Dish"
+        ],
+        "location": [
+            "Route 4",
+            "Route 10",
+            "Route 11",
+            "Route 12",
+            "Route 13",
+            "Route 19",
+            "Route 20",
+            "Route 21",
+            "Route 24",
+            "Bond Bridge",
+            "Cerulean City",
+            "Cinnabar Island",
+            "Five Island",
+            "Five Isle Meadow",
+            "Green Path",
+            "Icefall Cave",
+            "Kindle Road",
+            "Memorial Pillar",
+            "One Island",
+            "Outcast Island",
+            "Pallet Town",
+            "Resort Gorgeous",
+            "Tanoby Ruins",
+            "Trainer Tower",
+            "Treasure Beach",
+            "Vermilion City",
+            "Water Labyrinth",
+            "Water Path"
+        ],
+        "href": "/pokedex/tentacool"
+    },
+    {
+        "id": "1-073",
+        "name": "Tentacruel",
+        "poke_types": [
+            "Water",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Clear Body",
+            "Liquid Ooze",
+            "Rain Dish"
+        ],
+        "location": [
+            "Bond Bridge",
+            "Five Island",
+            "Five Isle Meadow",
+            "Green Path",
+            "Icefall Cave",
+            "Kindle Road",
+            "Memorial Pillar",
+            "One Island",
+            "Outcast Island",
+            "Resort Gorgeous",
+            "Tanoby Ruins",
+            "Trainer Tower",
+            "Treasure Beach",
+            "Water Labyrinth",
+            "Water Path"
+        ],
+        "href": "/pokedex/tentacruel"
+    },
+    {
+        "id": "1-074",
+        "name": "Geodude",
+        "poke_types": [
+            "Rock",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Sand Veil"
+        ],
+        "location": [
+            "Cerulean Cave",
+            "Kindle Road",
+            "Mt. Ember",
+            "Mt. Moon",
+            "Rock Tunnel",
+            "Sevault Canyon",
+            "Victory Road"
+        ],
+        "href": "/pokedex/geodude"
+    },
+    {
+        "id": "1-075",
+        "name": "Graveler",
+        "poke_types": [
+            "Rock",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Sand Veil"
+        ],
+        "location": [
+            "Cerulean Cave",
+            "Kindle Road",
+            "Mt. Ember",
+            "Rock Tunnel",
+            "Sevault Canyon"
+        ],
+        "href": "/pokedex/graveler"
+    },
+    {
+        "id": "1-076",
+        "name": "Golem",
+        "poke_types": [
+            "Rock",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Sand Veil"
+        ],
+        "location": [
+            "Geodude",
+            "Graveler"
+        ],
+        "href": "/pokedex/golem"
+    },
+    {
+        "id": "1-077",
+        "name": "Ponyta",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Run Away",
+            "Flash Fire",
+            "Flame Body"
+        ],
+        "location": [
+            "Kindle Road",
+            "Mt. Ember"
+        ],
+        "href": "/pokedex/ponyta"
+    },
+    {
+        "id": "1-078",
+        "name": "Rapidash",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Run Away",
+            "Flash Fire",
+            "Flame Body"
+        ],
+        "location": [
+            "Kindle Road",
+            "Mt. Ember"
+        ],
+        "href": "/pokedex/rapidash"
+    },
+    {
+        "id": "1-079",
+        "name": "Slowpoke",
+        "poke_types": [
+            "Water",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Monster",
+            "Water 1"
+        ],
+        "abilities": [
+            "Oblivious",
+            "Own Tempo",
+            "Regenerator"
+        ],
+        "location": [],
+        "href": "/pokedex/slowpoke"
+    },
+    {
+        "id": "1-080",
+        "name": "Slowbro",
+        "poke_types": [
+            "Water",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Monster",
+            "Water 1"
+        ],
+        "abilities": [
+            "Oblivious",
+            "Own Tempo",
+            "Regenerator"
+        ],
+        "location": [],
+        "href": "/pokedex/slowbro"
+    },
+    {
+        "id": "1-081",
+        "name": "Magnemite",
+        "poke_types": [
+            "Electric",
+            "Steel"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Magnet Pull",
+            "Sturdy",
+            "Analytic"
+        ],
+        "location": [
+            "Power Plant"
+        ],
+        "href": "/pokedex/magnemite"
+    },
+    {
+        "id": "1-082",
+        "name": "Magneton",
+        "poke_types": [
+            "Electric",
+            "Steel"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Magnet Pull",
+            "Sturdy",
+            "Analytic"
+        ],
+        "location": [
+            "Cerulean Cave",
+            "Power Plant"
+        ],
+        "href": "/pokedex/magneton"
+    },
+    {
+        "id": "1-083",
+        "name": "Farfetch'd",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Field",
+            "Flying"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Inner Focus",
+            "Defiant"
+        ],
+        "location": [
+            "Vermilion City"
+        ],
+        "href": "/pokedex/farfetchd"
+    },
+    {
+        "id": "1-084",
+        "name": "Doduo",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Run Away",
+            "Early Bird",
+            "Tangled Feet"
+        ],
+        "location": [
+            "Route 16",
+            "Route 17",
+            "Route 18",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/doduo"
+    },
+    {
+        "id": "1-085",
+        "name": "Dodrio",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Run Away",
+            "Early Bird",
+            "Tangled Feet"
+        ],
+        "location": [
+            "Doduo"
+        ],
+        "href": "/pokedex/dodrio"
+    },
+    {
+        "id": "1-086",
+        "name": "Seel",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 1"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Hydration",
+            "Ice Body"
+        ],
+        "location": [
+            "Cinnabar Island",
+            "Icefall Cave",
+            "Seafoam Islands"
+        ],
+        "href": "/pokedex/seel"
+    },
+    {
+        "id": "1-087",
+        "name": "Dewgong",
+        "poke_types": [
+            "Water",
+            "Ice"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 1"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Hydration",
+            "Ice Body"
+        ],
+        "location": [
+            "Icefall Cave",
+            "Seafoam Islands"
+        ],
+        "href": "/pokedex/dewgong"
+    },
+    {
+        "id": "1-088",
+        "name": "Grimer",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Stench",
+            "Sticky Hold",
+            "Poison Touch"
+        ],
+        "location": [
+            "Celadon City",
+            "Pok\u00e9mon Mansion"
+        ],
+        "href": "/pokedex/grimer"
+    },
+    {
+        "id": "1-089",
+        "name": "Muk",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Stench",
+            "Sticky Hold",
+            "Poison Touch"
+        ],
+        "location": [
+            "Grimer"
+        ],
+        "href": "/pokedex/muk"
+    },
+    {
+        "id": "1-090",
+        "name": "Shellder",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Shell Armor",
+            "Skill Link",
+            "Overcoat"
+        ],
+        "location": [
+            "Cinnabar Island",
+            "Five Island",
+            "Icefall Cave",
+            "One Island",
+            "Pallet Town",
+            "Vermilion City"
+        ],
+        "href": "/pokedex/shellder"
+    },
+    {
+        "id": "1-091",
+        "name": "Cloyster",
+        "poke_types": [
+            "Water",
+            "Ice"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Shell Armor",
+            "Skill Link",
+            "Overcoat"
+        ],
+        "location": [
+            "Shellder"
+        ],
+        "href": "/pokedex/cloyster"
+    },
+    {
+        "id": "1-092",
+        "name": "Gastly",
+        "poke_types": [
+            "Ghost",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "location": [
+            "Lost Cave",
+            "Pok\u00e9mon Tower"
+        ],
+        "href": "/pokedex/gastly"
+    },
+    {
+        "id": "1-093",
+        "name": "Haunter",
+        "poke_types": [
+            "Ghost",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "location": [
+            "Lost Cave",
+            "Pok\u00e9mon Tower"
+        ],
+        "href": "/pokedex/haunter"
+    },
+    {
+        "id": "1-094",
+        "name": "Gengar",
+        "poke_types": [
+            "Ghost",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Cursed Body"
+        ],
+        "location": [
+            "Gastly",
+            "Haunter"
+        ],
+        "href": "/pokedex/gengar"
+    },
+    {
+        "id": "1-095",
+        "name": "Onix",
+        "poke_types": [
+            "Rock",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Weak Armor"
+        ],
+        "location": [
+            "Rock Tunnel",
+            "Sevault Canyon",
+            "Victory Road"
+        ],
+        "href": "/pokedex/onix"
+    },
+    {
+        "id": "1-096",
+        "name": "Drowzee",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Insomnia",
+            "Forewarn",
+            "Inner Focus"
+        ],
+        "location": [
+            "Route 11",
+            "Berry Forest"
+        ],
+        "href": "/pokedex/drowzee"
+    },
+    {
+        "id": "1-097",
+        "name": "Hypno",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Insomnia",
+            "Forewarn",
+            "Inner Focus"
+        ],
+        "location": [
+            "Berry Forest"
+        ],
+        "href": "/pokedex/hypno"
+    },
+    {
+        "id": "1-098",
+        "name": "Krabby",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Hyper Cutter",
+            "Shell Armor",
+            "Sheer Force"
+        ],
+        "location": [
+            "Route 4",
+            "Route 10",
+            "Route 11",
+            "Route 12",
+            "Route 13",
+            "Route 19",
+            "Route 20",
+            "Route 21",
+            "Route 24",
+            "Cerulean City",
+            "Cinnabar Island",
+            "Pallet Town",
+            "Seafoam Islands",
+            "Vermilion City"
+        ],
+        "href": "/pokedex/krabby"
+    },
+    {
+        "id": "1-099",
+        "name": "Kingler",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Hyper Cutter",
+            "Shell Armor",
+            "Sheer Force"
+        ],
+        "location": [
+            "Krabby"
+        ],
+        "href": "/pokedex/kingler"
+    },
+    {
+        "id": "1-100",
+        "name": "Voltorb",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Soundproof",
+            "Static",
+            "Aftermath"
+        ],
+        "location": [
+            "Route 10",
+            "Power Plant"
+        ],
+        "href": "/pokedex/voltorb"
+    },
+    {
+        "id": "1-101",
+        "name": "Electrode",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Soundproof",
+            "Static",
+            "Aftermath"
+        ],
+        "location": [
+            "Cerulean Cave",
+            "Cinnabar Island"
+        ],
+        "href": "/pokedex/electrode"
+    },
+    {
+        "id": "1-102",
+        "name": "Exeggcute",
+        "poke_types": [
+            "Grass",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Harvest"
+        ],
+        "location": [
+            "Berry Forest",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/exeggcute"
+    },
+    {
+        "id": "1-103",
+        "name": "Exeggutor",
+        "poke_types": [
+            "Grass",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Harvest"
+        ],
+        "location": [
+            "Exeggcute"
+        ],
+        "href": "/pokedex/exeggutor"
+    },
+    {
+        "id": "1-104",
+        "name": "Cubone",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Monster"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Lightning Rod",
+            "Battle Armor"
+        ],
+        "location": [
+            "Pok\u00e9mon Tower",
+            "Sevault Canyon"
+        ],
+        "href": "/pokedex/cubone"
+    },
+    {
+        "id": "1-105",
+        "name": "Marowak",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Monster"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Lightning Rod",
+            "Battle Armor"
+        ],
+        "location": [
+            "Sevault Canyon",
+            "Victory Road"
+        ],
+        "href": "/pokedex/marowak"
+    },
+    {
+        "id": "1-106",
+        "name": "Hitmonlee",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Limber",
+            "Reckless",
+            "Unburden"
+        ],
+        "location": [
+            "Saffron City"
+        ],
+        "href": "/pokedex/hitmonlee"
+    },
+    {
+        "id": "1-107",
+        "name": "Hitmonchan",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Iron Fist",
+            "Inner Focus"
+        ],
+        "location": [
+            "Saffron City"
+        ],
+        "href": "/pokedex/hitmonchan"
+    },
+    {
+        "id": "1-108",
+        "name": "Lickitung",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Monster"
+        ],
+        "abilities": [
+            "Own Tempo",
+            "Oblivious",
+            "Cloud Nine"
+        ],
+        "location": [
+            "Route 18"
+        ],
+        "href": "/pokedex/lickitung"
+    },
+    {
+        "id": "1-109",
+        "name": "Koffing",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Levitate",
+            "Neutralizing Gas",
+            "Stench"
+        ],
+        "location": [
+            "Celadon City",
+            "Pok\u00e9mon Mansion"
+        ],
+        "href": "/pokedex/koffing"
+    },
+    {
+        "id": "1-110",
+        "name": "Weezing",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Levitate",
+            "Neutralizing Gas",
+            "Stench"
+        ],
+        "location": [
+            "Pok\u00e9mon Mansion"
+        ],
+        "href": "/pokedex/weezing"
+    },
+    {
+        "id": "1-111",
+        "name": "Rhyhorn",
+        "poke_types": [
+            "Ground",
+            "Rock"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Lightning Rod",
+            "Rock Head",
+            "Reckless"
+        ],
+        "location": [
+            "Safari Zone"
+        ],
+        "href": "/pokedex/rhyhorn"
+    },
+    {
+        "id": "1-112",
+        "name": "Rhydon",
+        "poke_types": [
+            "Ground",
+            "Rock"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Lightning Rod",
+            "Rock Head",
+            "Reckless"
+        ],
+        "location": [
+            "Rhyhorn"
+        ],
+        "href": "/pokedex/rhydon"
+    },
+    {
+        "id": "1-113",
+        "name": "Chansey",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Fairy"
+        ],
+        "abilities": [
+            "Natural Cure",
+            "Serene Grace",
+            "Healer"
+        ],
+        "location": [
+            "Safari Zone"
+        ],
+        "href": "/pokedex/chansey"
+    },
+    {
+        "id": "1-114",
+        "name": "Tangela",
+        "poke_types": [
+            "Grass"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Leaf Guard",
+            "Regenerator"
+        ],
+        "location": [
+            "Route 21",
+            "Cinnabar Island",
+            "Treasure Beach"
+        ],
+        "href": "/pokedex/tangela"
+    },
+    {
+        "id": "1-115",
+        "name": "Kangaskhan",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Monster"
+        ],
+        "abilities": [
+            "Early Bird",
+            "Scrappy",
+            "Inner Focus"
+        ],
+        "location": [
+            "Safari Zone"
+        ],
+        "href": "/pokedex/kangaskhan"
+    },
+    {
+        "id": "1-116",
+        "name": "Horsea",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 1"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Sniper",
+            "Damp"
+        ],
+        "location": [
+            "Route 4",
+            "Route 10",
+            "Route 11",
+            "Route 12",
+            "Route 13",
+            "Route 19",
+            "Route 20",
+            "Route 21",
+            "Route 24",
+            "Bond Bridge",
+            "Cerulean City",
+            "Cinnabar Island",
+            "Five Island",
+            "Five Isle Meadow",
+            "Green Path",
+            "Icefall Cave",
+            "Kindle Road",
+            "Memorial Pillar",
+            "One Island",
+            "Outcast Island",
+            "Pallet Town",
+            "Resort Gorgeous",
+            "Seafoam Islands",
+            "Tanoby Ruins",
+            "Trainer Tower",
+            "Treasure Beach",
+            "Vermilion City",
+            "Water Labyrinth",
+            "Water Path"
+        ],
+        "href": "/pokedex/horsea"
+    },
+    {
+        "id": "1-117",
+        "name": "Seadra",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 1"
+        ],
+        "abilities": [
+            "Poison Point",
+            "Sniper",
+            "Damp"
+        ],
+        "location": [
+            "Bond Bridge",
+            "Cinnabar Island",
+            "Five Island",
+            "Five Isle Meadow",
+            "Green Path",
+            "Icefall Cave",
+            "Kindle Road",
+            "Memorial Pillar",
+            "One Island",
+            "Outcast Island",
+            "Pallet Town",
+            "Resort Gorgeous",
+            "Tanoby Ruins",
+            "Trainer Tower",
+            "Treasure Beach",
+            "Water Labyrinth",
+            "Water Path"
+        ],
+        "href": "/pokedex/seadra"
+    },
+    {
+        "id": "1-118",
+        "name": "Goldeen",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Water Veil",
+            "Lightning Rod"
+        ],
+        "location": [
+            "Route 6",
+            "Route 22",
+            "Route 23",
+            "Route 25",
+            "Berry Forest",
+            "Cape Brink",
+            "Cerulean Cave",
+            "Four Island",
+            "Fuchsia City",
+            "Icefall Cave",
+            "Ruin Valley",
+            "Viridian City",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/goldeen"
+    },
+    {
+        "id": "1-119",
+        "name": "Seaking",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Water Veil",
+            "Lightning Rod"
+        ],
+        "location": [
+            "Berry Forest",
+            "Fuchsia City",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/seaking"
+    },
+    {
+        "id": "1-120",
+        "name": "Staryu",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Illuminate",
+            "Natural Cure",
+            "Analytic"
+        ],
+        "location": [],
+        "href": "/pokedex/staryu"
+    },
+    {
+        "id": "1-121",
+        "name": "Starmie",
+        "poke_types": [
+            "Water",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Illuminate",
+            "Natural Cure",
+            "Analytic"
+        ],
+        "location": [],
+        "href": "/pokedex/starmie"
+    },
+    {
+        "id": "1-122",
+        "name": "Mr. Mime",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Soundproof",
+            "Filter",
+            "Technician"
+        ],
+        "location": [
+            "Route 2"
+        ],
+        "href": "/pokedex/mr-mime"
+    },
+    {
+        "id": "1-123",
+        "name": "Scyther",
+        "poke_types": [
+            "Bug",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Swarm",
+            "Technician",
+            "Steadfast"
+        ],
+        "location": [
+            "Celadon City",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/scyther"
+    },
+    {
+        "id": "1-124",
+        "name": "Jynx",
+        "poke_types": [
+            "Ice",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Oblivious",
+            "Forewarn",
+            "Dry Skin"
+        ],
+        "location": [
+            "Cerulean City"
+        ],
+        "href": "/pokedex/jynx"
+    },
+    {
+        "id": "1-125",
+        "name": "Electabuzz",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Static",
+            "Vital Spirit"
+        ],
+        "location": [
+            "Power Plant"
+        ],
+        "href": "/pokedex/electabuzz"
+    },
+    {
+        "id": "1-126",
+        "name": "Magmar",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Flame Body",
+            "Vital Spirit"
+        ],
+        "location": [],
+        "href": "/pokedex/magmar"
+    },
+    {
+        "id": "1-127",
+        "name": "Pinsir",
+        "poke_types": [
+            "Bug"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Hyper Cutter",
+            "Mold Breaker",
+            "Moxie"
+        ],
+        "location": [],
+        "href": "/pokedex/pinsir"
+    },
+    {
+        "id": "1-128",
+        "name": "Tauros",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Intimidate",
+            "Anger Point",
+            "Sheer Force"
+        ],
+        "location": [
+            "Safari Zone"
+        ],
+        "href": "/pokedex/tauros"
+    },
+    {
+        "id": "1-129",
+        "name": "Magikarp",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 2"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Rattled"
+        ],
+        "location": [
+            "Route 4",
+            "Route 6",
+            "Route 10",
+            "Route 11",
+            "Route 12",
+            "Route 13",
+            "Route 19",
+            "Route 20",
+            "Route 21",
+            "Route 22",
+            "Route 23",
+            "Route 24",
+            "Route 25",
+            "Berry Forest",
+            "Bond Bridge",
+            "Cape Brink",
+            "Celadon City",
+            "Cerulean Cave",
+            "Cerulean City",
+            "Cinnabar Island",
+            "Five Island",
+            "Five Isle Meadow",
+            "Four Island",
+            "Fuchsia City",
+            "Green Path",
+            "Icefall Cave",
+            "Kindle Road",
+            "Memorial Pillar",
+            "One Island",
+            "Outcast Island",
+            "Pallet Town",
+            "Resort Gorgeous",
+            "Ruin Valley",
+            "Seafoam Islands",
+            "Tanoby Ruins",
+            "Trainer Tower",
+            "Treasure Beach",
+            "Vermilion City",
+            "Viridian City",
+            "Water Labyrinth",
+            "Water Path",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/magikarp"
+    },
+    {
+        "id": "1-130",
+        "name": "Gyarados",
+        "poke_types": [
+            "Water",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 2"
+        ],
+        "abilities": [
+            "Intimidate",
+            "Moxie"
+        ],
+        "location": [
+            "Route 4",
+            "Route 6",
+            "Route 10",
+            "Route 11",
+            "Route 12",
+            "Route 13",
+            "Route 19",
+            "Route 20",
+            "Route 21",
+            "Route 22",
+            "Route 23",
+            "Route 24",
+            "Route 25",
+            "Berry Forest",
+            "Bond Bridge",
+            "Cape Brink",
+            "Cerulean Cave",
+            "Cerulean City",
+            "Cinnabar Island",
+            "Five Island",
+            "Five Isle Meadow",
+            "Four Island",
+            "Fuchsia City",
+            "Green Path",
+            "Icefall Cave",
+            "Kindle Road",
+            "Memorial Pillar",
+            "One Island",
+            "Outcast Island",
+            "Pallet Town",
+            "Resort Gorgeous",
+            "Ruin Valley",
+            "Seafoam Islands",
+            "Tanoby Ruins",
+            "Trainer Tower",
+            "Treasure Beach",
+            "Vermilion City",
+            "Viridian City",
+            "Water Labyrinth",
+            "Water Path"
+        ],
+        "href": "/pokedex/gyarados"
+    },
+    {
+        "id": "1-131",
+        "name": "Lapras",
+        "poke_types": [
+            "Water",
+            "Ice"
+        ],
+        "egg_groups": [
+            "Monster",
+            "Water 1"
+        ],
+        "abilities": [
+            "Water Absorb",
+            "Shell Armor",
+            "Hydration"
+        ],
+        "location": [
+            "Icefall Cave",
+            "Silph Co."
+        ],
+        "href": "/pokedex/lapras"
+    },
+    {
+        "id": "1-132",
+        "name": "Ditto",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Ditto"
+        ],
+        "abilities": [
+            "Limber",
+            "Imposter"
+        ],
+        "location": [
+            "Route 13",
+            "Route 14",
+            "Route 15",
+            "Cerulean Cave",
+            "Pok\u00e9mon Mansion"
+        ],
+        "href": "/pokedex/ditto"
+    },
+    {
+        "id": "1-133",
+        "name": "Eevee",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Run Away",
+            "Adaptability",
+            "Anticipation"
+        ],
+        "location": [
+            "Celadon City"
+        ],
+        "href": "/pokedex/eevee"
+    },
+    {
+        "id": "1-134",
+        "name": "Vaporeon",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Water Absorb",
+            "Hydration"
+        ],
+        "location": [
+            "Eevee"
+        ],
+        "href": "/pokedex/vaporeon"
+    },
+    {
+        "id": "1-135",
+        "name": "Jolteon",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Volt Absorb",
+            "Quick Feet"
+        ],
+        "location": [
+            "Eevee"
+        ],
+        "href": "/pokedex/jolteon"
+    },
+    {
+        "id": "1-136",
+        "name": "Flareon",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Flash Fire",
+            "Guts"
+        ],
+        "location": [
+            "Eevee"
+        ],
+        "href": "/pokedex/flareon"
+    },
+    {
+        "id": "1-137",
+        "name": "Porygon",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Trace",
+            "Download",
+            "Analytic"
+        ],
+        "location": [
+            "Celadon City"
+        ],
+        "href": "/pokedex/porygon"
+    },
+    {
+        "id": "1-138",
+        "name": "Omanyte",
+        "poke_types": [
+            "Rock",
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 1",
+            "Water 3"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Shell Armor",
+            "Weak Armor"
+        ],
+        "location": [
+            "Cinnabar Island"
+        ],
+        "href": "/pokedex/omanyte"
+    },
+    {
+        "id": "1-139",
+        "name": "Omastar",
+        "poke_types": [
+            "Rock",
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 1",
+            "Water 3"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Shell Armor",
+            "Weak Armor"
+        ],
+        "location": [
+            "Omanyte"
+        ],
+        "href": "/pokedex/omastar"
+    },
+    {
+        "id": "1-140",
+        "name": "Kabuto",
+        "poke_types": [
+            "Rock",
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 1",
+            "Water 3"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Battle Armor",
+            "Weak Armor"
+        ],
+        "location": [
+            "Cinnabar Island"
+        ],
+        "href": "/pokedex/kabuto"
+    },
+    {
+        "id": "1-141",
+        "name": "Kabutops",
+        "poke_types": [
+            "Rock",
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 1",
+            "Water 3"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Battle Armor",
+            "Weak Armor"
+        ],
+        "location": [
+            "Kabuto"
+        ],
+        "href": "/pokedex/kabutops"
+    },
+    {
+        "id": "1-142",
+        "name": "Aerodactyl",
+        "poke_types": [
+            "Rock",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Pressure",
+            "Unnerve"
+        ],
+        "location": [
+            "Cinnabar Island"
+        ],
+        "href": "/pokedex/aerodactyl"
+    },
+    {
+        "id": "1-143",
+        "name": "Snorlax",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Monster"
+        ],
+        "abilities": [
+            "Immunity",
+            "Thick Fat",
+            "Gluttony"
+        ],
+        "location": [
+            "Route 12",
+            "Route 16"
+        ],
+        "href": "/pokedex/snorlax"
+    },
+    {
+        "id": "1-144",
+        "name": "Articuno",
+        "poke_types": [
+            "Ice",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Pressure",
+            "Snow Cloak"
+        ],
+        "location": [
+            "Seafoam Islands"
+        ],
+        "href": "/pokedex/articuno"
+    },
+    {
+        "id": "1-145",
+        "name": "Zapdos",
+        "poke_types": [
+            "Electric",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Pressure",
+            "Static"
+        ],
+        "location": [
+            "Power Plant"
+        ],
+        "href": "/pokedex/zapdos"
+    },
+    {
+        "id": "1-146",
+        "name": "Moltres",
+        "poke_types": [
+            "Fire",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Pressure",
+            "Flame Body"
+        ],
+        "location": [
+            "Mt. Ember"
+        ],
+        "href": "/pokedex/moltres"
+    },
+    {
+        "id": "1-147",
+        "name": "Dratini",
+        "poke_types": [
+            "Dragon"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 1"
+        ],
+        "abilities": [
+            "Shed Skin",
+            "Marvel Scale"
+        ],
+        "location": [
+            "Celadon City",
+            "Safari Zone"
+        ],
+        "href": "/pokedex/dratini"
+    },
+    {
+        "id": "1-148",
+        "name": "Dragonair",
+        "poke_types": [
+            "Dragon"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 1"
+        ],
+        "abilities": [
+            "Shed Skin",
+            "Marvel Scale"
+        ],
+        "location": [
+            "Safari Zone"
+        ],
+        "href": "/pokedex/dragonair"
+    },
+    {
+        "id": "1-149",
+        "name": "Dragonite",
+        "poke_types": [
+            "Dragon",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 1"
+        ],
+        "abilities": [
+            "Inner Focus",
+            "Multiscale"
+        ],
+        "location": [
+            "Dratini",
+            "Dragonair"
+        ],
+        "href": "/pokedex/dragonite"
+    },
+    {
+        "id": "1-150",
+        "name": "Mewtwo",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Pressure",
+            "Unnerve"
+        ],
+        "location": [
+            "Cerulean Cave"
+        ],
+        "href": "/pokedex/mewtwo"
+    },
+    {
+        "id": "1-151",
+        "name": "Mew",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Synchronize"
+        ],
+        "location": [],
+        "href": "/pokedex/mew"
+    }
+]

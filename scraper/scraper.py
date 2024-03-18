@@ -9,8 +9,8 @@ BASE_URL = "https://pokemondb.net"
 DATA_FOLDER = "../data/"
 
 GAME_MAP = {
-    "emerald": ["https://pokemondb.net/pokedex/game/ruby-sapphire-emerald", "3"],
-    "red": ["https://pokemondb.net/pokedex/game/firered-leafgreen", "1"]
+    "Emerald": ["https://pokemondb.net/pokedex/game/ruby-sapphire-emerald", "3"],
+    "FireRed": ["https://pokemondb.net/pokedex/game/firered-leafgreen", "1"]
 }
 
 
@@ -20,12 +20,13 @@ class ScraperError(Exception):
 
 class Pokemon:
     def __init__(self, id: str, name: str, poke_types: list, egg_groups: list,
-                 abilities: list, href: str):
+                 abilities: list, location: list, href: str):
         self.id = id
         self.name = name
         self.poke_types = poke_types
         self.egg_groups = egg_groups
         self.abilities = abilities
+        self.location = location
         self.href = href
 
     def __str__(self):
@@ -82,11 +83,12 @@ class GameScraper(PokemonDBScraper):
         href = name_element["href"]
         types = [type_element.text for type_element in type_elements]
 
-        poke_scraper = PokemonScraper(pokemon_name, href)
+        poke_scraper = PokemonScraper(pokemon_name, self.game_name, href)
         abilities = poke_scraper.get_abilities()
         egg_groups = poke_scraper.get_egg_groups()
+        locations = poke_scraper.get_location()
 
-        return Pokemon(id, pokemon_name, types, egg_groups, abilities, href)
+        return Pokemon(id, pokemon_name, types, egg_groups, abilities, locations, href)
 
     def get_all_pokemon(self) -> list:
         soup = self._load_webpage()
@@ -97,8 +99,9 @@ class GameScraper(PokemonDBScraper):
 
 
 class PokemonScraper(PokemonDBScraper):
-    def __init__(self, name: str, href: str) -> None:
+    def __init__(self, name: str, game: str, href: str) -> None:
         self.name = name
+        self.game = game
         super().__init__(BASE_URL + href)
 
     def is_gridcol_div(self, tag, specifier: str) -> bool:
@@ -120,14 +123,37 @@ class PokemonScraper(PokemonDBScraper):
             lambda tag: tag.name == "a" and "ability" in tag.attrs.get("href", ""))
         return [ability_a_tag.get_text() for ability_a_tag in ability_a_tags]
 
+    def find_location_tag(self, tag):
+        return (tag.name == "tr"
+                and tag.find(lambda child: child.name == "span" and self.game in child.get_text()))
+
+    def get_location(self):
+        soup = self._load_webpage()
+        location_div = soup.find(lambda tag: self.is_gridcol_div(tag, f"Where to find {self.name}"))
+        location_tr = location_div.find(lambda tag: self.find_location_tag(tag))
+        locations = [location.get_text() for location in location_tr.find_all("a")]
+        new_locations = []
+        for location in locations:
+            if location.isnumeric():
+                new_locations.append("Route " + location)
+            else:
+                new_locations.append(location)
+        return new_locations
+
     def get_file_path(self) -> str:
-        return DATA_FOLDER + "pokemon/" + self.name + ".html"
+        return DATA_FOLDER + f"pokemon-{self.game.lower()}/" + self.name + ".html"
 
 
 if __name__ == "__main__":
     # emerald = GameScraper("emerald")
-    # pokemon = emerald.get_all_pokemon()
-    # poke_dicts = [poke.__dict__ for poke in pokemon]
-    # with open(DATA_FOLDER + "generation3-pokemon.json", "w", encoding="utf-8") as f:
+    # pokemon-emerald = emerald.get_all_pokemon()
+    # # poke = PokemonScraper("Treecko", "Emerald", "/pokedex/treecko")
+    # # print(poke.get_location())
+    # poke_dicts = [poke.__dict__ for poke in pokemon-emerald]
+    # with open(DATA_FOLDER + "generation3-pokemon-emerald.json", "w", encoding="utf-8") as f:
     #     f.write(json.dumps(poke_dicts, indent=4))
-    pass
+    red = GameScraper("FireRed")
+    pokemon = red.get_all_pokemon()
+    poke_dicts = [poke.__dict__ for poke in pokemon]
+    with open(DATA_FOLDER + "generation1-pokemon.json", "w", encoding="utf-8") as f:
+        f.write(json.dumps(poke_dicts, indent=4))
