@@ -1,0 +1,3276 @@
+[
+    {
+        "id": "3-001",
+        "name": "Treecko",
+        "poke_types": [
+            "Grass"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Monster"
+        ],
+        "abilities": [
+            "Overgrow",
+            "Unburden"
+        ],
+        "href": "/pokedex/treecko"
+    },
+    {
+        "id": "3-002",
+        "name": "Grovyle",
+        "poke_types": [
+            "Grass"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Monster"
+        ],
+        "abilities": [
+            "Overgrow",
+            "Unburden"
+        ],
+        "href": "/pokedex/grovyle"
+    },
+    {
+        "id": "3-003",
+        "name": "Sceptile",
+        "poke_types": [
+            "Grass"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Monster"
+        ],
+        "abilities": [
+            "Overgrow",
+            "Unburden"
+        ],
+        "href": "/pokedex/sceptile"
+    },
+    {
+        "id": "3-004",
+        "name": "Torchic",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Blaze",
+            "Speed Boost"
+        ],
+        "href": "/pokedex/torchic"
+    },
+    {
+        "id": "3-005",
+        "name": "Combusken",
+        "poke_types": [
+            "Fire",
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Blaze",
+            "Speed Boost"
+        ],
+        "href": "/pokedex/combusken"
+    },
+    {
+        "id": "3-006",
+        "name": "Blaziken",
+        "poke_types": [
+            "Fire",
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Blaze",
+            "Speed Boost"
+        ],
+        "href": "/pokedex/blaziken"
+    },
+    {
+        "id": "3-007",
+        "name": "Mudkip",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Monster",
+            "Water 1"
+        ],
+        "abilities": [
+            "Torrent",
+            "Damp"
+        ],
+        "href": "/pokedex/mudkip"
+    },
+    {
+        "id": "3-008",
+        "name": "Marshtomp",
+        "poke_types": [
+            "Water",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Monster",
+            "Water 1"
+        ],
+        "abilities": [
+            "Torrent",
+            "Damp"
+        ],
+        "href": "/pokedex/marshtomp"
+    },
+    {
+        "id": "3-009",
+        "name": "Swampert",
+        "poke_types": [
+            "Water",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Monster",
+            "Water 1"
+        ],
+        "abilities": [
+            "Torrent",
+            "Damp"
+        ],
+        "href": "/pokedex/swampert"
+    },
+    {
+        "id": "3-010",
+        "name": "Poochyena",
+        "poke_types": [
+            "Dark"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Run Away",
+            "Quick Feet",
+            "Rattled"
+        ],
+        "href": "/pokedex/poochyena"
+    },
+    {
+        "id": "3-011",
+        "name": "Mightyena",
+        "poke_types": [
+            "Dark"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Intimidate",
+            "Quick Feet",
+            "Moxie"
+        ],
+        "href": "/pokedex/mightyena"
+    },
+    {
+        "id": "3-012",
+        "name": "Zigzagoon",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Pickup",
+            "Gluttony",
+            "Quick Feet"
+        ],
+        "href": "/pokedex/zigzagoon"
+    },
+    {
+        "id": "3-013",
+        "name": "Linoone",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Pickup",
+            "Gluttony",
+            "Quick Feet"
+        ],
+        "href": "/pokedex/linoone"
+    },
+    {
+        "id": "3-014",
+        "name": "Wurmple",
+        "poke_types": [
+            "Bug"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Shield Dust",
+            "Run Away"
+        ],
+        "href": "/pokedex/wurmple"
+    },
+    {
+        "id": "3-015",
+        "name": "Silcoon",
+        "poke_types": [
+            "Bug"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Shed Skin"
+        ],
+        "href": "/pokedex/silcoon"
+    },
+    {
+        "id": "3-016",
+        "name": "Beautifly",
+        "poke_types": [
+            "Bug",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Swarm",
+            "Rivalry"
+        ],
+        "href": "/pokedex/beautifly"
+    },
+    {
+        "id": "3-017",
+        "name": "Cascoon",
+        "poke_types": [
+            "Bug"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Shed Skin"
+        ],
+        "href": "/pokedex/cascoon"
+    },
+    {
+        "id": "3-018",
+        "name": "Dustox",
+        "poke_types": [
+            "Bug",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Shield Dust",
+            "Compound Eyes"
+        ],
+        "href": "/pokedex/dustox"
+    },
+    {
+        "id": "3-019",
+        "name": "Lotad",
+        "poke_types": [
+            "Water",
+            "Grass"
+        ],
+        "egg_groups": [
+            "Grass",
+            "Water 1"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Rain Dish",
+            "Own Tempo"
+        ],
+        "href": "/pokedex/lotad"
+    },
+    {
+        "id": "3-020",
+        "name": "Lombre",
+        "poke_types": [
+            "Water",
+            "Grass"
+        ],
+        "egg_groups": [
+            "Grass",
+            "Water 1"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Rain Dish",
+            "Own Tempo"
+        ],
+        "href": "/pokedex/lombre"
+    },
+    {
+        "id": "3-021",
+        "name": "Ludicolo",
+        "poke_types": [
+            "Water",
+            "Grass"
+        ],
+        "egg_groups": [
+            "Grass",
+            "Water 1"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Rain Dish",
+            "Own Tempo"
+        ],
+        "href": "/pokedex/ludicolo"
+    },
+    {
+        "id": "3-022",
+        "name": "Seedot",
+        "poke_types": [
+            "Grass"
+        ],
+        "egg_groups": [
+            "Field",
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Early Bird",
+            "Pickpocket"
+        ],
+        "href": "/pokedex/seedot"
+    },
+    {
+        "id": "3-023",
+        "name": "Nuzleaf",
+        "poke_types": [
+            "Grass",
+            "Dark"
+        ],
+        "egg_groups": [
+            "Field",
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Early Bird",
+            "Pickpocket"
+        ],
+        "href": "/pokedex/nuzleaf"
+    },
+    {
+        "id": "3-024",
+        "name": "Shiftry",
+        "poke_types": [
+            "Grass",
+            "Dark"
+        ],
+        "egg_groups": [
+            "Field",
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Early Bird",
+            "Pickpocket"
+        ],
+        "href": "/pokedex/shiftry"
+    },
+    {
+        "id": "3-025",
+        "name": "Taillow",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Guts",
+            "Scrappy"
+        ],
+        "href": "/pokedex/taillow"
+    },
+    {
+        "id": "3-026",
+        "name": "Swellow",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Guts",
+            "Scrappy"
+        ],
+        "href": "/pokedex/swellow"
+    },
+    {
+        "id": "3-027",
+        "name": "Wingull",
+        "poke_types": [
+            "Water",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying",
+            "Water 1"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Hydration",
+            "Rain Dish"
+        ],
+        "href": "/pokedex/wingull"
+    },
+    {
+        "id": "3-028",
+        "name": "Pelipper",
+        "poke_types": [
+            "Water",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying",
+            "Water 1"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Drizzle",
+            "Rain Dish"
+        ],
+        "href": "/pokedex/pelipper"
+    },
+    {
+        "id": "3-029",
+        "name": "Ralts",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Amorphous",
+            "Human-Like"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Trace",
+            "Telepathy"
+        ],
+        "href": "/pokedex/ralts"
+    },
+    {
+        "id": "3-030",
+        "name": "Kirlia",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Amorphous",
+            "Human-Like"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Trace",
+            "Telepathy"
+        ],
+        "href": "/pokedex/kirlia"
+    },
+    {
+        "id": "3-031",
+        "name": "Gardevoir",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Amorphous",
+            "Human-Like"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Trace",
+            "Telepathy"
+        ],
+        "href": "/pokedex/gardevoir"
+    },
+    {
+        "id": "3-032",
+        "name": "Surskit",
+        "poke_types": [
+            "Bug",
+            "Water"
+        ],
+        "egg_groups": [
+            "Bug",
+            "Water 1"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Rain Dish"
+        ],
+        "href": "/pokedex/surskit"
+    },
+    {
+        "id": "3-033",
+        "name": "Masquerain",
+        "poke_types": [
+            "Bug",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Bug",
+            "Water 1"
+        ],
+        "abilities": [
+            "Intimidate",
+            "Unnerve"
+        ],
+        "href": "/pokedex/masquerain"
+    },
+    {
+        "id": "3-034",
+        "name": "Shroomish",
+        "poke_types": [
+            "Grass"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Grass"
+        ],
+        "abilities": [
+            "Effect Spore",
+            "Poison Heal",
+            "Quick Feet"
+        ],
+        "href": "/pokedex/shroomish"
+    },
+    {
+        "id": "3-035",
+        "name": "Breloom",
+        "poke_types": [
+            "Grass",
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Grass"
+        ],
+        "abilities": [
+            "Effect Spore",
+            "Poison Heal",
+            "Technician"
+        ],
+        "href": "/pokedex/breloom"
+    },
+    {
+        "id": "3-036",
+        "name": "Slakoth",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Truant"
+        ],
+        "href": "/pokedex/slakoth"
+    },
+    {
+        "id": "3-037",
+        "name": "Vigoroth",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Vital Spirit"
+        ],
+        "href": "/pokedex/vigoroth"
+    },
+    {
+        "id": "3-038",
+        "name": "Slaking",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Truant"
+        ],
+        "href": "/pokedex/slaking"
+    },
+    {
+        "id": "3-039",
+        "name": "Abra",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Inner Focus",
+            "Magic Guard"
+        ],
+        "href": "/pokedex/abra"
+    },
+    {
+        "id": "3-040",
+        "name": "Kadabra",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Inner Focus",
+            "Magic Guard"
+        ],
+        "href": "/pokedex/kadabra"
+    },
+    {
+        "id": "3-041",
+        "name": "Alakazam",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Inner Focus",
+            "Magic Guard"
+        ],
+        "href": "/pokedex/alakazam"
+    },
+    {
+        "id": "3-042",
+        "name": "Nincada",
+        "poke_types": [
+            "Bug",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Compound Eyes",
+            "Run Away"
+        ],
+        "href": "/pokedex/nincada"
+    },
+    {
+        "id": "3-043",
+        "name": "Ninjask",
+        "poke_types": [
+            "Bug",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Speed Boost",
+            "Infiltrator"
+        ],
+        "href": "/pokedex/ninjask"
+    },
+    {
+        "id": "3-044",
+        "name": "Shedinja",
+        "poke_types": [
+            "Bug",
+            "Ghost"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Wonder Guard"
+        ],
+        "href": "/pokedex/shedinja"
+    },
+    {
+        "id": "3-045",
+        "name": "Whismur",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Soundproof",
+            "Rattled"
+        ],
+        "href": "/pokedex/whismur"
+    },
+    {
+        "id": "3-046",
+        "name": "Loudred",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Soundproof",
+            "Scrappy"
+        ],
+        "href": "/pokedex/loudred"
+    },
+    {
+        "id": "3-047",
+        "name": "Exploud",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Soundproof",
+            "Scrappy"
+        ],
+        "href": "/pokedex/exploud"
+    },
+    {
+        "id": "3-048",
+        "name": "Makuhita",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Guts",
+            "Sheer Force"
+        ],
+        "href": "/pokedex/makuhita"
+    },
+    {
+        "id": "3-049",
+        "name": "Hariyama",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Guts",
+            "Sheer Force"
+        ],
+        "href": "/pokedex/hariyama"
+    },
+    {
+        "id": "3-050",
+        "name": "Goldeen",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Water Veil",
+            "Lightning Rod"
+        ],
+        "href": "/pokedex/goldeen"
+    },
+    {
+        "id": "3-051",
+        "name": "Seaking",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Water Veil",
+            "Lightning Rod"
+        ],
+        "href": "/pokedex/seaking"
+    },
+    {
+        "id": "3-052",
+        "name": "Magikarp",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 2"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Rattled"
+        ],
+        "href": "/pokedex/magikarp"
+    },
+    {
+        "id": "3-053",
+        "name": "Gyarados",
+        "poke_types": [
+            "Water",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 2"
+        ],
+        "abilities": [
+            "Intimidate",
+            "Moxie"
+        ],
+        "href": "/pokedex/gyarados"
+    },
+    {
+        "id": "3-054",
+        "name": "Azurill",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Huge Power",
+            "Sap Sipper"
+        ],
+        "href": "/pokedex/azurill"
+    },
+    {
+        "id": "3-055",
+        "name": "Marill",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Water 1"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Huge Power",
+            "Sap Sipper"
+        ],
+        "href": "/pokedex/marill"
+    },
+    {
+        "id": "3-056",
+        "name": "Azumarill",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Water 1"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Huge Power",
+            "Sap Sipper"
+        ],
+        "href": "/pokedex/azumarill"
+    },
+    {
+        "id": "3-057",
+        "name": "Geodude",
+        "poke_types": [
+            "Rock",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Sand Veil"
+        ],
+        "href": "/pokedex/geodude"
+    },
+    {
+        "id": "3-058",
+        "name": "Graveler",
+        "poke_types": [
+            "Rock",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Sand Veil"
+        ],
+        "href": "/pokedex/graveler"
+    },
+    {
+        "id": "3-059",
+        "name": "Golem",
+        "poke_types": [
+            "Rock",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Sand Veil"
+        ],
+        "href": "/pokedex/golem"
+    },
+    {
+        "id": "3-060",
+        "name": "Nosepass",
+        "poke_types": [
+            "Rock"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Sturdy",
+            "Magnet Pull",
+            "Sand Force"
+        ],
+        "href": "/pokedex/nosepass"
+    },
+    {
+        "id": "3-061",
+        "name": "Skitty",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Field"
+        ],
+        "abilities": [
+            "Cute Charm",
+            "Normalize",
+            "Wonder Skin"
+        ],
+        "href": "/pokedex/skitty"
+    },
+    {
+        "id": "3-062",
+        "name": "Delcatty",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Field"
+        ],
+        "abilities": [
+            "Cute Charm",
+            "Normalize",
+            "Wonder Skin"
+        ],
+        "href": "/pokedex/delcatty"
+    },
+    {
+        "id": "3-063",
+        "name": "Zubat",
+        "poke_types": [
+            "Poison",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Inner Focus",
+            "Infiltrator"
+        ],
+        "href": "/pokedex/zubat"
+    },
+    {
+        "id": "3-064",
+        "name": "Golbat",
+        "poke_types": [
+            "Poison",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Inner Focus",
+            "Infiltrator"
+        ],
+        "href": "/pokedex/golbat"
+    },
+    {
+        "id": "3-065",
+        "name": "Crobat",
+        "poke_types": [
+            "Poison",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Inner Focus",
+            "Infiltrator"
+        ],
+        "href": "/pokedex/crobat"
+    },
+    {
+        "id": "3-066",
+        "name": "Tentacool",
+        "poke_types": [
+            "Water",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Clear Body",
+            "Liquid Ooze",
+            "Rain Dish"
+        ],
+        "href": "/pokedex/tentacool"
+    },
+    {
+        "id": "3-067",
+        "name": "Tentacruel",
+        "poke_types": [
+            "Water",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Clear Body",
+            "Liquid Ooze",
+            "Rain Dish"
+        ],
+        "href": "/pokedex/tentacruel"
+    },
+    {
+        "id": "3-068",
+        "name": "Sableye",
+        "poke_types": [
+            "Dark",
+            "Ghost"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Stall",
+            "Prankster"
+        ],
+        "href": "/pokedex/sableye"
+    },
+    {
+        "id": "3-069",
+        "name": "Mawile",
+        "poke_types": [
+            "Steel"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Field"
+        ],
+        "abilities": [
+            "Hyper Cutter",
+            "Intimidate",
+            "Sheer Force"
+        ],
+        "href": "/pokedex/mawile"
+    },
+    {
+        "id": "3-070",
+        "name": "Aron",
+        "poke_types": [
+            "Steel",
+            "Rock"
+        ],
+        "egg_groups": [
+            "Monster"
+        ],
+        "abilities": [
+            "Sturdy",
+            "Rock Head",
+            "Heavy Metal"
+        ],
+        "href": "/pokedex/aron"
+    },
+    {
+        "id": "3-071",
+        "name": "Lairon",
+        "poke_types": [
+            "Steel",
+            "Rock"
+        ],
+        "egg_groups": [
+            "Monster"
+        ],
+        "abilities": [
+            "Sturdy",
+            "Rock Head",
+            "Heavy Metal"
+        ],
+        "href": "/pokedex/lairon"
+    },
+    {
+        "id": "3-072",
+        "name": "Aggron",
+        "poke_types": [
+            "Steel",
+            "Rock"
+        ],
+        "egg_groups": [
+            "Monster"
+        ],
+        "abilities": [
+            "Sturdy",
+            "Rock Head",
+            "Heavy Metal"
+        ],
+        "href": "/pokedex/aggron"
+    },
+    {
+        "id": "3-073",
+        "name": "Machop",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Guts",
+            "No Guard",
+            "Steadfast"
+        ],
+        "href": "/pokedex/machop"
+    },
+    {
+        "id": "3-074",
+        "name": "Machoke",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Guts",
+            "No Guard",
+            "Steadfast"
+        ],
+        "href": "/pokedex/machoke"
+    },
+    {
+        "id": "3-075",
+        "name": "Machamp",
+        "poke_types": [
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Guts",
+            "No Guard",
+            "Steadfast"
+        ],
+        "href": "/pokedex/machamp"
+    },
+    {
+        "id": "3-076",
+        "name": "Meditite",
+        "poke_types": [
+            "Fighting",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Pure Power",
+            "Telepathy"
+        ],
+        "href": "/pokedex/meditite"
+    },
+    {
+        "id": "3-077",
+        "name": "Medicham",
+        "poke_types": [
+            "Fighting",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Human-Like"
+        ],
+        "abilities": [
+            "Pure Power",
+            "Telepathy"
+        ],
+        "href": "/pokedex/medicham"
+    },
+    {
+        "id": "3-078",
+        "name": "Electrike",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Static",
+            "Lightning Rod",
+            "Minus"
+        ],
+        "href": "/pokedex/electrike"
+    },
+    {
+        "id": "3-079",
+        "name": "Manectric",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Static",
+            "Lightning Rod",
+            "Minus"
+        ],
+        "href": "/pokedex/manectric"
+    },
+    {
+        "id": "3-080",
+        "name": "Plusle",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Fairy"
+        ],
+        "abilities": [
+            "Plus",
+            "Lightning Rod"
+        ],
+        "href": "/pokedex/plusle"
+    },
+    {
+        "id": "3-081",
+        "name": "Minun",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Fairy"
+        ],
+        "abilities": [
+            "Minus",
+            "Volt Absorb"
+        ],
+        "href": "/pokedex/minun"
+    },
+    {
+        "id": "3-082",
+        "name": "Magnemite",
+        "poke_types": [
+            "Electric",
+            "Steel"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Magnet Pull",
+            "Sturdy",
+            "Analytic"
+        ],
+        "href": "/pokedex/magnemite"
+    },
+    {
+        "id": "3-083",
+        "name": "Magneton",
+        "poke_types": [
+            "Electric",
+            "Steel"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Magnet Pull",
+            "Sturdy",
+            "Analytic"
+        ],
+        "href": "/pokedex/magneton"
+    },
+    {
+        "id": "3-084",
+        "name": "Voltorb",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Soundproof",
+            "Static",
+            "Aftermath"
+        ],
+        "href": "/pokedex/voltorb"
+    },
+    {
+        "id": "3-085",
+        "name": "Electrode",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Soundproof",
+            "Static",
+            "Aftermath"
+        ],
+        "href": "/pokedex/electrode"
+    },
+    {
+        "id": "3-086",
+        "name": "Volbeat",
+        "poke_types": [
+            "Bug"
+        ],
+        "egg_groups": [
+            "Bug",
+            "Human-Like"
+        ],
+        "abilities": [
+            "Illuminate",
+            "Swarm",
+            "Prankster"
+        ],
+        "href": "/pokedex/volbeat"
+    },
+    {
+        "id": "3-087",
+        "name": "Illumise",
+        "poke_types": [
+            "Bug"
+        ],
+        "egg_groups": [
+            "Bug",
+            "Human-Like"
+        ],
+        "abilities": [
+            "Oblivious",
+            "Tinted Lens",
+            "Prankster"
+        ],
+        "href": "/pokedex/illumise"
+    },
+    {
+        "id": "3-088",
+        "name": "Oddish",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Run Away"
+        ],
+        "href": "/pokedex/oddish"
+    },
+    {
+        "id": "3-089",
+        "name": "Gloom",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Stench"
+        ],
+        "href": "/pokedex/gloom"
+    },
+    {
+        "id": "3-090",
+        "name": "Vileplume",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Effect Spore"
+        ],
+        "href": "/pokedex/vileplume"
+    },
+    {
+        "id": "3-091",
+        "name": "Bellossom",
+        "poke_types": [
+            "Grass"
+        ],
+        "egg_groups": [
+            "Grass"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Healer"
+        ],
+        "href": "/pokedex/bellossom"
+    },
+    {
+        "id": "3-092",
+        "name": "Doduo",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Run Away",
+            "Early Bird",
+            "Tangled Feet"
+        ],
+        "href": "/pokedex/doduo"
+    },
+    {
+        "id": "3-093",
+        "name": "Dodrio",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Run Away",
+            "Early Bird",
+            "Tangled Feet"
+        ],
+        "href": "/pokedex/dodrio"
+    },
+    {
+        "id": "3-094",
+        "name": "Roselia",
+        "poke_types": [
+            "Grass",
+            "Poison"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Grass"
+        ],
+        "abilities": [
+            "Natural Cure",
+            "Poison Point",
+            "Leaf Guard"
+        ],
+        "href": "/pokedex/roselia"
+    },
+    {
+        "id": "3-095",
+        "name": "Gulpin",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Liquid Ooze",
+            "Sticky Hold",
+            "Gluttony"
+        ],
+        "href": "/pokedex/gulpin"
+    },
+    {
+        "id": "3-096",
+        "name": "Swalot",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Liquid Ooze",
+            "Sticky Hold",
+            "Gluttony"
+        ],
+        "href": "/pokedex/swalot"
+    },
+    {
+        "id": "3-097",
+        "name": "Carvanha",
+        "poke_types": [
+            "Water",
+            "Dark"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Rough Skin",
+            "Speed Boost"
+        ],
+        "href": "/pokedex/carvanha"
+    },
+    {
+        "id": "3-098",
+        "name": "Sharpedo",
+        "poke_types": [
+            "Water",
+            "Dark"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Rough Skin",
+            "Speed Boost"
+        ],
+        "href": "/pokedex/sharpedo"
+    },
+    {
+        "id": "3-099",
+        "name": "Wailmer",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 2"
+        ],
+        "abilities": [
+            "Water Veil",
+            "Oblivious",
+            "Pressure"
+        ],
+        "href": "/pokedex/wailmer"
+    },
+    {
+        "id": "3-100",
+        "name": "Wailord",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 2"
+        ],
+        "abilities": [
+            "Water Veil",
+            "Oblivious",
+            "Pressure"
+        ],
+        "href": "/pokedex/wailord"
+    },
+    {
+        "id": "3-101",
+        "name": "Numel",
+        "poke_types": [
+            "Fire",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Oblivious",
+            "Simple",
+            "Own Tempo"
+        ],
+        "href": "/pokedex/numel"
+    },
+    {
+        "id": "3-102",
+        "name": "Camerupt",
+        "poke_types": [
+            "Fire",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Magma Armor",
+            "Solid Rock",
+            "Anger Point"
+        ],
+        "href": "/pokedex/camerupt"
+    },
+    {
+        "id": "3-103",
+        "name": "Slugma",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Magma Armor",
+            "Flame Body",
+            "Weak Armor"
+        ],
+        "href": "/pokedex/slugma"
+    },
+    {
+        "id": "3-104",
+        "name": "Magcargo",
+        "poke_types": [
+            "Fire",
+            "Rock"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Magma Armor",
+            "Flame Body",
+            "Weak Armor"
+        ],
+        "href": "/pokedex/magcargo"
+    },
+    {
+        "id": "3-105",
+        "name": "Torkoal",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "White Smoke",
+            "Drought",
+            "Shell Armor"
+        ],
+        "href": "/pokedex/torkoal"
+    },
+    {
+        "id": "3-106",
+        "name": "Grimer",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Stench",
+            "Sticky Hold",
+            "Poison Touch"
+        ],
+        "href": "/pokedex/grimer"
+    },
+    {
+        "id": "3-107",
+        "name": "Muk",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Stench",
+            "Sticky Hold",
+            "Poison Touch"
+        ],
+        "href": "/pokedex/muk"
+    },
+    {
+        "id": "3-108",
+        "name": "Koffing",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Levitate",
+            "Neutralizing Gas",
+            "Stench"
+        ],
+        "href": "/pokedex/koffing"
+    },
+    {
+        "id": "3-109",
+        "name": "Weezing",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Levitate",
+            "Neutralizing Gas",
+            "Stench"
+        ],
+        "href": "/pokedex/weezing"
+    },
+    {
+        "id": "3-110",
+        "name": "Spoink",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Own Tempo",
+            "Gluttony"
+        ],
+        "href": "/pokedex/spoink"
+    },
+    {
+        "id": "3-111",
+        "name": "Grumpig",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Own Tempo",
+            "Gluttony"
+        ],
+        "href": "/pokedex/grumpig"
+    },
+    {
+        "id": "3-112",
+        "name": "Sandshrew",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Sand Veil",
+            "Sand Rush"
+        ],
+        "href": "/pokedex/sandshrew"
+    },
+    {
+        "id": "3-113",
+        "name": "Sandslash",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Sand Veil",
+            "Sand Rush"
+        ],
+        "href": "/pokedex/sandslash"
+    },
+    {
+        "id": "3-114",
+        "name": "Spinda",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field",
+            "Human-Like"
+        ],
+        "abilities": [
+            "Own Tempo",
+            "Tangled Feet",
+            "Contrary"
+        ],
+        "href": "/pokedex/spinda"
+    },
+    {
+        "id": "3-115",
+        "name": "Skarmory",
+        "poke_types": [
+            "Steel",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Keen Eye",
+            "Sturdy",
+            "Weak Armor"
+        ],
+        "href": "/pokedex/skarmory"
+    },
+    {
+        "id": "3-116",
+        "name": "Trapinch",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Bug",
+            "Dragon"
+        ],
+        "abilities": [
+            "Hyper Cutter",
+            "Arena Trap",
+            "Sheer Force"
+        ],
+        "href": "/pokedex/trapinch"
+    },
+    {
+        "id": "3-117",
+        "name": "Vibrava",
+        "poke_types": [
+            "Ground",
+            "Dragon"
+        ],
+        "egg_groups": [
+            "Bug",
+            "Dragon"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "href": "/pokedex/vibrava"
+    },
+    {
+        "id": "3-118",
+        "name": "Flygon",
+        "poke_types": [
+            "Ground",
+            "Dragon"
+        ],
+        "egg_groups": [
+            "Bug",
+            "Dragon"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "href": "/pokedex/flygon"
+    },
+    {
+        "id": "3-119",
+        "name": "Cacnea",
+        "poke_types": [
+            "Grass"
+        ],
+        "egg_groups": [
+            "Grass",
+            "Human-Like"
+        ],
+        "abilities": [
+            "Sand Veil",
+            "Water Absorb"
+        ],
+        "href": "/pokedex/cacnea"
+    },
+    {
+        "id": "3-120",
+        "name": "Cacturne",
+        "poke_types": [
+            "Grass",
+            "Dark"
+        ],
+        "egg_groups": [
+            "Grass",
+            "Human-Like"
+        ],
+        "abilities": [
+            "Sand Veil",
+            "Water Absorb"
+        ],
+        "href": "/pokedex/cacturne"
+    },
+    {
+        "id": "3-121",
+        "name": "Swablu",
+        "poke_types": [
+            "Normal",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Flying"
+        ],
+        "abilities": [
+            "Natural Cure",
+            "Cloud Nine"
+        ],
+        "href": "/pokedex/swablu"
+    },
+    {
+        "id": "3-122",
+        "name": "Altaria",
+        "poke_types": [
+            "Dragon",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Flying"
+        ],
+        "abilities": [
+            "Natural Cure",
+            "Cloud Nine"
+        ],
+        "href": "/pokedex/altaria"
+    },
+    {
+        "id": "3-123",
+        "name": "Zangoose",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Immunity",
+            "Toxic Boost"
+        ],
+        "href": "/pokedex/zangoose"
+    },
+    {
+        "id": "3-124",
+        "name": "Seviper",
+        "poke_types": [
+            "Poison"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Field"
+        ],
+        "abilities": [
+            "Shed Skin",
+            "Infiltrator"
+        ],
+        "href": "/pokedex/seviper"
+    },
+    {
+        "id": "3-125",
+        "name": "Lunatone",
+        "poke_types": [
+            "Rock",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "href": "/pokedex/lunatone"
+    },
+    {
+        "id": "3-126",
+        "name": "Solrock",
+        "poke_types": [
+            "Rock",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "href": "/pokedex/solrock"
+    },
+    {
+        "id": "3-127",
+        "name": "Barboach",
+        "poke_types": [
+            "Water",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Oblivious",
+            "Anticipation",
+            "Hydration"
+        ],
+        "href": "/pokedex/barboach"
+    },
+    {
+        "id": "3-128",
+        "name": "Whiscash",
+        "poke_types": [
+            "Water",
+            "Ground"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Oblivious",
+            "Anticipation",
+            "Hydration"
+        ],
+        "href": "/pokedex/whiscash"
+    },
+    {
+        "id": "3-129",
+        "name": "Corphish",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 1",
+            "Water 3"
+        ],
+        "abilities": [
+            "Hyper Cutter",
+            "Shell Armor",
+            "Adaptability"
+        ],
+        "href": "/pokedex/corphish"
+    },
+    {
+        "id": "3-130",
+        "name": "Crawdaunt",
+        "poke_types": [
+            "Water",
+            "Dark"
+        ],
+        "egg_groups": [
+            "Water 1",
+            "Water 3"
+        ],
+        "abilities": [
+            "Hyper Cutter",
+            "Shell Armor",
+            "Adaptability"
+        ],
+        "href": "/pokedex/crawdaunt"
+    },
+    {
+        "id": "3-131",
+        "name": "Baltoy",
+        "poke_types": [
+            "Ground",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "href": "/pokedex/baltoy"
+    },
+    {
+        "id": "3-132",
+        "name": "Claydol",
+        "poke_types": [
+            "Ground",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "href": "/pokedex/claydol"
+    },
+    {
+        "id": "3-133",
+        "name": "Lileep",
+        "poke_types": [
+            "Rock",
+            "Grass"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Suction Cups",
+            "Storm Drain"
+        ],
+        "href": "/pokedex/lileep"
+    },
+    {
+        "id": "3-134",
+        "name": "Cradily",
+        "poke_types": [
+            "Rock",
+            "Grass"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Suction Cups",
+            "Storm Drain"
+        ],
+        "href": "/pokedex/cradily"
+    },
+    {
+        "id": "3-135",
+        "name": "Anorith",
+        "poke_types": [
+            "Rock",
+            "Bug"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Battle Armor",
+            "Swift Swim"
+        ],
+        "href": "/pokedex/anorith"
+    },
+    {
+        "id": "3-136",
+        "name": "Armaldo",
+        "poke_types": [
+            "Rock",
+            "Bug"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Battle Armor",
+            "Swift Swim"
+        ],
+        "href": "/pokedex/armaldo"
+    },
+    {
+        "id": "3-137",
+        "name": "Igglybuff",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Cute Charm",
+            "Competitive",
+            "Friend Guard"
+        ],
+        "href": "/pokedex/igglybuff"
+    },
+    {
+        "id": "3-138",
+        "name": "Jigglypuff",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Fairy"
+        ],
+        "abilities": [
+            "Cute Charm",
+            "Competitive",
+            "Friend Guard"
+        ],
+        "href": "/pokedex/jigglypuff"
+    },
+    {
+        "id": "3-139",
+        "name": "Wigglytuff",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Fairy"
+        ],
+        "abilities": [
+            "Cute Charm",
+            "Competitive",
+            "Frisk"
+        ],
+        "href": "/pokedex/wigglytuff"
+    },
+    {
+        "id": "3-140",
+        "name": "Feebas",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 1"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Oblivious",
+            "Adaptability"
+        ],
+        "href": "/pokedex/feebas"
+    },
+    {
+        "id": "3-141",
+        "name": "Milotic",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 1"
+        ],
+        "abilities": [
+            "Marvel Scale",
+            "Competitive",
+            "Cute Charm"
+        ],
+        "href": "/pokedex/milotic"
+    },
+    {
+        "id": "3-142",
+        "name": "Castform",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Amorphous",
+            "Fairy"
+        ],
+        "abilities": [
+            "Forecast"
+        ],
+        "href": "/pokedex/castform"
+    },
+    {
+        "id": "3-143",
+        "name": "Staryu",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Illuminate",
+            "Natural Cure",
+            "Analytic"
+        ],
+        "href": "/pokedex/staryu"
+    },
+    {
+        "id": "3-144",
+        "name": "Starmie",
+        "poke_types": [
+            "Water",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Water 3"
+        ],
+        "abilities": [
+            "Illuminate",
+            "Natural Cure",
+            "Analytic"
+        ],
+        "href": "/pokedex/starmie"
+    },
+    {
+        "id": "3-145",
+        "name": "Kecleon",
+        "poke_types": [
+            "Normal"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Color Change",
+            "Protean"
+        ],
+        "href": "/pokedex/kecleon"
+    },
+    {
+        "id": "3-146",
+        "name": "Shuppet",
+        "poke_types": [
+            "Ghost"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Insomnia",
+            "Frisk",
+            "Cursed Body"
+        ],
+        "href": "/pokedex/shuppet"
+    },
+    {
+        "id": "3-147",
+        "name": "Banette",
+        "poke_types": [
+            "Ghost"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Insomnia",
+            "Frisk",
+            "Cursed Body"
+        ],
+        "href": "/pokedex/banette"
+    },
+    {
+        "id": "3-148",
+        "name": "Duskull",
+        "poke_types": [
+            "Ghost"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Levitate",
+            "Frisk"
+        ],
+        "href": "/pokedex/duskull"
+    },
+    {
+        "id": "3-149",
+        "name": "Dusclops",
+        "poke_types": [
+            "Ghost"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Pressure",
+            "Frisk"
+        ],
+        "href": "/pokedex/dusclops"
+    },
+    {
+        "id": "3-150",
+        "name": "Tropius",
+        "poke_types": [
+            "Grass",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Grass",
+            "Monster"
+        ],
+        "abilities": [
+            "Chlorophyll",
+            "Solar Power",
+            "Harvest"
+        ],
+        "href": "/pokedex/tropius"
+    },
+    {
+        "id": "3-151",
+        "name": "Chimecho",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "href": "/pokedex/chimecho"
+    },
+    {
+        "id": "3-152",
+        "name": "Absol",
+        "poke_types": [
+            "Dark"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Pressure",
+            "Super Luck",
+            "Justified"
+        ],
+        "href": "/pokedex/absol"
+    },
+    {
+        "id": "3-153",
+        "name": "Vulpix",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Flash Fire",
+            "Drought"
+        ],
+        "href": "/pokedex/vulpix"
+    },
+    {
+        "id": "3-154",
+        "name": "Ninetales",
+        "poke_types": [
+            "Fire"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Flash Fire",
+            "Drought"
+        ],
+        "href": "/pokedex/ninetales"
+    },
+    {
+        "id": "3-155",
+        "name": "Pichu",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Static",
+            "Lightning Rod"
+        ],
+        "href": "/pokedex/pichu"
+    },
+    {
+        "id": "3-156",
+        "name": "Pikachu",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Field"
+        ],
+        "abilities": [
+            "Static",
+            "Lightning Rod"
+        ],
+        "href": "/pokedex/pikachu"
+    },
+    {
+        "id": "3-157",
+        "name": "Raichu",
+        "poke_types": [
+            "Electric"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Field"
+        ],
+        "abilities": [
+            "Static",
+            "Lightning Rod"
+        ],
+        "href": "/pokedex/raichu"
+    },
+    {
+        "id": "3-158",
+        "name": "Psyduck",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 1"
+        ],
+        "abilities": [
+            "Damp",
+            "Cloud Nine",
+            "Swift Swim"
+        ],
+        "href": "/pokedex/psyduck"
+    },
+    {
+        "id": "3-159",
+        "name": "Golduck",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 1"
+        ],
+        "abilities": [
+            "Damp",
+            "Cloud Nine",
+            "Swift Swim"
+        ],
+        "href": "/pokedex/golduck"
+    },
+    {
+        "id": "3-160",
+        "name": "Wynaut",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Shadow Tag",
+            "Telepathy"
+        ],
+        "href": "/pokedex/wynaut"
+    },
+    {
+        "id": "3-161",
+        "name": "Wobbuffet",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Amorphous"
+        ],
+        "abilities": [
+            "Shadow Tag",
+            "Telepathy"
+        ],
+        "href": "/pokedex/wobbuffet"
+    },
+    {
+        "id": "3-162",
+        "name": "Natu",
+        "poke_types": [
+            "Psychic",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Early Bird",
+            "Magic Bounce"
+        ],
+        "href": "/pokedex/natu"
+    },
+    {
+        "id": "3-163",
+        "name": "Xatu",
+        "poke_types": [
+            "Psychic",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Flying"
+        ],
+        "abilities": [
+            "Synchronize",
+            "Early Bird",
+            "Magic Bounce"
+        ],
+        "href": "/pokedex/xatu"
+    },
+    {
+        "id": "3-164",
+        "name": "Girafarig",
+        "poke_types": [
+            "Normal",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Inner Focus",
+            "Early Bird",
+            "Sap Sipper"
+        ],
+        "href": "/pokedex/girafarig"
+    },
+    {
+        "id": "3-165",
+        "name": "Phanpy",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Pickup",
+            "Sand Veil"
+        ],
+        "href": "/pokedex/phanpy"
+    },
+    {
+        "id": "3-166",
+        "name": "Donphan",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Field"
+        ],
+        "abilities": [
+            "Sturdy",
+            "Sand Veil"
+        ],
+        "href": "/pokedex/donphan"
+    },
+    {
+        "id": "3-167",
+        "name": "Pinsir",
+        "poke_types": [
+            "Bug"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Hyper Cutter",
+            "Mold Breaker",
+            "Moxie"
+        ],
+        "href": "/pokedex/pinsir"
+    },
+    {
+        "id": "3-168",
+        "name": "Heracross",
+        "poke_types": [
+            "Bug",
+            "Fighting"
+        ],
+        "egg_groups": [
+            "Bug"
+        ],
+        "abilities": [
+            "Swarm",
+            "Guts",
+            "Moxie"
+        ],
+        "href": "/pokedex/heracross"
+    },
+    {
+        "id": "3-169",
+        "name": "Rhyhorn",
+        "poke_types": [
+            "Ground",
+            "Rock"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Lightning Rod",
+            "Rock Head",
+            "Reckless"
+        ],
+        "href": "/pokedex/rhyhorn"
+    },
+    {
+        "id": "3-170",
+        "name": "Rhydon",
+        "poke_types": [
+            "Ground",
+            "Rock"
+        ],
+        "egg_groups": [
+            "Field",
+            "Monster"
+        ],
+        "abilities": [
+            "Lightning Rod",
+            "Rock Head",
+            "Reckless"
+        ],
+        "href": "/pokedex/rhydon"
+    },
+    {
+        "id": "3-171",
+        "name": "Snorunt",
+        "poke_types": [
+            "Ice"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Mineral"
+        ],
+        "abilities": [
+            "Inner Focus",
+            "Ice Body",
+            "Moody"
+        ],
+        "href": "/pokedex/snorunt"
+    },
+    {
+        "id": "3-172",
+        "name": "Glalie",
+        "poke_types": [
+            "Ice"
+        ],
+        "egg_groups": [
+            "Fairy",
+            "Mineral"
+        ],
+        "abilities": [
+            "Inner Focus",
+            "Ice Body",
+            "Moody"
+        ],
+        "href": "/pokedex/glalie"
+    },
+    {
+        "id": "3-173",
+        "name": "Spheal",
+        "poke_types": [
+            "Ice",
+            "Water"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 1"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Ice Body",
+            "Oblivious"
+        ],
+        "href": "/pokedex/spheal"
+    },
+    {
+        "id": "3-174",
+        "name": "Sealeo",
+        "poke_types": [
+            "Ice",
+            "Water"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 1"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Ice Body",
+            "Oblivious"
+        ],
+        "href": "/pokedex/sealeo"
+    },
+    {
+        "id": "3-175",
+        "name": "Walrein",
+        "poke_types": [
+            "Ice",
+            "Water"
+        ],
+        "egg_groups": [
+            "Field",
+            "Water 1"
+        ],
+        "abilities": [
+            "Thick Fat",
+            "Ice Body",
+            "Oblivious"
+        ],
+        "href": "/pokedex/walrein"
+    },
+    {
+        "id": "3-176",
+        "name": "Clamperl",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 1"
+        ],
+        "abilities": [
+            "Shell Armor",
+            "Rattled"
+        ],
+        "href": "/pokedex/clamperl"
+    },
+    {
+        "id": "3-177",
+        "name": "Huntail",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 1"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Water Veil"
+        ],
+        "href": "/pokedex/huntail"
+    },
+    {
+        "id": "3-178",
+        "name": "Gorebyss",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 1"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Hydration"
+        ],
+        "href": "/pokedex/gorebyss"
+    },
+    {
+        "id": "3-179",
+        "name": "Relicanth",
+        "poke_types": [
+            "Water",
+            "Rock"
+        ],
+        "egg_groups": [
+            "Water 1",
+            "Water 2"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Rock Head",
+            "Sturdy"
+        ],
+        "href": "/pokedex/relicanth"
+    },
+    {
+        "id": "3-180",
+        "name": "Corsola",
+        "poke_types": [
+            "Water",
+            "Rock"
+        ],
+        "egg_groups": [
+            "Water 1",
+            "Water 3"
+        ],
+        "abilities": [
+            "Hustle",
+            "Natural Cure",
+            "Regenerator"
+        ],
+        "href": "/pokedex/corsola"
+    },
+    {
+        "id": "3-181",
+        "name": "Chinchou",
+        "poke_types": [
+            "Water",
+            "Electric"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Volt Absorb",
+            "Illuminate",
+            "Water Absorb"
+        ],
+        "href": "/pokedex/chinchou"
+    },
+    {
+        "id": "3-182",
+        "name": "Lanturn",
+        "poke_types": [
+            "Water",
+            "Electric"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Volt Absorb",
+            "Illuminate",
+            "Water Absorb"
+        ],
+        "href": "/pokedex/lanturn"
+    },
+    {
+        "id": "3-183",
+        "name": "Luvdisc",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Water 2"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Hydration"
+        ],
+        "href": "/pokedex/luvdisc"
+    },
+    {
+        "id": "3-184",
+        "name": "Horsea",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 1"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Sniper",
+            "Damp"
+        ],
+        "href": "/pokedex/horsea"
+    },
+    {
+        "id": "3-185",
+        "name": "Seadra",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 1"
+        ],
+        "abilities": [
+            "Poison Point",
+            "Sniper",
+            "Damp"
+        ],
+        "href": "/pokedex/seadra"
+    },
+    {
+        "id": "3-186",
+        "name": "Kingdra",
+        "poke_types": [
+            "Water",
+            "Dragon"
+        ],
+        "egg_groups": [
+            "Dragon",
+            "Water 1"
+        ],
+        "abilities": [
+            "Swift Swim",
+            "Sniper",
+            "Damp"
+        ],
+        "href": "/pokedex/kingdra"
+    },
+    {
+        "id": "3-187",
+        "name": "Bagon",
+        "poke_types": [
+            "Dragon"
+        ],
+        "egg_groups": [
+            "Dragon"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Sheer Force"
+        ],
+        "href": "/pokedex/bagon"
+    },
+    {
+        "id": "3-188",
+        "name": "Shelgon",
+        "poke_types": [
+            "Dragon"
+        ],
+        "egg_groups": [
+            "Dragon"
+        ],
+        "abilities": [
+            "Rock Head",
+            "Overcoat"
+        ],
+        "href": "/pokedex/shelgon"
+    },
+    {
+        "id": "3-189",
+        "name": "Salamence",
+        "poke_types": [
+            "Dragon",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Dragon"
+        ],
+        "abilities": [
+            "Intimidate",
+            "Moxie"
+        ],
+        "href": "/pokedex/salamence"
+    },
+    {
+        "id": "3-190",
+        "name": "Beldum",
+        "poke_types": [
+            "Steel",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Clear Body",
+            "Light Metal"
+        ],
+        "href": "/pokedex/beldum"
+    },
+    {
+        "id": "3-191",
+        "name": "Metang",
+        "poke_types": [
+            "Steel",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Clear Body",
+            "Light Metal"
+        ],
+        "href": "/pokedex/metang"
+    },
+    {
+        "id": "3-192",
+        "name": "Metagross",
+        "poke_types": [
+            "Steel",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Mineral"
+        ],
+        "abilities": [
+            "Clear Body",
+            "Light Metal"
+        ],
+        "href": "/pokedex/metagross"
+    },
+    {
+        "id": "3-193",
+        "name": "Regirock",
+        "poke_types": [
+            "Rock"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Clear Body",
+            "Sturdy"
+        ],
+        "href": "/pokedex/regirock"
+    },
+    {
+        "id": "3-194",
+        "name": "Regice",
+        "poke_types": [
+            "Ice"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Clear Body",
+            "Ice Body"
+        ],
+        "href": "/pokedex/regice"
+    },
+    {
+        "id": "3-195",
+        "name": "Registeel",
+        "poke_types": [
+            "Steel"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Clear Body",
+            "Light Metal"
+        ],
+        "href": "/pokedex/registeel"
+    },
+    {
+        "id": "3-196",
+        "name": "Latias",
+        "poke_types": [
+            "Dragon",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "href": "/pokedex/latias"
+    },
+    {
+        "id": "3-197",
+        "name": "Latios",
+        "poke_types": [
+            "Dragon",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Levitate"
+        ],
+        "href": "/pokedex/latios"
+    },
+    {
+        "id": "3-198",
+        "name": "Kyogre",
+        "poke_types": [
+            "Water"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Drizzle"
+        ],
+        "href": "/pokedex/kyogre"
+    },
+    {
+        "id": "3-199",
+        "name": "Groudon",
+        "poke_types": [
+            "Ground"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Drought"
+        ],
+        "href": "/pokedex/groudon"
+    },
+    {
+        "id": "3-200",
+        "name": "Rayquaza",
+        "poke_types": [
+            "Dragon",
+            "Flying"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Air Lock"
+        ],
+        "href": "/pokedex/rayquaza"
+    },
+    {
+        "id": "3-201",
+        "name": "Jirachi",
+        "poke_types": [
+            "Steel",
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Serene Grace"
+        ],
+        "href": "/pokedex/jirachi"
+    },
+    {
+        "id": "3-202",
+        "name": "Deoxys",
+        "poke_types": [
+            "Psychic"
+        ],
+        "egg_groups": [
+            "Undiscovered"
+        ],
+        "abilities": [
+            "Pressure"
+        ],
+        "href": "/pokedex/deoxys"
+    }
+]
