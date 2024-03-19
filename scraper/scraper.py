@@ -20,17 +20,25 @@ class ScraperError(Exception):
 
 class Pokemon:
     def __init__(self, id: str, name: str, poke_types: list, egg_groups: list,
-                 abilities: list, location: list, href: str):
+                 abilities: list, location: list, lv_moves: list, tm_hm_moves: list, href: str):
         self.id = id
         self.name = name
         self.poke_types = poke_types
         self.egg_groups = egg_groups
         self.abilities = abilities
         self.location = location
+        self.lv_moves = lv_moves
+        self.tm_hm_moves = tm_hm_moves
         self.href = href
 
     def __str__(self):
         return json.dumps(self.__dict__, indent=4)
+
+    def to_dict(self):
+        poke_dict = self.__dict__
+        poke_dict["lv_moves"] = [lv_move.__dict__ for lv_move in self.lv_moves]
+        poke_dict["tm_hm_moves"] = [tm_move.__dict__ for tm_move in self.tm_hm_moves]
+        return poke_dict
 
 
 class PokemonDBScraper:
@@ -87,8 +95,10 @@ class GameScraper(PokemonDBScraper):
         abilities = poke_scraper.get_abilities()
         egg_groups = poke_scraper.get_egg_groups()
         locations = poke_scraper.get_location()
+        lv_moves, tm_hm_moves = poke_scraper.get_moves()
 
-        return Pokemon(id, pokemon_name, types, egg_groups, abilities, locations, href)
+        return Pokemon(id, pokemon_name, types,
+                       egg_groups, abilities, locations, lv_moves, tm_hm_moves, href)
 
     def get_all_pokemon(self) -> list:
         soup = self._load_webpage()
@@ -102,6 +112,7 @@ class PokemonScraper(PokemonDBScraper):
     def __init__(self, name: str, game: str, href: str) -> None:
         self.name = name
         self.game = game
+        self.href = href
         super().__init__(BASE_URL + href)
 
     def is_gridcol_div(self, tag, specifier: str) -> bool:
@@ -140,20 +151,120 @@ class PokemonScraper(PokemonDBScraper):
                 new_locations.append(location)
         return new_locations
 
+    def get_moves(self):
+        move_scraper = MoveScraper(GAME_MAP[self.game][1], self.name, self.href)
+        lv_moves, tm_moves = move_scraper.get_moves()
+        return lv_moves, tm_moves
+        # moves = [lv_moves.__dict__ for lv_moves in lv_moves]
+        # moves2 = [tm_moves.__dict__ for tm_moves in tm_moves]
+        # print(json.dumps(moves, indent=4))
+        # print(json.dumps(moves2, indent=4))
+
     def get_file_path(self) -> str:
         return DATA_FOLDER + f"pokemon-{self.game.lower()}/" + self.name + ".html"
+
+
+class Move:
+    def __init__(self, name, type, category, power, accuracy):
+        self.name = name
+        self.type = type
+        self.category = category
+        self.power = power
+        self.accuracy = accuracy
+
+
+class LevelMove(Move):
+    def __init__(self, level, name, type, category, power, accuracy):
+        super().__init__(name, type, category, power, accuracy)
+        self.level = level
+
+
+class TMHMMove(Move):
+    def __init__(self, number, name, type, category, power, accuracy):
+        super().__init__(name, type, category, power, accuracy)
+        self.number = number
+
+
+class MoveScraper(PokemonDBScraper):
+    def __init__(self, generation: str, poke_name: str, href: str) -> None:
+        self.generation = generation
+        self.poke_name = poke_name
+        super().__init__(BASE_URL + href + "/moves/" + generation)
+
+    def get_file_path(self) -> str:
+        return DATA_FOLDER + f"{self.generation}-moves/" + self.poke_name + ".html"
+
+    def make_level_move(self, move_tr):
+        move_tds = move_tr.find_all("td")
+        level = move_tds[0].get_text()
+        name = move_tds[1].find("a").get_text()
+        type = move_tds[2].find("a").get_text()
+        category = move_tds[3].find("img").attrs.get("title")
+        power = move_tds[4].get_text()
+        accuracy = move_tds[5].get_text()
+
+        if power == "\u2014": power = "-1"
+        if accuracy == "\u2014": accuracy = "-1"
+
+        return LevelMove(level, name, type, category, power, accuracy)
+
+    def make_tm_hm_move(self, move_tr):
+        move_tds = move_tr.find_all("td")
+        number = move_tds[0].find("a").get_text()
+        name = move_tds[1].find("a").get_text()
+        type = move_tds[2].find("a").get_text()
+        category = move_tds[3].find("img").attrs.get("title")
+        power = move_tds[4].get_text()
+        accuracy = move_tds[5].get_text()
+
+        if power == "\u2014": power = "-1"
+        if accuracy == "\u2014": accuracy = "-1"
+
+        return TMHMMove(number, name, type, category, power, accuracy)
+
+    def get_move_table(self, soup, id: str):
+        return soup.find(lambda tag: tag.name == "table" and "data-table" in tag.attrs.get("class", "") and
+                                     tag.find(lambda child: child.name == "div" and id in child.get_text()))
+
+    def get_moves(self):
+        print(f"processing moves for {self.poke_name}")
+        soup = self._load_webpage()
+        lv_table = self.get_move_table(soup, "Lv.")
+        tm_table = self.get_move_table(soup, "TM")
+        hm_table = self.get_move_table(soup, "HM")
+        lv_moves, tm_moves, hm_moves = [], [], None
+
+        if lv_table:
+            lv_tbody = lv_table.find(lambda tag: tag.name == "tbody" and tag.find(lambda child: child.name == "tr"))
+            lv_trs = lv_tbody.find_all("tr")
+            lv_moves = [self.make_level_move(move_tr) for move_tr in lv_trs]
+
+        if tm_table:
+            tm_tbody = tm_table.find(lambda tag: tag.name == "tbody" and tag.find(lambda child: child.name == "tr"))
+            tm_trs = tm_tbody.find_all("tr")
+            tm_moves = [self.make_tm_hm_move(move_tr) for move_tr in tm_trs]
+
+        if hm_table:
+            hm_tbody = hm_table.find(lambda tag: tag.name == "tbody" and tag.find(lambda child: child.name == "tr"))
+            hm_trs = hm_tbody.find_all("tr")
+            hm_moves = [self.make_tm_hm_move(move_tr) for move_tr in hm_trs]
+
+        if tm_moves and hm_moves:
+            tm_moves.extend(hm_moves)
+
+        return lv_moves, tm_moves
 
 
 if __name__ == "__main__":
     # emerald = GameScraper("emerald")
     # pokemon-emerald = emerald.get_all_pokemon()
-    # # poke = PokemonScraper("Treecko", "Emerald", "/pokedex/treecko")
-    # # print(poke.get_location())
+    # poke = PokemonScraper("Bulbasaur", "FireRed", "/pokedex/bulbasaur")
+    # poke.get_moves()
     # poke_dicts = [poke.__dict__ for poke in pokemon-emerald]
     # with open(DATA_FOLDER + "generation3-pokemon-emerald.json", "w", encoding="utf-8") as f:
     #     f.write(json.dumps(poke_dicts, indent=4))
     red = GameScraper("FireRed")
     pokemon = red.get_all_pokemon()
-    poke_dicts = [poke.__dict__ for poke in pokemon]
+    poke_dicts = [poke.to_dict() for poke in pokemon]
     with open(DATA_FOLDER + "generation1-pokemon.json", "w", encoding="utf-8") as f:
         f.write(json.dumps(poke_dicts, indent=4))
