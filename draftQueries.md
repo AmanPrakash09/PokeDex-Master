@@ -24,7 +24,7 @@ JOIN Uses u ON p1.PokeID = u.PokeID
 WHERE u.MoveName = :move_name;
 ```
 
-4. **Get the evolution chain of a specific Pokémon:**
+4. **Get evolution chain of a specific Pokémon:**
 
 ```sql
 WITH RECURSIVE EvolutionChain AS (
@@ -48,7 +48,7 @@ JOIN LevelMove lm ON m1.MoveName = lm.MoveName
 WHERE lm.UnlockLevel = :level;
 ```
 
-6. **Find the total number of Pokémon available at each location:**
+6. **Find total number of Pokémon available at each location:**
 
 ```sql
 SELECT c.Address, COUNT(*) AS TotalPokemon
@@ -56,7 +56,7 @@ FROM Contains c
 GROUP BY c.Address;
 ```
 
-7. **Get the email and name of users who joined after a specific date:**
+7. **Get email and name of users who joined after a specific date:**
 
 ```sql
 SELECT Email, Name
@@ -89,7 +89,7 @@ JOIN PokemonStores2 p2 ON ps.PokemonName = p2.PokemonName
 WHERE p2.EggGroup = :egg_group;
 ```
 
-11. **Get the loyalty of all users who joined in a specific year:**
+11. **Get loyalty of all users who joined in a specific year:**
 
 ```sql
 SELECT a1.Name, a2.Loyalty
@@ -114,7 +114,7 @@ FROM PokemonStores1 p1
 JOIN TMHMMove tm ON p1.MoveName = tm.MoveName;
 ```
 
-14. **Get the number of Pokémon available in each type:**
+14. **Get number of Pokémon available in each type:**
 
 ```sql
 SELECT Type, COUNT(*) AS TotalPokemon
@@ -138,7 +138,7 @@ SELECT ReleaseDate, SalePrice
 FROM PokemonGameCategorizes2;
 ```
 
-17. **Find the average loyalty of users who joined in a specific month:**
+17. **Find average loyalty of users who joined in a specific month:**
 
 ```sql
 SELECT AVG(a2.Loyalty) AS AverageLoyalty
