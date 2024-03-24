@@ -9,7 +9,7 @@ function App() {
     <>
       <div className="header-container">
         <div className="logo-container">
-          <a href="http://localhost:3000" target="_blank">
+          <a href="http://localhost:3000">
             <img src={appLogo} className="logo" alt="Project logo" />
           </a>
         </div>
