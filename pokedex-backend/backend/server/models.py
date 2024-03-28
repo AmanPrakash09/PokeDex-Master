@@ -5,5 +5,8 @@ class Counter(models.Model):
     count = models.IntegerField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'Counter'
+    
+    def __str__(self):
+        return str(self.count)

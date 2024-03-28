@@ -26,3 +26,14 @@ def getCounter(request):
     count = Counter.objects.all()
     serializer = CounterSerializer(count, many=True)
     return Response(serializer.data)
+
+@api_view(['PUT'])
+def updateCounter(request, pk):
+    
+    data = request.data
+    count = Counter.objects.get(id=pk)
+    serializer = CounterSerializer(instance=count, data=data)
+    
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
