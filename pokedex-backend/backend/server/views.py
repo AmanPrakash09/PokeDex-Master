@@ -15,7 +15,13 @@ def getRoutes(request):
             'method': 'GET',
             'body': None,
             'description': 'returns the counter'
-        }
+        },
+        {
+            'Endpoint': '/counter/<str:pk>/update/',
+            'method': 'PUT',
+            'body': {'body': ""},
+            'description': 'updates the counter'
+        },
     ]
     
     return Response(routes)
