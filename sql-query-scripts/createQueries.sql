@@ -1,6 +1,6 @@
 CREATE TABLE AppUser1(
-  Email VARCHAR2(254),
-  Name VARCHAR2(50),
+  Email VARCHAR(254),
+  Name VARCHAR(50),
   DateJoined DATE,
   PRIMARY KEY (Email),
   FOREIGN KEY (DateJoined) REFERENCES AppUser2(DateJoined) ON DELETE CASCADE
@@ -15,16 +15,16 @@ CREATE TABLE AppUser2(
 CREATE TABLE SaveFileManages(
   FileID NUMBER,
   CreationDate DATE,
-  Email VARCHAR2(254),
+  Email VARCHAR(254),
   PRIMARY KEY (FileID, Email),
   FOREIGN KEY (Email) REFERENCES AppUser1(Email) ON DELETE CASCADE
 );
 
 CREATE TABLE BadgeLoads1(
   BadgeID NUMBER,
-  BadgeName VARCHAR2(25),
+  BadgeName VARCHAR(25),
   FileID NUMBER,
-  Email VARCHAR2(254),
+  Email VARCHAR(254),
   PRIMARY KEY (BadgeID),
   FOREIGN KEY (FileID, Email) REFERENCES SaveFileManages(FileID, Email) 
     ON DELETE SET NULL
@@ -36,14 +36,14 @@ CREATE TABLE BadgeLoads1(
 
 CREATE TABLE BadgeLoads2(
   ObedienceLevel NUMBER,
-  BadgeName VARCHAR2(25),
+  BadgeName VARCHAR(25),
   PRIMARY KEY (BadgeName)
 );
 
 CREATE TABLE LocationFeaturesAccess1(
-  Address VARCHAR2(25),
+  Address VARCHAR(25),
   BadgeID NUMBER NOT NULL,
-  Title VARCHAR2(50) NOT NULL,
+  Title VARCHAR(50) NOT NULL,
   RouteNumber NUMBER,
   PRIMARY KEY (Address),
   FOREIGN KEY (BadgeID) REFERENCES BadgeLoads1(BadgeID) 
@@ -74,7 +74,7 @@ CREATE TABLE LocationFeaturesAccess3(
 );
 
 CREATE TABLE PokemonGameCategorizes1(
-  Title VARCHAR2(50),
+  Title VARCHAR(50),
   ReleaseDate DATE,
   GenerationNumber NUMBER NOT NULL,
   PRIMARY KEY (Title),
@@ -94,7 +94,7 @@ CREATE TABLE PokemonGameCategorizes2(
 
 CREATE TABLE Contains(
   PokeID NUMBER NOT NULL,
-  Address VARCHAR2(25),
+  Address VARCHAR(25),
   PRIMARY KEY (PokeID, Address),
   FOREIGN KEY (PokeID) REFERENCES PokemonStores1(PokeID) 
     ON DELETE CASCADE
@@ -106,13 +106,13 @@ CREATE TABLE Contains(
 
 CREATE TABLE PokemonStores1(
   PokeID NUMBER,
-  PokemonName VARCHAR2(25),
-  PokemonLevel VARCHAR2(25),
-  Ability VARCHAR2(15),
+  PokemonName VARCHAR(25),
+  PokemonLevel VARCHAR(25),
+  Ability VARCHAR(15),
   Stats NUMBER,
-  Type VARCHAR2(8),
+  Type VARCHAR(8),
   FileID NUMBER,
-  Email VARCHAR2(254),
+  Email VARCHAR(254),
   PRIMARY KEY (PokeID),
   FOREIGN KEY (PokemonName) REFERENCES PokemonStores2(PokemonName) 
     ON DELETE SET NULL
@@ -123,16 +123,16 @@ CREATE TABLE PokemonStores1(
 );
 
 CREATE TABLE PokemonStores2(
-  PokemonName VARCHAR2(25),
-  Type VARCHAR2(8),
-  EggGroup VARCHAR2(15),
+  PokemonName VARCHAR(25),
+  Type VARCHAR(8),
+  EggGroup VARCHAR(15),
   PRIMARY KEY (PokemonName)
 );
 
 CREATE TABLE Evolves(
   PokeIDFrom NUMBER,
   PokeIDTo NUMBER,
-  Condition VARCHAR2(100),
+  Condition VARCHAR(100),
   PRIMARY KEY (PokeIDFrom, PokeIDTo),
   FOREIGN KEY (PokeIDFrom) REFERENCES PokemonStores1(PokeID) 
     ON DELETE CASCADE
@@ -143,7 +143,7 @@ CREATE TABLE Evolves(
 );
 
 CREATE TABLE Parent(
-  MoveName VARCHAR2(25) NOT NULL,
+  MoveName VARCHAR(25) NOT NULL,
   PokeID NUMBER,
   PRIMARY KEY (MoveName, PokeID),
   FOREIGN KEY (MoveName) REFERENCES EggMove(MoveName) 
@@ -155,7 +155,7 @@ CREATE TABLE Parent(
 );
 
 CREATE TABLE Uses(
-  MoveName VARCHAR2(25) NOT NULL,
+  MoveName VARCHAR(25) NOT NULL,
   PokeID NUMBER,
   PRIMARY KEY (MoveName, PokeID),
   FOREIGN KEY (MoveName) REFERENCES Move1(MoveName) 
@@ -170,9 +170,9 @@ CREATE TABLE Move1(
   Accuracy NUMBER,
   MovePower NUMBER,
   PP NUMBER,
-  Type VARCHAR2(8),
-  Function VARCHAR2(15),
-  MoveName VARCHAR2(25),
+  Type VARCHAR(8),
+  Function VARCHAR(15),
+  MoveName VARCHAR(25),
   PRIMARY KEY (MoveName),
   FOREIGN KEY (Function) REFERENCES Move2(Function) 
     ON DELETE SET NULL
@@ -180,13 +180,13 @@ CREATE TABLE Move1(
 );
 
 CREATE TABLE Move2(
-  Function VARCHAR2(15),
+  Function VARCHAR(15),
   CanMiss CHAR(1),
   PRIMARY KEY (Function)
 );
 
 CREATE TABLE EggMove(
-  MoveName VARCHAR2(25),
+  MoveName VARCHAR(25),
   PRIMARY KEY (MoveName),
   FOREIGN KEY (MoveName) REFERENCES Move1(MoveName) 
     ON DELETE CASCADE
@@ -194,7 +194,7 @@ CREATE TABLE EggMove(
 );
 
 CREATE TABLE LevelMove(
-  MoveName VARCHAR2(25),
+  MoveName VARCHAR(25),
   UnlockLevel NUMBER,
   PRIMARY KEY (MoveName),
   FOREIGN KEY (MoveName) REFERENCES Move1(MoveName) 
@@ -203,7 +203,7 @@ CREATE TABLE LevelMove(
 );
 
 CREATE TABLE TMHMMove(
-  MoveName VARCHAR2(25),
+  MoveName VARCHAR(25),
   MoveNumber NUMBER,
   PRIMARY KEY (MoveName),
   FOREIGN KEY (MoveName) REFERENCES Move1(MoveName) 
@@ -212,9 +212,9 @@ CREATE TABLE TMHMMove(
 );
 
 CREATE TABLE TutorMoveTeaches(
-  MoveName VARCHAR2(25),
-  Price VARCHAR2(25),
-  Address VARCHAR2(25),
+  MoveName VARCHAR(25),
+  Price VARCHAR(25),
+  Address VARCHAR(25),
   PRIMARY KEY (MoveName),
   FOREIGN KEY (MoveName) REFERENCES Move1(MoveName) 
     ON DELETE CASCADE
@@ -226,6 +226,6 @@ CREATE TABLE TutorMoveTeaches(
 
 CREATE TABLE Generation(
   GenerationNumber NUMBER,
-  Console VARCHAR2(25),
+  Console VARCHAR(25),
   PRIMARY KEY (GenerationNumber)
 );
