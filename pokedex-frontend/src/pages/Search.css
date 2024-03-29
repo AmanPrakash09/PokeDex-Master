@@ -5,3 +5,18 @@
     width: 100%;
     padding: 0 1rem;
 }
+
+.search-bar {
+    border: 2px solid #ccc; /* Border style */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the box */
+    margin-right: 10px; /* Margin to create space between the boxes */
+  }
+  
+  .filter-container {
+    border: 2px solid #ccc; /* Border style */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the box */
+    flex-grow: 1; /* Take remaining space in the flex container */
+  }
+  
