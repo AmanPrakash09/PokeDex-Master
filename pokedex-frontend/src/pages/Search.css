@@ -7,16 +7,24 @@
 }
 
 .search-bar {
-    border: 2px solid #ccc; /* Border style */
-    border-radius: 8px; /* Rounded corners */
-    padding: 10px; /* Padding inside the box */
-    margin-right: 10px; /* Margin to create space between the boxes */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 10px;
   }
   
-  .filter-container {
-    border: 2px solid #ccc; /* Border style */
-    border-radius: 8px; /* Rounded corners */
-    padding: 10px; /* Padding inside the box */
-    flex-grow: 1; /* Take remaining space in the flex container */
-  }
+.filter-container {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.search-results {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
   
