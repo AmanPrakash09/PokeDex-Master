@@ -1,3 +1,41 @@
+#root {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    height: 100vh;
+}
+
 .signin-container {
-  
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.form-container form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container input[type='email'],
+.form-container input[type='text'],
+.form-container input[type='password'] {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 3rem;
+}
+
+.form-container input[type='submit'] {
+    width: 25%;
+    margin-bottom: 10px;
+    height: 3rem;
 }

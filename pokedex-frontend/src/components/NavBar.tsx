@@ -4,7 +4,6 @@ import {
     useResolvedPath
   } from "react-router-dom"
   
-import { useState, useEffect } from 'react'
 import appLogo from '../assets/PokedexLogo.png'
 import './NavBar.css'
 
@@ -15,6 +14,8 @@ function NavBar() {
           <Link to="/" className='site-title'>PokéDex Master</Link>
           <ul>
             <CustomLink to='/search'>search</CustomLink>
+            <CustomLink to='/savefiles'>my save files</CustomLink>
+            <CustomLink to='/accountinfo'>my info</CustomLink>
             <CustomLink to='/signin'>sign in</CustomLink>
           </ul>
         </div>
