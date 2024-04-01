@@ -1,13 +1,18 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
+from django.db import connection
+from django.db.utils import IntegrityError
+
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
+
 from .models import Counter
 from .serializers import CounterSerializer
 
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-from rest_framework_simplejwt.views import TokenObtainPairView
+from datetime import date
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
@@ -95,6 +100,60 @@ def register(request):
         user.last_name = last_name
         user.save()
 
+    except Exception as e:
+        return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+    
+    # ________________________________________________SQL INSERT Operation for AppUser1 and AppUser2________________________________________________
+    date_joined = date.today().strftime('%Y-%m-%d')
+    loyalty = 1
+
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT * FROM AppUser1 WHERE email = %s", [email])
+            if cursor.fetchone() is not None:
+                return Response({'error': "Email already exists"}, status=status.HTTP_400_BAD_REQUEST)
+
+            cursor.execute("SELECT DateJoined FROM AppUser2 WHERE DateJoined = %s", [date_joined])
+            if cursor.fetchone() is None:
+                cursor.execute("INSERT INTO AppUser2 (DateJoined, Loyalty) VALUES (%s, %s)", [date_joined, loyalty])
+        
+        custom_username = first_name + last_name
+
+        with connection.cursor() as cursor:
+            cursor.execute("INSERT INTO AppUser1 (Email, Username, DateJoined) VALUES (%s, %s, %s)", [email, custom_username, date_joined])
+
         return Response({'success': "User created successfully"}, status=status.HTTP_201_CREATED)
+    
+    except IntegrityError as e:
+        return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+    except Exception as e:
+        return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+# ________________________________________________SQL Selection/Projection/Join Operation for AppUser1 and AppUser2________________________________________________
+@api_view(['GET'])
+def user_info(request):
+    
+    email = request.query_params.get('email')
+    
+    if not email:
+        return Response({'error': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("""SELECT a1.Email, a1.Username, a2.DateJoined, a2.Loyalty
+                              FROM AppUser1 a1
+                              JOIN AppUser2 a2 ON a1.DateJoined = a2.DateJoined
+                              WHERE a1.Email = %s""", [email])
+            user_info = cursor.fetchone()
+            if user_info:
+                data = {
+                    'email': user_info[0],
+                    'username': user_info[1],
+                    'date_joined': user_info[2].strftime('%Y-%m-%d'),
+                    'loyalty': user_info[3]
+                }
+                return Response(data)
+            else:
+                return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
     except Exception as e:
         return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
