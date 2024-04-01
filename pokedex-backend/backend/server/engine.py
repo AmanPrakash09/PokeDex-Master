@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import mysql.connector
 import os
 
-DOT_ENV_PATH = "../pokedex-backend/backend/backend/.env"
+DOT_ENV_PATH = "../backend/.env"
 load_dotenv(DOT_ENV_PATH)
 
 

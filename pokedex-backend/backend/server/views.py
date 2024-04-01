@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.db import connection
 from django.db.utils import IntegrityError
@@ -11,7 +10,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 
 from .models import Counter
 from .serializers import CounterSerializer
-
+from .engine import QueryEngine
 from datetime import date
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -79,6 +78,15 @@ def updateCounter(request, pk):
     if serializer.is_valid():
         serializer.save()
     return Response(serializer.data)
+
+@api_view(['POST'])
+def query(request):
+    e = QueryEngine()
+    try:
+        tuples = e.execute_query(request.data)
+        return Response(tuples)
+    except:
+        return Response({"error": "Invalid query"}, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['POST'])
 def register(request):
