@@ -4,7 +4,6 @@ import {
     useResolvedPath
   } from "react-router-dom"
   
-import appLogo from '../assets/PokedexLogo.png'
 import './NavBar.css'
 import { useContext } from "react"
 import AuthContext from "../context/AuthContext"
@@ -24,7 +23,6 @@ function NavBar() {
             ): (
               <CustomLink to='/signin'>sign in</CustomLink>
             )}
-            {/* <CustomLink to='/signin'>sign in</CustomLink> */}
           </ul>
         </div>
       </>

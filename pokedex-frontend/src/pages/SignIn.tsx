@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react'
+import { useContext } from 'react'
 import './SignIn.css'
 import AuthContext from '../context/AuthContext'
 
@@ -10,6 +10,33 @@ function SignIn() {
   }
 
   let {loginUser} = context
+  
+  let signUpUser = async (e: any) => {
+    e.preventDefault();
+    try {
+        let response = await fetch('http://127.0.0.1:8000/register/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                'username': e.target.email.value,
+                'email': e.target.email.value,
+                'password': e.target.password.value,
+                'first_name': e.target.first_name.value,
+                'last_name': e.target.last_name.value,
+            })
+        });
+        let data = await response.json();
+        if (response.status === 201) {
+            alert("User created successfully!");
+        } else {
+            alert(data.error || "An error occurred!");
+        }
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+  };
 
   return (
     <>
@@ -24,12 +51,12 @@ function SignIn() {
         </div>
         <div className="form-container signup-container">
             <p>Sign up</p>
-            <form className='signup-form'>
+            <form onSubmit={signUpUser} className='signup-form'>
                 <input type='email' name='email' placeholder='Email' />
-                <input type='text' name='first name' placeholder='First Name' />
-                <input type='text' name='last name' placeholder='Last Name' />
+                <input type='text' name='first_name' placeholder='First Name' />
+                <input type='text' name='last_name' placeholder='Last Name' />
                 <input type='password' name='password' placeholder='Password' />
-                <input type='password' name='confirm password' placeholder='Confirm Password' />
+                <input type='password' name='confirm_password' placeholder='Confirm Password' />
                 <input type='submit' value='Sign Up' />
             </form>
         </div>
