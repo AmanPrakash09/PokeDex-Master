@@ -5,3 +5,26 @@
     width: 100%;
     padding: 0 1rem;
 }
+
+.search-bar {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+.filter-container {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.search-results {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+  
