@@ -6,8 +6,11 @@ import {
   
 import appLogo from '../assets/PokedexLogo.png'
 import './NavBar.css'
+import { useContext } from "react"
+import AuthContext from "../context/AuthContext"
 
 function NavBar() {
+  let {user, logoutUser} = useContext(AuthContext)!
     return (
       <>
         <div className="nav">
@@ -16,7 +19,12 @@ function NavBar() {
             <CustomLink to='/search'>search</CustomLink>
             <CustomLink to='/savefiles'>my save files</CustomLink>
             <CustomLink to='/accountinfo'>my info</CustomLink>
-            <CustomLink to='/signin'>sign in</CustomLink>
+            {user ? (
+              <button onClick={logoutUser}>logout</button>
+            ): (
+              <CustomLink to='/signin'>sign in</CustomLink>
+            )}
+            {/* <CustomLink to='/signin'>sign in</CustomLink> */}
           </ul>
         </div>
       </>
