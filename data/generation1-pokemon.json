@@ -913,7 +913,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -1200,7 +1200,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -1521,7 +1521,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -2735,7 +2735,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -3017,7 +3017,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -3232,7 +3232,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -3445,7 +3445,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -3670,7 +3670,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -3901,7 +3901,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -4143,7 +4143,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -4342,7 +4342,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -4559,7 +4559,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -5107,7 +5107,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "level": "26"
             },
             {
@@ -5261,7 +5261,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -5493,7 +5493,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -5591,7 +5591,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "level": "31"
             },
             {
@@ -5721,7 +5721,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -5835,7 +5835,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "level": "36"
             },
             {
@@ -5973,7 +5973,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -6029,7 +6029,7 @@
     },
     {
         "id": "1-029",
-        "name": "Nidoran\u2640",
+        "name": "NidoranF",
         "poke_types": [
             "Poison"
         ],
@@ -6502,7 +6502,7 @@
             "Sheer Force"
         ],
         "location": [
-            "Nidoran\u2640",
+            "NidoranF",
             "Nidorina"
         ],
         "lv_moves": [
@@ -6825,7 +6825,7 @@
     },
     {
         "id": "1-032",
-        "name": "Nidoran\u2642",
+        "name": "NidoranM",
         "poke_types": [
             "Poison"
         ],
@@ -7305,7 +7305,7 @@
             "Sheer Force"
         ],
         "location": [
-            "Nidoran\u2642",
+            "NidoranM",
             "Nidorino"
         ],
         "lv_moves": [
@@ -8472,7 +8472,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -8652,7 +8652,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -9503,7 +9503,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -9706,7 +9706,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -11238,7 +11238,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -11879,7 +11879,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -12126,7 +12126,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -12424,7 +12424,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -12723,7 +12723,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -12998,7 +12998,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -13295,7 +13295,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -13520,7 +13520,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -13719,7 +13719,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -18424,7 +18424,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -18656,7 +18656,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -18927,7 +18927,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -19318,7 +19318,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -19460,7 +19460,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "level": "41"
             },
             {
@@ -19566,7 +19566,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -19685,7 +19685,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "level": "46"
             },
             {
@@ -19799,7 +19799,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -20016,7 +20016,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -21594,7 +21594,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -21826,7 +21826,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -23881,7 +23881,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "level": "36"
             },
             {
@@ -23987,7 +23987,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -24105,7 +24105,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "level": "40"
             },
             {
@@ -24219,7 +24219,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -25473,7 +25473,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -25704,7 +25704,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -28123,7 +28123,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -28355,7 +28355,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -28590,7 +28590,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -28831,7 +28831,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -28922,7 +28922,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "level": "32"
             },
             {
@@ -29084,7 +29084,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -29338,7 +29338,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -29858,7 +29858,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -30432,7 +30432,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -32072,7 +32072,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -32334,7 +32334,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -32588,7 +32588,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -32842,7 +32842,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -33073,7 +33073,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -34229,7 +34229,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -34820,7 +34820,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -35027,7 +35027,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -35242,7 +35242,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -35498,7 +35498,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -35777,7 +35777,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -36082,7 +36082,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
@@ -36182,7 +36182,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "level": "1"
             },
             {
@@ -36883,7 +36883,7 @@
                 "type": "Normal",
                 "category": "Physical",
                 "power": "60",
-                "accuracy": "\u221e",
+                "accuracy": "100",
                 "number": "39"
             },
             {
