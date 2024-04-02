@@ -9,10 +9,23 @@ function Search() {
   const handleSearch = async () => {
     try {
       // Make an API call to fetch the matching Pokemon data based on the search query
-      const response = await fetch(`http://127.0.0.1:8000/pokemon/search?name=${searchQuery}`);
+      const query = "SELECT ps1.PokemonName, ps1.Ability, ps2.PokeType "+
+          "FROM PokemonStores1 ps1, PokemonStores2 ps2 "+
+          "WHERE ps1.PokemonName = ps2.PokemonName AND ps1.Ability LIKE '%Pressure%'"
+      const response = await fetch("http://127.0.0.1:8000/query/", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(query)
+      });
       if (response.ok) {
         const data = await response.json();
-        setSearchResults(data); // Set the search results in state
+        let newData = data.map((result: any) => {
+          return {PokemonName: result[0], Ability: result[1], Type: result[2]}
+        })
+        console.log(newData);
+        setSearchResults(newData); // Set the search results in state
       } else {
         console.error('Failed to fetch search results');
       }
@@ -30,20 +43,20 @@ function Search() {
           </a>
         </div>
 
-        <div> 
+        <div>
           <h1>PokeDex Master - Search Pokemon</h1>
           <h4>Search Pokemon By Name or By Using Filters</h4>
-          <div style={{ display: 'flex', alignItems: 'center'}}>
+          <div style={{display: 'flex', alignItems: 'center'}}>
             <div className="search-bar">
-              <input 
-                type="text" 
-                placeholder="Search Pokemon" 
-                value={searchQuery} 
-                onChange={(e) => setSearchQuery(e.target.value)} 
+              <input
+                  type="text"
+                  placeholder="Search Pokemon"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
               />
               <button onClick={handleSearch}>Search</button>
             </div>
-            
+
             <div className="filter-container">
               <div className="dropdown">
                 <label htmlFor="type">Type:</label>
@@ -78,7 +91,7 @@ function Search() {
                 </select>
               </div>
               <div className="checkbox">
-                <input type="checkbox" id="caught" />
+                <input type="checkbox" id="caught"/>
                 <label htmlFor="caught">Caught</label>
               </div>
               <button className="search-button">Search</button>
@@ -86,26 +99,33 @@ function Search() {
           </div>
 
           <div className="search-results">
-          <h2>Search Results</h2>
-          <table>
-            <thead>
+            <button>+ Filter</button>
+            <ul>
+              <li>Filter content</li>
+            </ul>
+          </div>
+
+          <div className="search-results">
+            <h2>Search Results</h2>
+            <table>
+              <thead>
               <tr>
                 <th>Pokemon Name</th>
                 <th>Type</th>
                 <th>Egg Group</th>
               </tr>
-            </thead>
-            <tbody>
-              {/* {searchResults.map((pokemon) => (
-                <tr key={pokemon.PokemonName}>
-                  <td>{pokemon.PokemonName}</td>
-                  <td>{pokemon.Type}</td>
-                  <td>{pokemon.EggGroup}</td>
-                </tr>
-              ))} */}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+              {searchResults.map((pokemon: any) => (
+                  <tr key={pokemon["PokemonName"]}>
+                    <td>{pokemon["PokemonName"]}</td>
+                    <td>{pokemon["Ability"]}</td>
+                    <td>{pokemon["Type"]}</td>
+                  </tr>
+              ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>

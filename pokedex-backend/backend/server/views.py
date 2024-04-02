@@ -82,9 +82,11 @@ def updateCounter(request, pk):
 
 @api_view(['POST'])
 def query(request):
+    print(request.data)
     e = QueryEngine()
     try:
         tuples = e.execute_query(request.data)
+        print(tuples)
         return Response(tuples)
     except:
         return Response({"error": "Invalid query"}, status=status.HTTP_400_BAD_REQUEST)
