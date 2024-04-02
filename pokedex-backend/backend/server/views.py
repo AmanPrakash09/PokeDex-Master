@@ -169,8 +169,7 @@ def user_info(request):
 
 @api_view(['DELETE'])
 def delete_account(request):
-    # email = request.query_params.get('email')
-    email = "123@123.com"
+    email = request.query_params.get('email')
 
     if not email:
         return Response({'error': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
