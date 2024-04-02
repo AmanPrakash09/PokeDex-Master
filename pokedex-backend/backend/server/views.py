@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.db import connection
 from django.db.utils import IntegrityError
 
@@ -103,7 +104,7 @@ def register(request):
     except Exception as e:
         return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
     
-    # ________________________________________________SQL INSERT Operation for AppUser1 and AppUser2________________________________________________
+    # ________________________________________________SQL INSERT Operation on AppUser1 and AppUser2________________________________________________
     date_joined = date.today().strftime('%Y-%m-%d')
     loyalty = 1
 
@@ -129,7 +130,7 @@ def register(request):
     except Exception as e:
         return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
-# ________________________________________________SQL Selection/Projection/Join Operation for AppUser1 and AppUser2________________________________________________
+# ________________________________________________SQL Selection/Projection/Join Operation on AppUser1 and AppUser2________________________________________________
 @api_view(['GET'])
 def user_info(request):
     
@@ -155,5 +156,30 @@ def user_info(request):
                 return Response(data)
             else:
                 return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['DELETE'])
+def delete_account(request):
+    # email = request.query_params.get('email')
+    email = "123@123.com"
+
+    if not email:
+        return Response({'error': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        User = get_user_model()
+        try:
+            user_to_delete = User.objects.get(email=email)
+            user_to_delete.delete()
+        except User.DoesNotExist:
+            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        # ________________________________________________SQL DELETE Operation on AppUser1________________________________________________
+        
+        with connection.cursor() as cursor:
+            cursor.execute("DELETE FROM AppUser1 WHERE Email = %s", [email])
+
+        return Response({'success': 'User deleted successfully.'}, status=status.HTTP_200_OK)
     except Exception as e:
         return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)

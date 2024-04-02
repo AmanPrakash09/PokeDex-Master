@@ -17,7 +17,7 @@ interface AuthContextType {
   authTokens: AuthTokens | null;
   user: User | null;
   loginUser: (e: React.FormEvent<HTMLFormElement>) => Promise<void>;
-  logoutUser: (e: React.MouseEvent) => void;
+  logoutUser: () => void;
 }
 
 interface MyJwtPayload {
