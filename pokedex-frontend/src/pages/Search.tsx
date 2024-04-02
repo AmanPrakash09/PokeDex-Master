@@ -5,13 +5,20 @@ import './Search.css'
 function Search() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [orElements, setOrElements] = useState<string[]>([]);
+
+  const [nameCheckbox, setNameCheckBox] = useState(false);
+  const [typeCheckbox, setTypeCheckBox] = useState(false);
+  const [eggCheckbox, setEggCheckBox] = useState(false);
+  const [abilityCheckbox, setAbilityCheckBox] = useState(false);
 
   const handleSearch = async () => {
     try {
       // Make an API call to fetch the matching Pokemon data based on the search query
       const query = "SELECT ps1.PokemonName, ps1.Ability, ps2.PokeType "+
           "FROM PokemonStores1 ps1, PokemonStores2 ps2 "+
-          "WHERE ps1.PokemonName = ps2.PokemonName AND ps1.Ability LIKE '%Pressure%'"
+          "WHERE ps1.PokemonName = ps2.PokemonName AND "+
+          "(ps1.Ability LIKE '%Pressure%' OR ps2.PokeType LIKE '%Grass%' AND ps1.PokemonName LIKE '%a%')";
       const response = await fetch("http://127.0.0.1:8000/query/", {
         method: "POST",
         headers: {
@@ -33,6 +40,16 @@ function Search() {
       console.error('Error occurred while fetching search results:', error);
     }
   };
+
+  const removeFilterElement = () => {
+    const newList = orElements.slice(0, -1);
+    setOrElements(newList);
+  }
+
+  const addFilterElement = () => {
+    const newList = [...orElements, "3"];
+    setOrElements(newList);
+  }
 
   return (
     <>
@@ -98,10 +115,73 @@ function Search() {
             </div>
           </div>
 
-          <div className="search-results">
-            <button>+ Filter</button>
+          <div className="filter-container">
+            <label>
+              <input
+                  type="checkbox"
+                  checked={nameCheckbox}
+                  onChange={() => {
+                    setNameCheckBox(!nameCheckbox)}}
+              />
+              Name
+            </label>
+            <label>
+              <input
+                  type="checkbox"
+                  checked={typeCheckbox}
+                  onChange={() => {setTypeCheckBox(!typeCheckbox)}}
+              />
+              Type
+            </label>
+            <label>
+              <input
+                  type="checkbox"
+                  checked={eggCheckbox}
+                  onChange={() => {setEggCheckBox(!eggCheckbox)}}
+              />
+              Egg Group
+            </label>
+            <label>
+              <input
+                  type="checkbox"
+                  checked={abilityCheckbox}
+                  onChange={() => {setAbilityCheckBox(!abilityCheckbox)}}
+              />
+              Ability
+            </label>
+          </div>
+
+          <div className="filter-container">
+            <button onClick={addFilterElement}>+</button>
+            <button onClick={removeFilterElement}>-</button>
             <ul>
-              <li>Filter content</li>
+              {orElements.map((orElement: any) => (
+                  <div>
+                    <label>
+                      <select id="filter-type">
+                        <option value="AND">AND</option>
+                        <option value="OR">OR</option>
+                      </select>
+                    </label>
+                    <label>
+                      <select id="filter-type">
+                        <option>Name</option>
+                        <option>Type</option>
+                        <option>Egg Group</option>
+                        <option>Ability</option>
+                      </select>
+                    </label>
+                    <label>
+                      <select id="filter-type">
+                        <option value="LIKE">LIKE</option>
+                        <option value="EQUALS">EQUALS</option>
+                      </select>
+                    </label>
+                    <label>
+                      <input id="qualifier-text" type="text"/>
+                    </label>
+                  </div>
+              ))}
             </ul>
           </div>
 

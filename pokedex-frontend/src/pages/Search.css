@@ -20,11 +20,19 @@
   flex-grow: 1;
 }
 
+.filter-container label {
+  margin-right: 10px;
+}
+
 .search-results {
   border: 2px solid #ccc;
   border-radius: 8px;
   padding: 10px;
   flex-grow: 1;
+}
+
+.filter-element {
+    display: inline-block;
 }
 
   
