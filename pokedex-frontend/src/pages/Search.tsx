@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import appLogo from '../assets/PokedexLogo.png'
 import './Search.css'
 
 function Search() {
-  const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
   const [nameCheckbox, setNameCheckBox] = useState(false);
@@ -11,6 +10,8 @@ function Search() {
   const [eggCheckbox, setEggCheckBox] = useState(false);
   const [abilityCheckbox, setAbilityCheckBox] = useState(false);
   const [filters, setFilters] = useState<any[]>([]);
+
+  const [typePower, setTypePower] = useState([]);
 
   const handleFilterChange = (index: any, key: any, value: any) => {
     const updatedFilters = [...filters];
@@ -45,6 +46,7 @@ function Search() {
   }
 
   const searchDatabase = async () => {
+    setSearchResults([]);
     if (!(nameCheckbox || typeCheckbox || abilityCheckbox || eggCheckbox)) {
       alert("Please select some columns to project upon");
       return;
@@ -61,10 +63,58 @@ function Search() {
     if (selectClause === "SELECT ") return;
     selectClause = selectClause.slice(0, -2);
     const query = `${selectClause} ${fromClause} ${whereClause}`;
-    await handleSearch(query);
+    await handleSearch(query, setSearchResults);
   }
 
-  const handleSearch = async(query: string) => {
+  const groupByAggregation = async () => {
+    const query = "SELECT m.MoveType, COUNT(*) FROM Move1 m GROUP BY m.MoveType"
+    await handleSearch(query, setTypePower);
+  }
+
+  const groupByHaving = async () => {
+    const query =
+        "SELECT m.MoveType, MAX(m.Power) " +
+        "FROM Move1 m " +
+        "GROUP BY m.MoveType " +
+        "HAVING MAX(m.Power) >= 60";
+    await handleSearch(query, setTypePower);
+  }
+
+  const nestedAggregation = async () => {
+    const levelMoves =
+        "SELECT p2.PokeType, p.PokemonName, m.MoveName, m.MoveType " +
+        "FROM PokemonStores1 p, Learns l, LevelMove lm, Move1 m, PokemonStores2 p2 " +
+        "WHERE p.PokeID = l.PokeID AND l.MoveName = lm.MoveName AND lm.MoveName = m.MoveName " +
+        "AND p2.PokemonName = p.PokemonName";
+    const tmMoves =
+        "SELECT p2.PokeType, p.PokemonName, m.MoveName, m.MoveType " +
+        "FROM PokemonStores1 p, Accesses a, TMHMMove t, Move1 m, PokemonStores2 p2 " +
+        "WHERE p.PokeID = a.PokeID AND a.MoveName = t.MoveName AND t.MoveName = m.MoveName " +
+        "AND p2.PokemonName = p.PokemonName";
+    const union = levelMoves + " UNION " + tmMoves;
+    const query =
+        `WITH PokemonAvailableMoves AS (${union}) ` +
+        "SELECT p.PokemonName " +
+        "FROM PokemonStores1 p " +
+        "GROUP BY p.PokemonName " +
+        "HAVING 9 <= (SELECT COUNT(DISTINCT pam.MoveType) " +
+        "FROM PokemonAvailableMoves pam " +
+        "WHERE pam.PokemonName = p.PokemonName)";
+    await handleSearch(query, setTypePower);
+  }
+
+  const division = async () => {
+    const query =
+        "SELECT p.PokemonName " +
+        "FROM PokemonStores1 p " +
+        "WHERE NOT EXISTS (" +
+        "(SELECT t.MoveName FROM TMHMMove t) " +
+        "EXCEPT " +
+        "(SELECT a.MoveName FROM Accesses a WHERE a.PokeID = p.PokeID))";
+    await handleSearch(query, setTypePower);
+  }
+
+  const handleSearch = async(query: string, func: any) => {
     try {
       // Make an API call to fetch the matching Pokemon data based on the search query
       const response = await fetch("http://127.0.0.1:8000/query/", {
@@ -76,11 +126,7 @@ function Search() {
       });
       if (response.ok) {
         const data = await response.json();
-        // let newData = data.map((result: any) => {
-        //   return {PokemonName: result[0], Type: result[1], EggGroup: result[2], Ability: result[3]}
-        // })
-        // console.log(newData);
-        setSearchResults(data); // Set the search results in state
+        func(data); // Set the search results in state
       } else {
         console.error('Failed to fetch search results');
       }
@@ -92,67 +138,8 @@ function Search() {
   return (
     <>
       <div className="search-container">
-        <div className="logo-container">
-          <a href="http://localhost:3000">
-            <img src={appLogo} className="logo" alt="Project logo" />
-          </a>
-        </div>
-
         <div>
           <h1>PokeDex Master - Search Pokemon</h1>
-          {/*<h4>Search Pokemon By Name or By Using Filters</h4>*/}
-          {/*<div style={{display: 'flex', alignItems: 'center'}}>*/}
-            {/*<div className="search-bar">*/}
-            {/*  <input*/}
-            {/*      type="text"*/}
-            {/*      placeholder="Search Pokemon"*/}
-            {/*      value={searchQuery}*/}
-            {/*      onChange={(e) => setSearchQuery(e.target.value)}*/}
-            {/*  />*/}
-            {/*  <button>Search</button>*/}
-            {/*</div>*/}
-
-          {/*  <div className="filter-container">*/}
-          {/*    <div className="dropdown">*/}
-          {/*      <label htmlFor="type">Type:</label>*/}
-          {/*      <select id="type">*/}
-          {/*        <option value="">Any</option>*/}
-          {/*        <option value="grass">Grass</option>*/}
-          {/*        <option value="fire">Fire</option>*/}
-          {/*        <option value="water">Water</option>*/}
-          {/*        <option value="poison">Poison</option>*/}
-          {/*        <option value="flying">Flying</option>*/}
-          {/*        <option value="bug">Bug</option>*/}
-          {/*        <option value="normal">Normal</option>*/}
-          {/*        <option value="electric">Electric</option>*/}
-          {/*        <option value="ground">Ground</option>*/}
-          {/*        <option value="dark">Dark</option>*/}
-          {/*        <option value="steel">Steel</option>*/}
-          {/*        <option value="fighting">Fighting</option>*/}
-          {/*        <option value="psychic">Psychic</option>*/}
-          {/*        <option value="ice">Ice</option>*/}
-          {/*        <option value="water">Water</option>*/}
-          {/*        <option value="ghost">Ghost</option>*/}
-          {/*        <option value="fairy">Fairy</option>*/}
-          {/*        <option value="rock">Rock</option>*/}
-          {/*      </select>*/}
-          {/*    </div>*/}
-          {/*    <div className="dropdown">*/}
-          {/*      <label htmlFor="generation">Generation:</label>*/}
-          {/*      <select id="generation">*/}
-          {/*        <option value="">Any</option>*/}
-          {/*        <option value="1">Generation 1</option>*/}
-          {/*        <option value="3">Generation 3</option>*/}
-          {/*      </select>*/}
-          {/*    </div>*/}
-          {/*    <div className="checkbox">*/}
-          {/*      <input type="checkbox" id="caught"/>*/}
-          {/*      <label htmlFor="caught">Caught</label>*/}
-          {/*    </div>*/}
-          {/*    <button className="search-button">Search</button>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
-
           <div className="filter-container">
             <label>
               <input
@@ -278,6 +265,19 @@ function Search() {
               ))}
               </tbody>
             </table>
+          </div>
+          <div className="filter-container">
+            <button onClick={groupByAggregation}>Move Types Count</button>
+            <button onClick={groupByHaving}>Move Types With Power >= 60</button>
+            <button onClick={nestedAggregation}>Pokemon With >= 9 Type Coverage</button>
+            <button onClick={division}>Pokemon Who Can Access all TM/Hm's</button>
+          </div>
+          <div className="search-results">
+            {typePower.map((res: any) => (
+                <div>
+                  {res}
+                </div>
+              ))}
           </div>
         </div>
       </div>
