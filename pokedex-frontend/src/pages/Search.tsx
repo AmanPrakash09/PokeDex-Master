@@ -11,7 +11,8 @@ function Search() {
   const [abilityCheckbox, setAbilityCheckBox] = useState(false);
   const [filters, setFilters] = useState<any[]>([]);
 
-  const [typePower, setTypePower] = useState([]);
+  const [buttonQueryResults, setButtonQueryResults] = useState([]);
+  const [buttonQueryFlag, setButtonQueryFlag] = useState(0);
 
   const handleFilterChange = (index: any, key: any, value: any) => {
     const updatedFilters = [...filters];
@@ -66,21 +67,29 @@ function Search() {
     await handleSearch(query, setSearchResults);
   }
 
-  const groupByAggregation = async () => {
-    const query = "SELECT m.MoveType, COUNT(*) FROM Move1 m GROUP BY m.MoveType"
-    await handleSearch(query, setTypePower);
+  // Query for: "Aggregation with GROUP BY" requirement
+  const getCountOfMoveTypes = async () => {
+    setButtonQueryFlag(1);
+    const query =
+        "SELECT m.MoveType, COUNT(*) " +
+        "FROM Move1 m GROUP BY m.MoveType";
+    await handleSearch(query, setButtonQueryResults);
   }
 
-  const groupByHaving = async () => {
+  // Query for: "Aggregation with HAVING" requirement
+  const getMoveTypesWithEnoughPower = async (power: number) => {
+    setButtonQueryFlag(2);
     const query =
         "SELECT m.MoveType, MAX(m.Power) " +
         "FROM Move1 m " +
         "GROUP BY m.MoveType " +
-        "HAVING MAX(m.Power) >= 60";
-    await handleSearch(query, setTypePower);
+        `HAVING MAX(m.Power) >= ${power}`;
+    await handleSearch(query, setButtonQueryResults);
   }
 
-  const nestedAggregation = async () => {
+  // Query for: "Nested aggregation with GROUP BY" requirement
+  const getPokemonWithEnoughTypeCoverage = async (uniqueTypes: number) => {
+    setButtonQueryFlag(3);
     const levelMoves =
         "SELECT p2.PokeType, p.PokemonName, m.MoveName, m.MoveType " +
         "FROM PokemonStores1 p, Learns l, LevelMove lm, Move1 m, PokemonStores2 p2 " +
@@ -97,13 +106,15 @@ function Search() {
         "SELECT p.PokemonName " +
         "FROM PokemonStores1 p " +
         "GROUP BY p.PokemonName " +
-        "HAVING 9 <= (SELECT COUNT(DISTINCT pam.MoveType) " +
+        `HAVING ${uniqueTypes} <= (SELECT COUNT(DISTINCT pam.MoveType) ` +
         "FROM PokemonAvailableMoves pam " +
         "WHERE pam.PokemonName = p.PokemonName)";
-    await handleSearch(query, setTypePower);
+    await handleSearch(query, setButtonQueryResults);
   }
 
-  const division = async () => {
+  // Query for: "Division" requirement
+  const getPokemonWhoUseAllTMHM = async () => {
+    setButtonQueryFlag(4);
     const query =
         "SELECT p.PokemonName " +
         "FROM PokemonStores1 p " +
@@ -111,7 +122,7 @@ function Search() {
         "(SELECT t.MoveName FROM TMHMMove t) " +
         "EXCEPT " +
         "(SELECT a.MoveName FROM Accesses a WHERE a.PokeID = p.PokeID))";
-    await handleSearch(query, setTypePower);
+    await handleSearch(query, setButtonQueryResults);
   }
 
   const handleSearch = async(query: string, func: any) => {
@@ -267,22 +278,63 @@ function Search() {
             </table>
           </div>
           <div className="filter-container">
-            <button onClick={groupByAggregation}>Move Types Count</button>
-            <button onClick={groupByHaving}>Move Types With Power >= 60</button>
-            <button onClick={nestedAggregation}>Pokemon With >= 9 Type Coverage</button>
-            <button onClick={division}>Pokemon Who Can Access all TM/Hm's</button>
+            <button onClick={getCountOfMoveTypes}>Move Types Count</button>
+            <button onClick={() => getMoveTypesWithEnoughPower(60)}>Move Types With Power >= 60</button>
+            <button onClick={() => getPokemonWithEnoughTypeCoverage(9)}>Pokemon With >= 9 Type Coverage</button>
+            <button onClick={getPokemonWhoUseAllTMHM}>Pokemon Who Can Access all TM/HM's</button>
           </div>
           <div className="search-results">
-            {typePower.map((res: any) => (
-                <div>
-                  {res}
-                </div>
+            <table>
+              <thead>
+              <tr>
+                {buttonQueryFlag === 1 &&
+                    <>
+                      <td>
+                        <h3>Type</h3>
+                      </td>
+                      <td>
+                        <h3>Count</h3>
+                      </td>
+                    </>}
+                {buttonQueryFlag === 2 &&
+                    <>
+                      <td>
+                        <h3>Type</h3>
+                      </td>
+                      <td>
+                        <h3>Max-Power</h3>
+                      </td>
+                    </>}
+                {buttonQueryFlag === 3 &&
+                    <>
+                      <td>
+                        <h3>Name</h3>
+                      </td>
+                    </>}
+                {buttonQueryFlag === 4 &&
+                    <>
+                      <td>
+                        <h3>Name</h3>
+                      </td>
+                    </>}
+              </tr>
+              </thead>
+              <tbody>
+              {buttonQueryResults.map((res: any) => (
+                  <tr key={res[0]}>
+                    <td>{res[0]}</td>
+                    <td>{res[1]}</td>
+                    <td>{res[2]}</td>
+                    <td>{res[3]}</td>
+                  </tr>
               ))}
+              </tbody>
+            </table>
+          </div>
           </div>
         </div>
-      </div>
-    </>
-  )
-}
+      </>
+      )
+      }
 
-export default Search
+      export default Search
