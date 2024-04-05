@@ -3,13 +3,20 @@ import appLogo from '../assets/PokedexLogo.png'
 import './Search.css'
 
 function Search() {
-  const [searchResults, setSearchResults] = useState([]);
+  const [selectionResults, setSelectionResults] = useState([]);
+  const [projectionResults, setProjectionResults] = useState([]);
 
   const [nameCheckbox, setNameCheckBox] = useState(false);
   const [typeCheckbox, setTypeCheckBox] = useState(false);
   const [eggCheckbox, setEggCheckBox] = useState(false);
   const [abilityCheckbox, setAbilityCheckBox] = useState(false);
   const [filters, setFilters] = useState<any[]>([]);
+
+  const [titleCheckbox, setTitleCheckBox] = useState(false);
+  const [releaseDateCheckbox, setReleaseDateCheckBox] = useState(false);
+  const [salePriceCheckbox, setSalePriceCheckBox] = useState(false);
+  const [consoleCheckbox, setConsoleCheckBox] = useState(false);
+  const [generationCheckbox, setGenerationCheckBox] = useState(false);
 
   const [buttonQueryResults, setButtonQueryResults] = useState([]);
   const [buttonQueryFlag, setButtonQueryFlag] = useState(0);
@@ -34,10 +41,14 @@ function Search() {
 
   const getSelectionFilters = () => {
     const combineFilters = filters.reduce((prevString: any, currFilter: any) => {
-      if (currFilter.filterType === "PokeType" || currFilter.filterType === "EggGroup") {
-        return prevString + ` ${currFilter.logicOperator} ps2.${currFilter.filterType} ${currFilter.eqOperator == "LIKE"? "LIKE" : "="} '${currFilter.qualifierText}'`
+      let inputText = currFilter.qualifierText.replace(/'/g, '');
+      if (currFilter.eqOperator == "LIKE") inputText = `%${inputText}%`;
+      const logic = currFilter.logicOperator;
+      const column = currFilter.filterType;
+      if (column === "PokeType" || column === "EggGroup") {
+        return prevString + ` ${logic} ps2.${column} ${currFilter.eqOperator == "LIKE"? "LIKE" : "="} '${inputText}'`
       } else {
-        return prevString + ` ${currFilter.logicOperator} ps1.${currFilter.filterType} ${currFilter.eqOperator == "LIKE"? "LIKE" : "="} '${currFilter.qualifierText}'`
+        return prevString + ` ${logic} ps1.${column} ${currFilter.eqOperator == "LIKE"? "LIKE" : "="} '${inputText}'`
       }
     }, "")
     if (combineFilters) {
@@ -46,8 +57,8 @@ function Search() {
     return "";
   }
 
-  const searchDatabase = async () => {
-    setSearchResults([]);
+  const selectionQuery = async () => {
+    setSelectionResults([]);
     if (!(nameCheckbox || typeCheckbox || abilityCheckbox || eggCheckbox)) {
       alert("Please select some columns to project upon");
       return;
@@ -64,7 +75,28 @@ function Search() {
     if (selectClause === "SELECT ") return;
     selectClause = selectClause.slice(0, -2);
     const query = `${selectClause} ${fromClause} ${whereClause}`;
-    await handleSearch(query, setSearchResults);
+    await handleSearch(query, setSelectionResults);
+  }
+
+  const projectionQuery = async () => {
+    setProjectionResults([]);
+    if (!(titleCheckbox || generationCheckbox || releaseDateCheckbox || consoleCheckbox || salePriceCheckbox)) {
+      alert("Please select some columns to project upon");
+      return;
+    }
+    let selectClause = "SELECT ";
+    if (titleCheckbox) selectClause += "p1.Title, ";
+    if (generationCheckbox) selectClause += "p1.GenerationNumber, ";
+    if (releaseDateCheckbox) selectClause += "p1.ReleaseDate, ";
+    if (consoleCheckbox) selectClause += "g.Console, ";
+    if (salePriceCheckbox) selectClause += "p2.SalePrice, ";
+    if (selectClause === "SELECT ") return;
+    selectClause = selectClause.slice(0, -2);
+    const query =
+        `${selectClause} ` +
+        "FROM Generation g, PokemonGameCategorizes2 p2, PokemonGameCategorizes1 p1 " +
+        "WHERE g.GenerationNumber = p1.GenerationNumber AND p2.ReleaseDate = p1.ReleaseDate";
+    await handleSearch(query, setProjectionResults);
   }
 
   // Query for: "Aggregation with GROUP BY" requirement
@@ -125,6 +157,10 @@ function Search() {
     await handleSearch(query, setButtonQueryResults);
   }
 
+  const clearQueryResults = () => {
+    setSelectionResults([]);
+  }
+
   const handleSearch = async(query: string, func: any) => {
     try {
       // Make an API call to fetch the matching Pokemon data based on the search query
@@ -150,13 +186,15 @@ function Search() {
     <>
       <div className="search-container">
         <div>
-          <h1>PokeDex Master - Search Pokemon</h1>
+          <h1>PokeDex Master - Search</h1>
           <div className="filter-container">
+            <h2>Pokemon Selection</h2>
             <label>
               <input
                   type="checkbox"
                   checked={nameCheckbox}
                   onChange={() => {
+                    setSelectionResults([]);
                     setNameCheckBox(!nameCheckbox)
                   }}
               />
@@ -167,6 +205,7 @@ function Search() {
                   type="checkbox"
                   checked={typeCheckbox}
                   onChange={() => {
+                    setSelectionResults([]);
                     setTypeCheckBox(!typeCheckbox)
                   }}
               />
@@ -177,6 +216,7 @@ function Search() {
                   type="checkbox"
                   checked={eggCheckbox}
                   onChange={() => {
+                    setSelectionResults([]);
                     setEggCheckBox(!eggCheckbox)
                   }}
               />
@@ -187,66 +227,65 @@ function Search() {
                   type="checkbox"
                   checked={abilityCheckbox}
                   onChange={() => {
+                    setSelectionResults([]);
                     setAbilityCheckBox(!abilityCheckbox)
                   }}
               />
               Ability
             </label>
-          </div>
-
-          <div className="filter-container">
+            <div className="spacer"></div>
             <div>
               <button onClick={addFilter}>+</button>
-              <button onClick={searchDatabase}>Search</button>
+              <button onClick={selectionQuery}>Search</button>
+              <button onClick={clearQueryResults}>Clear</button>
             </div>
             <ul>
               {filters.map((filter, index) => (
-        <div key={index}>
-          {index !== 0 && (
-            <label>
-              <select
-                value={filter.logicOperator || ''}
-                onChange={(e) => handleFilterChange(index, 'logicOperator', e.target.value)}
-              >
-                <option value="AND">AND</option>
-                <option value="OR">OR</option>
-              </select>
-            </label>
-          )}
-          <label>
-            <select
-              value={filter.filterType || ''}
-              onChange={(e) => handleFilterChange(index, 'filterType', e.target.value)}
-            >
-              <option value="PokemonName">Name</option>
-              <option value="PokeType">Type</option>
-              <option value="EggGroup">Egg Group</option>
-              <option value="Ability">Ability</option>
-            </select>
-          </label>
-          <label>
-            <select
-              value={filter.eqOperator || ''}
-              onChange={(e) => handleFilterChange(index, 'eqOperator', e.target.value)}
-            >
-              <option value="LIKE">LIKE</option>
-              <option value="EQUALS">EQUALS</option>
-            </select>
-          </label>
-          <label>
-            <input
-                type="text"
-                value={filter.qualifierText || ''}
-                onChange={(e) => handleFilterChange(index, 'qualifierText', e.target.value)}
-            />
-            <button onClick={() => removeFilter(index)}>-</button>
-          </label>
-        </div>
-              ))}
+                <div key={index}>
+                  {index !== 0 && (
+                    <label>
+                      <select
+                        value={filter.logicOperator || ''}
+                        onChange={(e) => handleFilterChange(index, 'logicOperator', e.target.value)}
+                      >
+                        <option value="AND">AND</option>
+                        <option value="OR">OR</option>
+                      </select>
+                    </label>
+                  )}
+                  <label>
+                  <select
+                    value={filter.filterType || ''}
+                    onChange={(e) => handleFilterChange(index, 'filterType', e.target.value)}
+                  >
+                    <option value="PokemonName">Name</option>
+                    <option value="PokeType">Type</option>
+                    <option value="EggGroup">Egg Group</option>
+                    <option value="Ability">Ability</option>
+                  </select>
+                </label>
+                <label>
+                  <select
+                    value={filter.eqOperator || ''}
+                    onChange={(e) => handleFilterChange(index, 'eqOperator', e.target.value)}
+                  >
+                    <option value="LIKE">LIKE</option>
+                    <option value="EQUALS">EQUALS</option>
+                  </select>
+                </label>
+                <label>
+                  <input
+                      type="text"
+                      value={filter.qualifierText || ''}
+                      onChange={(e) => handleFilterChange(index, 'qualifierText', e.target.value)}
+                  />
+                  <button onClick={() => removeFilter(index)}>-</button>
+                </label>
+              </div>
+                    ))}
             </ul>
-          </div>
-
-          <div className="search-results">
+            <div className="spacer"></div>
+            <hr />
             <h2>Search Results</h2>
             <table>
               <thead>
@@ -266,7 +305,7 @@ function Search() {
                 </tr>
               </thead>
               <tbody>
-              {searchResults.map((pokemon: any) => (
+              {selectionResults.map((pokemon: any) => (
                   <tr key={pokemon[0]}>
                     <td>{pokemon[0]}</td>
                     <td>{pokemon[1]}</td>
@@ -277,13 +316,115 @@ function Search() {
               </tbody>
             </table>
           </div>
+          <div className="spacer"></div>
           <div className="filter-container">
+            <h2>Game Information</h2>
+            <label>
+              <input
+                  type="checkbox"
+                  checked={titleCheckbox}
+                  onChange={() => {
+                    setProjectionResults([]);
+                    setTitleCheckBox(!titleCheckbox)
+                  }}
+              />
+              Title
+            </label>
+            <label>
+              <input
+                  type="checkbox"
+                  checked={generationCheckbox}
+                  onChange={() => {
+                    setProjectionResults([]);
+                    setGenerationCheckBox(!generationCheckbox)
+                  }}
+              />
+              Generation
+            </label>
+            <label>
+              <input
+                  type="checkbox"
+                  checked={releaseDateCheckbox}
+                  onChange={() => {
+                    setProjectionResults([]);
+                    setReleaseDateCheckBox(!releaseDateCheckbox)
+                  }}
+              />
+              Release
+            </label>
+            <label>
+              <input
+                  type="checkbox"
+                  checked={consoleCheckbox}
+                  onChange={() => {
+                    setProjectionResults([]);
+                    setConsoleCheckBox(!consoleCheckbox)
+                  }}
+              />
+              Console
+            </label>
+            <label>
+              <input
+                  type="checkbox"
+                  checked={salePriceCheckbox}
+                  onChange={() => {
+                    setProjectionResults([]);
+                    setSalePriceCheckBox(!salePriceCheckbox)
+                  }}
+              />
+              Price
+            </label>
+            <div className="spacer"></div>
+            <div>
+              <button onClick={projectionQuery}>Search</button>
+              <button onClick={() => setProjectionResults([])}>Clear</button>
+            </div>
+            <div className="spacer"></div>
+            <hr/>
+            <h2>Search Results</h2>
+            <table>
+              <thead>
+              <tr>
+                {titleCheckbox &&
+                    <th>Title</th>
+                }
+                {generationCheckbox &&
+                    <th>Generation</th>
+                }
+                {releaseDateCheckbox &&
+                    <th>Release</th>
+                }
+                {consoleCheckbox &&
+                    <th>Console</th>
+                }
+                {salePriceCheckbox &&
+                    <th>Price</th>
+                }
+              </tr>
+              </thead>
+              <tbody>
+              {projectionResults.map((game: any) => (
+                  <tr key={game[0]}>
+                    <td>{game[0]}</td>
+                    <td>{game[1]}</td>
+                    <td>{game[2]}</td>
+                    <td>{game[3]}</td>
+                    <td>{game[4]}</td>
+                  </tr>
+              ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="spacer"></div>
+          <div className="filter-container">
+            <h2>Move Information</h2>
             <button onClick={getCountOfMoveTypes}>Move Types Count</button>
             <button onClick={() => getMoveTypesWithEnoughPower(60)}>Move Types With Power >= 60</button>
             <button onClick={() => getPokemonWithEnoughTypeCoverage(9)}>Pokemon With >= 9 Type Coverage</button>
             <button onClick={getPokemonWhoUseAllTMHM}>Pokemon Who Can Access all TM/HM's</button>
-          </div>
-          <div className="search-results">
+            <div className="spacer"></div>
+            <hr/>
+            <h2>Search Results</h2>
             <table>
               <thead>
               <tr>
@@ -331,7 +472,7 @@ function Search() {
               </tbody>
             </table>
           </div>
-          </div>
+        </div>
         </div>
       </>
       )
