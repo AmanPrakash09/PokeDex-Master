@@ -95,8 +95,7 @@ def register(request):
         username = request.data['username']
         email = request.data['email']
         password = request.data['password']
-        first_name = request.data['first_name']
-        last_name = request.data['last_name']
+        user_name = request.data['user_name']
         
         if User.objects.filter(username=username).exists():
             return Response({'error': "Username already exists"}, status=status.HTTP_400_BAD_REQUEST)
@@ -105,8 +104,8 @@ def register(request):
             return Response({'error': "Email already exists"}, status=status.HTTP_400_BAD_REQUEST)
 
         user = User.objects.create_user(username, email, password)
-        user.first_name = first_name
-        user.last_name = last_name
+        user.first_name = user_name
+        user.last_name = user_name
         user.save()
 
     except Exception as e:
@@ -125,11 +124,9 @@ def register(request):
             cursor.execute("SELECT DateJoined FROM AppUser2 WHERE DateJoined = %s", [date_joined])
             if cursor.fetchone() is None:
                 cursor.execute("INSERT INTO AppUser2 (DateJoined, Loyalty) VALUES (%s, %s)", [date_joined, loyalty])
-        
-        custom_username = first_name + last_name
 
         with connection.cursor() as cursor:
-            cursor.execute("INSERT INTO AppUser1 (Email, Username, DateJoined) VALUES (%s, %s, %s)", [email, custom_username, date_joined])
+            cursor.execute("INSERT INTO AppUser1 (Email, Username, DateJoined) VALUES (%s, %s, %s)", [email, user_name, date_joined])
 
         return Response({'success': "User created successfully"}, status=status.HTTP_201_CREATED)
     

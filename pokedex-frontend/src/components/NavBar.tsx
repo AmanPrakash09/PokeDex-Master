@@ -10,6 +10,7 @@ import AuthContext from "../context/AuthContext"
 
 function NavBar() {
   let {user, logoutUser} = useContext(AuthContext)!
+  console.log(user)
     return (
       <>
         <div className="nav">

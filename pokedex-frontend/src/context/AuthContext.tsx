@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
 import {
     useNavigate
@@ -16,7 +16,7 @@ interface User {
 interface AuthContextType {
   authTokens: AuthTokens | null;
   user: User | null;
-  loginUser: (e: React.FormEvent<HTMLFormElement>) => Promise<void>;
+  loginUser: (username: string, password: string) => Promise<void>;
   logoutUser: () => void;
 }
 
@@ -42,11 +42,13 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     const userEmail = localStorage.getItem('user');
     return userEmail ? { email: userEmail } : null;
   });
+
+  let [loading, setLoading] = useState(true)
   
   const history = useNavigate()
 
-  let loginUser = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  let loginUser = async (username: string, password: string) => {
+    // e.preventDefault();
     try {
       let response = await fetch('http://127.0.0.1:8000/token/', {
         method: 'POST',
@@ -54,8 +56,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          'username': e.currentTarget.email.value,
-          'password': e.currentTarget.password.value
+          'username': username,
+          'password': password
         })
       });
       if (!response.ok) {
@@ -95,7 +97,42 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     setAuthTokens(null)
     setUser(null)
     localStorage.removeItem('authTokens')
+    localStorage.removeItem('user')
     history('/signin')
+  }
+
+  let updateToken = async () => {
+    console.log("Updating Token")
+    let response = await fetch('http://127.0.0.1:8000/token/refresh', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({'username':authTokens?.refreshToken})
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error when updating token! status: ${response.status}`);
+      }
+      let data = await response.json();
+      if (response.status === 200) {
+
+        setAuthTokens({
+          accessToken: data.access,
+          refreshToken: data.refresh
+        });
+        
+        const decodedData = jwtDecode<MyJwtPayload>(data.access);
+        console.log(decodedData);
+        setUser({
+          email: decodedData['username'],
+        });
+
+        localStorage.setItem('authTokens', JSON.stringify(data))
+        localStorage.setItem('user', decodedData['username'])
+      } else {
+        alert("Response status is not 200 and we are logging out!")
+        logoutUser();
+      }
   }
 
   let contextData: AuthContextType = {
@@ -104,6 +141,16 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     loginUser:loginUser,
     logoutUser:logoutUser
   };
+
+  useEffect(() => {
+    let timer = 1000 * 60 * 5;
+    let internal = setInterval(() => {
+      if(authTokens) {
+        updateToken();
+      }
+    }, timer)
+    return () => clearInterval(internal)
+  }, [authTokens, loading])
 
   return (
     <AuthContext.Provider value={contextData}>
