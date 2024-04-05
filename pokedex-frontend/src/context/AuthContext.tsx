@@ -48,7 +48,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const history = useNavigate()
 
   let loginUser = async (username: string, password: string) => {
-    // e.preventDefault();
     try {
       let response = await fetch('http://127.0.0.1:8000/token/', {
         method: 'POST',
@@ -61,6 +60,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         })
       });
       if (!response.ok) {
+        alert("Either Email or Password is incorrect!")
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       let data = await response.json();
