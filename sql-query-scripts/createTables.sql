@@ -5,7 +5,7 @@ User Data CREATE TABLE statements
 */
 
 CREATE TABLE AppUser2(
-  MembershipLevel DATE,
+  MembershipLevel INTEGER,
   Loyalty INTEGER,
   PRIMARY KEY (MembershipLevel)
 );
