@@ -6,11 +6,13 @@ function Location() {
   const [locationResults, setLocationResults] = useState([]);
 
   const getPokemonFromLocation = async () => {
+    const lowerString = searchAddress.replace(/'/g, '').toLowerCase();
+    const titleString = lowerString.charAt(0).toUpperCase() + lowerString.slice(1);
     const query =
         "SELECT l.Address, p.PokemonName " +
         "FROM LocationFeaturesAccess1 l, PokemonStores1 p, PokemonContains pc " +
         "WHERE l.Address = pc.Address AND p.PokeID = pc.PokeID " +
-        `AND l.Address LIKE '%${searchAddress.replace(/'/g, '')}%'`
+        `AND l.Address LIKE '%${titleString}%'`
     await handleSearch(query, setLocationResults);
   }
 

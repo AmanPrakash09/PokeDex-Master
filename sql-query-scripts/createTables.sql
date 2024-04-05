@@ -5,17 +5,17 @@ User Data CREATE TABLE statements
 */
 
 CREATE TABLE AppUser2(
-  DateJoined DATE,
+  MembershipLevel DATE,
   Loyalty INTEGER,
-  PRIMARY KEY (DateJoined)
+  PRIMARY KEY (MembershipLevel)
 );
 
 CREATE TABLE AppUser1(
   Email VARCHAR(254),
   Username VARCHAR(50),
-  DateJoined DATE,
+  MembershipLevel INTEGER,
   PRIMARY KEY (Email),
-  FOREIGN KEY (DateJoined) REFERENCES AppUser2 (DateJoined) ON DELETE CASCADE
+  FOREIGN KEY (MembershipLevel) REFERENCES AppUser2 (MembershipLevel) ON DELETE CASCADE
 );
 
 CREATE TABLE SaveFileManages(

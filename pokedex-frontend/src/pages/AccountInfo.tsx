@@ -63,15 +63,16 @@ function AccountInfo() {
   }
 
   return (
-    <>
-      <div className="accountinfo-container">
-        <p>Email: {userInfo.email}</p>
-        <p>Username: {userInfo.username}</p>
-        <p>Date: {userInfo.date_joined}</p>
-        <p>Loyalty: {userInfo.loyalty}</p>
-        <button onClick={handleDeleteAccount}>Delete My Account</button>
-      </div>
-    </>
+      <>
+        <div className="accountinfo-container">
+          <p>Email: {userInfo.email}</p>
+          <p>Username: {userInfo.username}</p>
+          <p>Date: {userInfo.date_joined}</p>
+          <p>Loyalty: {userInfo.loyalty}</p>
+          <button onClick={handleDeleteAccount}>Delete My Account</button>
+          <button onClick={() => console.log("hello")}>Edit</button>
+        </div>
+      </>
   )
 }
 
