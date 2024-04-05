@@ -5,7 +5,7 @@ import AuthContext from "../context/AuthContext.tsx";
 import {s} from "vite/dist/node/types.d-FdqQ54oU";
 
 function SaveFiles() {
-    const [saveFiles, setSaveFiles] = useState([]);
+    const [saveFiles, setSaveFiles] = useState<any[][]>([]);
 
     const context = useContext(AuthContext);
     if (!context) throw new Error("useContext must be inside a Provider with a value");
@@ -58,19 +58,22 @@ function SaveFiles() {
     }
 
     const addSaveFile = async () => {
-        await updateSaveFileState();
+        // await updateSaveFileState();
         const date = getDate();
+        let newFileID = 0;
         if (saveFiles.length === 0) {
             const insertQuery =
                 `INSERT INTO SaveFileManages(FileID, CreationDate, Email) VALUES (0, '${date}', '${email}')`
             await handleSearch(insertQuery, () => {});
-            return;
+        } else {
+            newFileID = saveFiles[saveFiles.length - 1][0] + 1;
+            const insertQuery =
+                "INSERT INTO SaveFileManages(FileID, CreationDate, Email) " +
+                `VALUES (${newFileID}, '${date}', '${email}')`;
+            await handleSearch(insertQuery, () => {});
         }
-        const insertQuery =
-            "INSERT INTO SaveFileManages(FileID, CreationDate, Email) " +
-            `VALUES (${saveFiles[saveFiles.length - 1][0] + 1}, '${date}', '${email}')`;
-        await handleSearch(insertQuery, () => {});
-        await updateSaveFileState();
+        // await updateSaveFileState();
+        setSaveFiles([...saveFiles, [newFileID, date, email]])
         alert("Save file added successfully")
     }
 
@@ -83,7 +86,7 @@ function SaveFiles() {
                   <tbody>
                   {saveFiles.map((res: any) => (
                       <tr key={res[0]}>
-                          <td>File ID: {res[0]}</td>
+                          <td>File Number: {res[0] + 1}</td>
                       </tr>
                   ))}
                   </tbody>
