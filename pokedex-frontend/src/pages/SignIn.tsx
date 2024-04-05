@@ -6,6 +6,8 @@ function SignIn() {
   const context = useContext(AuthContext);
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
+  const [signinEmail, setSigninEmail] = useState('');
+  const [signinPassword, setSigninPassword] = useState('');
 
   if (!context) {
       throw new Error("useContext must be inside a Provider with a value");
@@ -38,7 +40,7 @@ function SignIn() {
         let data = await response.json();
         if (response.status === 201) {
             alert("User created successfully!");
-            handleLoginSubmit(e);
+            loginUser(signinEmail, signinPassword);
         } else {
             alert(data.error || "An error occurred!");
         }
@@ -66,9 +68,9 @@ function SignIn() {
         <div className="form-container signup-container">
             <p>Sign up</p>
             <form onSubmit={signUpUser} className='signup-form'>
-                <input type='email' name='email' placeholder='Email' value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)}/>
+                <input type='email' name='email' placeholder='Email' value={signinEmail} onChange={(e) => setSigninEmail(e.target.value)}/>
                 <input type='text' name='user_name' placeholder='User Name' />
-                <input type='password' name='password' placeholder='Password' value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)}/>
+                <input type='password' name='password' placeholder='Password' value={signinPassword} onChange={(e) => setSigninPassword(e.target.value)}/>
                 <input type='password' name='confirm_password' placeholder='Confirm Password' />
                 <input type='submit' value='Sign Up' />
             </form>

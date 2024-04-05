@@ -92,15 +92,13 @@ def query(request):
 @api_view(['POST'])
 def register(request):
     try:
+        # username is actually email
         username = request.data['username']
         email = request.data['email']
         password = request.data['password']
         user_name = request.data['user_name']
         
         if User.objects.filter(username=username).exists():
-            return Response({'error': "Username already exists"}, status=status.HTTP_400_BAD_REQUEST)
-        
-        if User.objects.filter(email=email).exists():
             return Response({'error': "Email already exists"}, status=status.HTTP_400_BAD_REQUEST)
 
         user = User.objects.create_user(username, email, password)
