@@ -31,7 +31,6 @@ function SaveFiles() {
       });
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
         func(data); // Set the search results in state
       } else {
         console.error('Failed to fetch search results');
