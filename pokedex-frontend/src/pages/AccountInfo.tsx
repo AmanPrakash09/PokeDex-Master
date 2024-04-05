@@ -5,7 +5,7 @@ import AuthContext from '../context/AuthContext'
 interface UserInfo {
   email: string;
   username: string;
-  date_joined: string;
+  membership_level: BigInteger;
   loyalty: BigInteger;
 }
 function AccountInfo() {
@@ -67,7 +67,7 @@ function AccountInfo() {
         <div className="accountinfo-container">
           <p>Email: {userInfo.email}</p>
           <p>Username: {userInfo.username}</p>
-          <p>Date: {userInfo.date_joined}</p>
+          <p>Membership Level: {userInfo.membership_level}</p>
           <p>Loyalty: {userInfo.loyalty}</p>
           <button onClick={handleDeleteAccount}>Delete My Account</button>
           <button onClick={() => console.log("hello")}>Edit</button>

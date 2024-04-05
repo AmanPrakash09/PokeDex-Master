@@ -110,7 +110,8 @@ def register(request):
         return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
     
     # ________________________________________________SQL INSERT Operation on AppUser1 and AppUser2________________________________________________
-    date_joined = date.today().strftime('%Y-%m-%d')
+    # membership default value is 1
+    membership_level = 1
     loyalty = 1
 
     try:
@@ -119,12 +120,12 @@ def register(request):
             if cursor.fetchone() is not None:
                 return Response({'error': "Email already exists"}, status=status.HTTP_400_BAD_REQUEST)
 
-            cursor.execute("SELECT DateJoined FROM AppUser2 WHERE DateJoined = %s", [date_joined])
+            cursor.execute("SELECT MembershipLevel FROM AppUser2 WHERE MembershipLevel = %s", [membership_level])
             if cursor.fetchone() is None:
-                cursor.execute("INSERT INTO AppUser2 (DateJoined, Loyalty) VALUES (%s, %s)", [date_joined, loyalty])
+                cursor.execute("INSERT INTO AppUser2 (MembershipLevel, Loyalty) VALUES (%s, %s)", [membership_level, loyalty])
 
         with connection.cursor() as cursor:
-            cursor.execute("INSERT INTO AppUser1 (Email, Username, DateJoined) VALUES (%s, %s, %s)", [email, user_name, date_joined])
+            cursor.execute("INSERT INTO AppUser1 (Email, Username, MembershipLevel) VALUES (%s, %s, %s)", [email, user_name, membership_level])
 
         return Response({'success': "User created successfully"}, status=status.HTTP_201_CREATED)
     
@@ -144,16 +145,16 @@ def user_info(request):
 
     try:
         with connection.cursor() as cursor:
-            cursor.execute("""SELECT a1.Email, a1.Username, a2.DateJoined, a2.Loyalty
+            cursor.execute("""SELECT a1.Email, a1.Username, a2.MembershipLevel, a2.Loyalty
                               FROM AppUser1 a1
-                              JOIN AppUser2 a2 ON a1.DateJoined = a2.DateJoined
+                              JOIN AppUser2 a2 ON a1.MembershipLevel = a2.MembershipLevel
                               WHERE a1.Email = %s""", [email])
             user_info = cursor.fetchone()
             if user_info:
                 data = {
                     'email': user_info[0],
                     'username': user_info[1],
-                    'date_joined': user_info[2].strftime('%Y-%m-%d'),
+                    'membership_level': user_info[2],
                     'loyalty': user_info[3]
                 }
                 return Response(data)

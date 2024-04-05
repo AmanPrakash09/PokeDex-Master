@@ -1,16 +1,16 @@
-INSERT INTO AppUser2(DateJoined, Loyalty)
-VALUES      ('2024-03-01', 0),
-            ('2024-02-01', 1),
-            ('2024-01-01', 2),
-            ('2023-12-01', 3),
-            ('2023-11-01', 4);
+INSERT INTO AppUser2(MembershipLevel, Loyalty)
+VALUES      (1, 100),
+            (2, 200),
+            (3, 300),
+            (4, 400),
+            (5, 500);
 
-INSERT INTO AppUser1(Email, Username, DateJoined)
-VALUES      ('matthewasmith442@gmail.com', 'matthew', '2024-03-01'),
-            ('xx442boyxx@gmail.com', 'matthew2', '2024-02-01'),
-            ('amanprakashburnett@gmail.com', 'aman', '2024-01-01'),
-            ('billjones.com.com@gmail.com', 'matthew3', '2023-12-01'),
-            ('test@gmail.com', 'first-account', '2023-11-01');
+INSERT INTO AppUser1(Email, Username, MembershipLevel)
+VALUES      ('matthewasmith442@gmail.com', 'matthew', 1),
+            ('xx442boyxx@gmail.com', 'matthew2', 1),
+            ('amanprakashburnett@gmail.com', 'aman', 1),
+            ('billjones.com.com@gmail.com', 'matthew3', 1),
+            ('test@gmail.com', 'first-account', 1);
 
 INSERT INTO SaveFileManages(FileID, CreationDate, Email)
 VALUES      (0, '2024-03-01', 'matthewasmith442@gmail.com'),
