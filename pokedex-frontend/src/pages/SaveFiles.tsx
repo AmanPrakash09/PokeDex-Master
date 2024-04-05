@@ -49,11 +49,6 @@ function SaveFiles() {
         return year + "-" + (month < 10 ? "0" + month : month) + "-" + (day < 10 ? "0" + day : day);
     }
 
-    const getSaveFileManages = async () => {
-        const query = "SELECT * FROM SaveFileManages"
-        await handleSearch(query, () => {});
-    }
-
     const updateSaveFileState = async() => {
         const query =
             "SELECT * " +
@@ -76,18 +71,19 @@ function SaveFiles() {
             `VALUES (${saveFiles[saveFiles.length - 1][0] + 1}, '${date}', '${email}')`;
         await handleSearch(insertQuery, () => {});
         await updateSaveFileState();
+        alert("Save file added successfully")
     }
 
   return (
       <>
+          <h2>{email}'s Save Files</h2>
           <button onClick={addSaveFile}>Add Save File +</button>
-          <button onClick={getSaveFileManages}>get tuples</button>
           <div className="savefiles-container">
               <table>
                   <tbody>
                   {saveFiles.map((res: any) => (
                       <tr key={res[0]}>
-                          <td>{res[0]}</td>
+                          <td>File ID: {res[0]}</td>
                       </tr>
                   ))}
                   </tbody>
