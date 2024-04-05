@@ -15,7 +15,10 @@ function NavBar() {
         <div className="nav">
           <Link to="/" className='site-title'>PokéDex Master</Link>
           <ul>
-            <CustomLink to='/search'>search</CustomLink>
+              <CustomLink to={"move"}>move</CustomLink>
+              <CustomLink to={'/location'}>location</CustomLink>
+              <CustomLink to='/game'>game</CustomLink>
+            <CustomLink to='/pokemon'>pokemon</CustomLink>
             <CustomLink to='/savefiles'>my save files</CustomLink>
             <CustomLink to='/accountinfo'>my info</CustomLink>
             {user ? (

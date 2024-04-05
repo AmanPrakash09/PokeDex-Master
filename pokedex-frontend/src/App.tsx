@@ -6,7 +6,12 @@ import {
 import './App.css'
 import NavBar from './components/NavBar'
 import Header from './pages/Header'
-import Search from './pages/Search'
+
+import Pokemon from './pages/Pokemon.tsx'
+import Game from "./pages/Game.tsx";
+import Location from './pages/Location.tsx'
+import Move from "./pages/Move.tsx";
+
 import SaveFiles from './pages/SaveFiles'
 import AccountInfo from './pages/AccountInfo'
 import SignIn from './pages/SignIn'
@@ -22,7 +27,10 @@ function App() {
       <NavBar/>
         <Routes>
           <Route path="/" element={<Header />} />
-          <Route path="/search" element={<Search />} />
+          <Route path="/pokemon" element={<Pokemon />} />
+          <Route path="/game" element={<Game />} />
+          <Route path={'/move'} element={<Move/>}/>
+          <Route path="/location" element={<Location />}/>
           <Route path="/savefiles" element={<PrivateRoute />}>
             <Route path="/savefiles" element={<SaveFiles />} />
           </Route>
