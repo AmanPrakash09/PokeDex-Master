@@ -21,6 +21,9 @@ function Search() {
   const [buttonQueryResults, setButtonQueryResults] = useState([]);
   const [buttonQueryFlag, setButtonQueryFlag] = useState(0);
 
+  const [searchAddress, setSearchAddress] = useState("");
+  const [locationResults, setLocationResults] = useState([]);
+
   const handleFilterChange = (index: any, key: any, value: any) => {
     const updatedFilters = [...filters];
     updatedFilters[index] = {
@@ -30,7 +33,7 @@ function Search() {
     setFilters(updatedFilters);
   };
 
-  const addFilter = () => {
+  const addSelectionFilter = () => {
     setFilters([...filters, {logicOperator: "AND", filterType: 'PokemonName', eqOperator: 'LIKE', qualifierText: '' }]);
   };
 
@@ -157,6 +160,15 @@ function Search() {
     await handleSearch(query, setButtonQueryResults);
   }
 
+  const getPokemonFromLocation = async () => {
+    const query =
+        "SELECT l.Address, p.PokemonName " +
+        "FROM LocationFeaturesAccess1 l, PokemonStores1 p, PokemonContains pc " +
+        "WHERE l.Address = pc.Address AND p.PokeID = pc.PokeID " +
+        `AND l.Address LIKE '%${searchAddress.replace(/'/g, '')}%'`
+    await handleSearch(query, setLocationResults);
+  }
+
   const clearQueryResults = () => {
     setSelectionResults([]);
   }
@@ -235,7 +247,7 @@ function Search() {
             </label>
             <div className="spacer"></div>
             <div>
-              <button onClick={addFilter}>+</button>
+              <button onClick={addSelectionFilter}>+</button>
               <button onClick={selectionQuery}>Search</button>
               <button onClick={clearQueryResults}>Clear</button>
             </div>
@@ -410,6 +422,41 @@ function Search() {
                     <td>{game[2]}</td>
                     <td>{game[3]}</td>
                     <td>{game[4]}</td>
+                  </tr>
+              ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="spacer"></div>
+          <div className="filter-container">
+            <h2>Location Information</h2>
+            <div>
+              <label>
+                <input
+                    type="text"
+                    value={searchAddress || ""}
+                    placeholder="Type a partial address"
+                    onChange={(e) => setSearchAddress(e.target.value)}
+                />
+              </label>
+              <button onClick={getPokemonFromLocation}>Search</button>
+              <button onClick={() => setLocationResults([])}>Clear</button>
+            </div>
+            <div className="spacer"></div>
+            <hr/>
+            <h2>Search Results</h2>
+            <table>
+              <thead>
+              <tr>
+                <td><h3>Location</h3></td>
+                <td><h3>Name</h3></td>
+              </tr>
+              </thead>
+              <tbody>
+              {locationResults.map((res: any, index: number) => (
+                  <tr key={index}>
+                    <td>{res[0]}</td>
+                    <td>{res[1]}</td>
                   </tr>
               ))}
               </tbody>
