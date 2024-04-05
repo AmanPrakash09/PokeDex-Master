@@ -18,6 +18,10 @@ class QueryEngine:
     def execute_query(self, query: str):
         cursor = self.conn.cursor()
         cursor.execute(query)
+        try:
+            self.conn.commit()
+        except:
+            pass
         return cursor.fetchall()
 
 
