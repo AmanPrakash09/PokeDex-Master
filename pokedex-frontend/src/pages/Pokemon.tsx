@@ -31,7 +31,8 @@ function Pokemon() {
   const getSelectionFilters = () => {
     const combineFilters = filters.reduce((prevString: any, currFilter: any) => {
       let inputText = currFilter.qualifierText.replace(/'/g, '');
-      if (currFilter.eqOperator == "LIKE") inputText = `%${inputText}%`;
+      if (currFilter.eqOperator === "LIKE") inputText = `%${inputText}%`;
+      if (currFilter.eqOperator === "EQUALS") inputText = inputText.charAt(0).toUpperCase() + inputText.slice(1).toLowerCase()
       const logic = currFilter.logicOperator;
       const column = currFilter.filterType;
       if (column === "PokeType" || column === "EggGroup") {

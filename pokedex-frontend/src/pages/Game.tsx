@@ -148,6 +148,7 @@ function Game() {
                   <td>{game[2]}</td>
                   <td>{game[3]}</td>
                   <td>{game[4]}</td>
+                  <td><button>Edit</button></td>
                 </tr>
             ))}
             </tbody>
