@@ -6,7 +6,7 @@
 Please find the single SQL script to create all tables and data in the database in
 `/sql-query-scripts/createAndPopulate.sql`. Otherwise, no extra information.
 
-Below is the requirements from Milestone 3.
+Below is the requirements from Milestone 3,
 
 ## Project Summary
 
