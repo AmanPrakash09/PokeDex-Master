@@ -210,13 +210,16 @@ def update_account(request):
             return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     try:
-        User = get_user_model()
-        try:
-            user_to_update = User.objects.get(email=email)
-            user_to_update.username = data.get('username', user_to_update.username)
-            user_to_update.save()
-        except User.DoesNotExist:
-            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+        
+        # needed to remove since when updating the username, we do not want to not be able to login since the code below will change the email
+        
+        # User = get_user_model()
+        # try:
+        #     user_to_update = User.objects.get(email=email)
+        #     user_to_update.username = data.get('username', user_to_update.username)
+        #     user_to_update.save()
+        # except User.DoesNotExist:
+        #     return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
 
         # ________________________________________________SQL UPDATE Operation on AppUser1 Username________________________________________________
         
