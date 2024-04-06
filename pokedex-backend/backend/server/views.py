@@ -186,3 +186,32 @@ def delete_account(request):
         return Response({'success': 'User deleted successfully.'}, status=status.HTTP_200_OK)
     except Exception as e:
         return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['PUT'])
+def update_account(request):
+    email = request.query_params.get('email')
+    
+    data = request.data
+
+    if not email:
+        return Response({'error': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        User = get_user_model()
+        try:
+            user_to_update = User.objects.get(email=email)
+            user_to_update.username = data.get('username', user_to_update.username)
+            user_to_update.save()
+        except User.DoesNotExist:
+            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        # ________________________________________________SQL UPDATE Operation on AppUser1________________________________________________
+        
+        with connection.cursor() as cursor:
+            cursor.execute("""UPDATE AppUser1 
+                              SET Username = %s
+                              WHERE Email = %s""", [data['username'], email])
+
+        return Response({'success': 'Username updated successfully.'}, status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)

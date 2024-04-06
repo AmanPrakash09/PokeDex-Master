@@ -11,6 +11,8 @@ interface UserInfo {
 function AccountInfo() {
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
   const context = useContext(AuthContext);
+  const [editUsernameMode, setUsernameEditMode] = useState(false);
+  const [newUsername, setNewUsername] = useState("");
   
   if (!context) {
       throw new Error("useContext must be inside a Provider with a value");
@@ -57,6 +59,33 @@ function AccountInfo() {
       }
     }
   };
+  
+  const handleUsernameChange = (e: any) => {
+    setNewUsername(e.target.value);
+  };
+
+  const handleUpdateUsername = async () => {
+    try {
+      const response = await fetch(`http://127.0.0.1:8000/update-account/?email=${user?.email}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username: newUsername }),
+      });
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      // update user info on front-end
+      setUserInfo(data);
+      // change button
+      setUsernameEditMode(false);
+      window.location.reload();
+    } catch (error) {
+      console.error("There was a problem with the update operation:", error);
+    }
+  };
 
   if (!userInfo) {
     return <div>Loading...</div>;
@@ -67,10 +96,23 @@ function AccountInfo() {
         <div className="accountinfo-container">
           <p>Email: {userInfo.email}</p>
           <p>Username: {userInfo.username}</p>
+          {editUsernameMode ? (
+            <>
+              <input
+                type="text"
+                value={newUsername}
+                onChange={handleUsernameChange}
+              />
+              <button onClick={handleUpdateUsername}>Update Username</button>
+            </>
+          ) : (
+            <>
+              <button onClick={() => setUsernameEditMode(true)}>Edit Username</button>
+            </>
+          )}
           <p>Membership Level: {userInfo.membership_level}</p>
           <p>Loyalty: {userInfo.loyalty}</p>
           <button onClick={handleDeleteAccount}>Delete My Account</button>
-          <button onClick={() => console.log("hello")}>Edit</button>
         </div>
       </>
   )
