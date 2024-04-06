@@ -84,6 +84,7 @@ function AccountInfo() {
       // change button
       setUsernameEditMode(false);
       window.location.reload();
+      alert('Your Username has been successfully updated.');
     } catch (error) {
       console.error("There was a problem with the update operation:", error);
     }
@@ -116,6 +117,7 @@ function AccountInfo() {
       // change button
       setMembershipLevelEditMode(false);
       window.location.reload();
+      alert('Your Membership Level has been successfully updated.');
     } catch (error) {
       console.error("There was a problem with the update operation:", error);
     }

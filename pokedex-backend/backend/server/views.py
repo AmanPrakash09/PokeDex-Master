@@ -199,6 +199,7 @@ def update_account(request):
     membership_level = data.get('membership_level')
     if membership_level:
         try:
+        # ________________________________________________SQL UPDATE Operation on AppUser1 MembershipLevel________________________________________________
             with connection.cursor() as cursor:
                 cursor.execute("""UPDATE AppUser1 
                                 SET MembershipLevel = %s
@@ -217,7 +218,7 @@ def update_account(request):
         except User.DoesNotExist:
             return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
 
-        # ________________________________________________SQL UPDATE Operation on AppUser1________________________________________________
+        # ________________________________________________SQL UPDATE Operation on AppUser1 Username________________________________________________
         
         with connection.cursor() as cursor:
             cursor.execute("""UPDATE AppUser1 
