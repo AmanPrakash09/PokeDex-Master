@@ -9,7 +9,7 @@ Please find the single SQL script to create all tables and data in the database 
 
 -------------------------------------------------
 
-Below is the requirements from Milestone 3,
+Below is the requirements from Milestone 3.
 
 ## Project Summary
 
