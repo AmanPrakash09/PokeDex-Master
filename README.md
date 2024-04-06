@@ -4,12 +4,12 @@
 ## Milestone 4 Updates
 
 Please find the single SQL script to create all tables and data in the database in
-`/sql-query-scripts/createAndPopulate.sql`. Otherwise, no extra information.
+`/sql-query-scripts/createAndPopulate.sql`. The PDF file is found at `/C304_Milestone_4.pdf`. Otherwise, no extra information.
 
 
 -------------------------------------------------
 
-Below is the requirements from Milestone 3,
+Below is the requirements from Milestone 3.
 
 ## Project Summary
 
