@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Pokemon.css'
+//
 
 function Game() {
   const [projectionResults, setProjectionResults] = useState([]);
@@ -148,7 +149,6 @@ function Game() {
                   <td>{game[2]}</td>
                   <td>{game[3]}</td>
                   <td>{game[4]}</td>
-                  <td><button>Edit</button></td>
                 </tr>
             ))}
             </tbody>
