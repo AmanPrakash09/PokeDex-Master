@@ -13,6 +13,8 @@ function AccountInfo() {
   const context = useContext(AuthContext);
   const [editUsernameMode, setUsernameEditMode] = useState(false);
   const [newUsername, setNewUsername] = useState("");
+  const [editMembershipLevelMode, setMembershipLevelEditMode] = useState(false);
+  const [newMembershipLevel, setNewMembershipLevel] = useState(1);
   
   if (!context) {
       throw new Error("useContext must be inside a Provider with a value");
@@ -86,6 +88,38 @@ function AccountInfo() {
       console.error("There was a problem with the update operation:", error);
     }
   };
+  
+  const handleMembershipLevelChange = (e: any) => {
+    const value = e.target.value;
+    if (value < 1 || value > 5) {
+      alert("Please enter a Membership Level between 1 and 5.")
+      return;
+    }
+    setNewMembershipLevel(e.target.value);
+  };
+
+  const handleUpdateMembershipLevel = async () => {
+    try {
+      const response = await fetch(`http://127.0.0.1:8000/update-account/?email=${user?.email}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ membership_level: newMembershipLevel }),
+      });
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      // update user info on front-end
+      setUserInfo(data);
+      // change button
+      setMembershipLevelEditMode(false);
+      window.location.reload();
+    } catch (error) {
+      console.error("There was a problem with the update operation:", error);
+    }
+  };
 
   if (!userInfo) {
     return <div>Loading...</div>;
@@ -111,6 +145,24 @@ function AccountInfo() {
             </>
           )}
           <p>Membership Level: {userInfo.membership_level}</p>
+          {
+            editMembershipLevelMode ? (
+              <>
+                <input
+                  type="number"
+                  value={newMembershipLevel}
+                  onChange={handleMembershipLevelChange}
+                  min={1}
+                  max={5}
+                />
+                <button onClick={handleUpdateMembershipLevel}>Update Membership Level</button>
+              </>
+            ) : (
+              <>
+                <button onClick={() => setMembershipLevelEditMode(true)}>Edit Membership Level</button>
+              </>
+            )
+          }
           <p>Loyalty: {userInfo.loyalty}</p>
           <button onClick={handleDeleteAccount}>Delete My Account</button>
         </div>

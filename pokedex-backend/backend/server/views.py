@@ -195,6 +195,18 @@ def update_account(request):
 
     if not email:
         return Response({'error': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
+    
+    membership_level = data.get('membership_level')
+    if membership_level:
+        try:
+            with connection.cursor() as cursor:
+                cursor.execute("""UPDATE AppUser1 
+                                SET MembershipLevel = %s
+                                WHERE Email = %s""", [membership_level, email])
+            return Response({'success': 'Membership Level updated successfully.'}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     try:
         User = get_user_model()
